@@ -28,33 +28,33 @@ const siteLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a2e] text-white">
+    <footer style={{ background: '#1a2744' }} className="text-white pb-24">
       <div className="max-w-5xl mx-auto px-4 py-14">
         <div className="text-center mb-10">
-          <h3 className="font-bold text-xl mb-4">US ESTA Apply Website</h3>
+          <h3 className="font-bold text-xl mb-4" style={{ fontFamily: "'Noto Serif JP', serif" }}>US ESTA Apply Website</h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mx-auto mb-4">
             当サイトはESTA(エスタ)の申請代行サービスを提供するウェブサイトです。民間企業による運営であり、いかなる政府機関とも提携または関係はありません。電子渡航認証は、本サービスを利用せず公式サイトから直接申請することも可能です。
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 border-t border-gray-700 pt-8">
+        <div className="grid md:grid-cols-2 gap-8 border-t border-gray-600 pt-8">
           <div>
-            <h4 className="font-bold text-sm mb-4 text-gray-300">ESTA申請関連情報一覧</h4>
+            <h4 className="font-bold text-sm mb-4 text-white border-b border-gray-600 pb-2">ESTA申請関連情報一覧</h4>
             <ul className="space-y-2">
               {estaLinks.map((l) => (
-                <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-white text-sm">{l.label}</Link></li>
+                <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-white text-sm transition-colors">{l.label}</Link></li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-sm mb-4 text-gray-300">サイト情報一覧</h4>
+            <h4 className="font-bold text-sm mb-4 text-white border-b border-gray-600 pb-2">サイト情報一覧</h4>
             <ul className="space-y-2">
               {siteLinks.map((l) => (
-                <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-white text-sm">{l.label}</Link></li>
+                <li key={l.href}><Link href={l.href} className="text-gray-400 hover:text-white text-sm transition-colors">{l.label}</Link></li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-xs">
+        <div className="border-t border-gray-600 mt-8 pt-6 text-center text-gray-500 text-xs">
           <p>© US ESTA Apply Website All rights reserved.</p>
         </div>
       </div>

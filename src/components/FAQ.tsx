@@ -6,24 +6,28 @@ type FAQItem = { q: string; a: string };
 export default function FAQ({ items, title }: { items: FAQItem[]; title?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
-    <section className="py-12">
-      <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">{title || 'よくある質問'}</h2>
-      <div className="max-w-3xl mx-auto space-y-3">
+    <section className="py-16">
+      <h2 className="text-2xl font-bold mb-10 text-center" style={{ color: '#1a2744', fontFamily: "'Noto Serif JP', serif" }}>
+        {title || 'よくある質問'}
+      </h2>
+      <div className="max-w-3xl mx-auto">
         {items.map((item, i) => (
-          <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+          <div key={i} className="faq-item">
             <button
-              className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50"
+              className="w-full px-5 py-5 text-left flex items-center justify-between gap-4"
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
             >
-              <span className="flex items-center gap-3">
-                <span className="text-sm font-bold text-red-500 w-6">{String(i + 1).padStart(2, '0')}</span>
-                <span className="font-medium text-gray-800">{item.q}</span>
+              <span className="flex items-center gap-4">
+                <span className="text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#c41e3a', color: 'white', fontSize: '0.75rem' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="font-medium" style={{ color: '#1a2744' }}>{item.q}</span>
               </span>
-              <span className="text-gray-400 text-xl">{openIndex === i ? '−' : '+'}</span>
+              <span className="text-xl flex-shrink-0" style={{ color: '#1a2744' }}>{openIndex === i ? '−' : '+'}</span>
             </button>
-            {openIndex === i && (
-              <div className="px-5 pb-4 pl-14 text-gray-600 text-sm leading-relaxed">{item.a}</div>
-            )}
+            <div className={`faq-answer ${openIndex === i ? 'open' : ''}`} style={{ padding: openIndex === i ? '0 1.25rem 1.25rem 3.75rem' : '0 1.25rem 0 3.75rem' }}>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+            </div>
           </div>
         ))}
       </div>

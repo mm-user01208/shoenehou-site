@@ -10,24 +10,31 @@ export default function Header() {
     { label: 'サイト情報一覧', href: '/list-site-information' },
   ];
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="sticky top-0 z-50" style={{ background: '#1a2744' }}>
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold text-gray-800">US ESTA Apply Website</span>
+          <span className="text-lg font-bold text-white tracking-wide" style={{ fontFamily: "'Noto Serif JP', serif" }}>US ESTA Apply Website</span>
         </Link>
-        <button className="md:hidden text-gray-600 text-2xl" onClick={() => setOpen(!open)} aria-label="メニュー">☰</button>
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setOpen(!open)}
+          aria-label="メニュー"
+        >
+          {open ? '✕' : '☰'}
+        </button>
         <nav className="hidden md:flex gap-8">
           {navItems.map((l) => (
-            <Link key={l.href} href={l.href} className="text-gray-600 hover:text-gray-900 text-sm font-medium">{l.label}</Link>
+            <Link key={l.href} href={l.href} className="text-gray-200 hover:text-white text-sm font-medium transition-colors">{l.label}</Link>
           ))}
         </nav>
       </div>
       {open && (
-        <nav className="md:hidden border-t px-4 py-3 space-y-2 bg-white">
+        <div className="mobile-nav" onClick={() => setOpen(false)}>
+          <button className="absolute top-4 right-4 text-white text-3xl" onClick={() => setOpen(false)}>✕</button>
           {navItems.map((l) => (
-            <Link key={l.href} href={l.href} className="block text-gray-600 text-sm py-1" onClick={() => setOpen(false)}>{l.label}</Link>
+            <Link key={l.href} href={l.href} className="text-white text-xl font-medium" onClick={() => setOpen(false)}>{l.label}</Link>
           ))}
-        </nav>
+        </div>
       )}
     </header>
   );

@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="pb-20">
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />
