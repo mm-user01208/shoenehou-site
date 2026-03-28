@@ -11,7 +11,7 @@ const steps = [
   { num: 1, title: '申請書の入力', desc: '申請フォームの注意事項をご確認のうえ、必須項目を入力してくだい。申請には有効なパスポート・申請料の支払いに使用するクレジットカード・メールアドレスが必要です。' },
   { num: 2, title: '申請料の支払い', desc: '入力内容に誤りがないか確認し、支払いページに進みます。クレジットカード情報を入力後、申請料の支払い手続きを行ってください。' },
   { num: 3, title: '受付通知と審査', desc: 'お支払い完了後、登録されたメールアドレス宛に「申請受付通知」が送信されます。審査には最大72時間を要するため、結果が通知されるまでお待ちください。' },
-  { num: 4, title: '結果の通知', desc: '審査結果はメールにて通知いたします。認証情報は渡米時まで大切に保管してください。申請内容および審査状況については<Link href="/list-site-information/status" className="text-[#c41e3a] hover:underline">こちら</Link>よりご確認ください。' },
+  { num: 4, title: '結果の通知', desc: '審査結果はメールにて通知いたします。認証情報は渡米時まで大切に保管してください。申請内容および審査状況についてはこちらよりご確認ください。' },
 ];
 
 const articleCards = [
@@ -91,7 +91,11 @@ export default function Page() {
                 <div className="step-circle">{step.num}</div>
                 <div>
                   <h3 className="font-bold text-lg mb-2" style={{ color: '#1a2744' }}>{step.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.num === 4 ? (
+                      <>審査結果はメールにて通知いたします。認証情報は渡米時まで大切に保管してください。申請内容および審査状況については<Link href="/list-site-information/status" className="text-[#c41e3a] hover:underline">こちら</Link>よりご確認ください。</>
+                    ) : step.desc}
+                  </p>
                 </div>
               </div>
             ))}
