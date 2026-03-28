@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -28,7 +29,7 @@ export default function Page() {
         </div>
         <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">グアム渡航におけるESTAの必要性</h3>
         <p className="text-gray-700 leading-relaxed mb-4">日本国籍者が、グアムまたは北マリアナ諸島で46日以上の滞在を希望する場合は、事前にESTA(エスタ)を申請する必要があります。ESTAは短期間の観光、商用、または乗り継ぎを目的としてグアムへ渡航する際に必要となる電子渡航認証制度で、渡航認証が承認された場合は最大90日間の滞在が可能です。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">一方、45日以内のグアムまたは北マリアナ諸島への滞在を希望する場合は、一定の条件を満たすことで「グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)」を利用でき、ESTAの申請は不要となります。ただし、Guam-CNMI VWPの利用には、電子渡航認証システム“G-CNMI ETA”の事前取得が義務付けられています。短期間のグアム滞在においてESTAの申請は不要ですが、CBP(アメリカ合衆国税関・国境警備局)では、入国審査の簡易化を目的として渡航認証の取得を推奨しています。</p>
+        <p className="text-gray-700 leading-relaxed mb-4">一方、45日以内のグアムまたは北マリアナ諸島への滞在を希望する場合は、一定の条件を満たすことで「グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)」を利用でき、ESTAの申請は不要となります。ただし、Guam-CNMI VWPの利用には、電子渡航認証システム“G-CNMI ETA”の事前取得が義務付けられています。短期間のグアム滞在においてESTAの申請は不要ですが、<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer" className="text-[#c41e3a] hover:underline">CBP(アメリカ合衆国税関・国境警備局)</a>では、入国審査の簡易化を目的として渡航認証の取得を推奨しています。</p>
         <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)参加国一覧</h3>
         <p className="text-gray-700 leading-relaxed mb-4">イギリス</p>
         <p className="text-gray-700 leading-relaxed mb-4">オーストラリア</p>
@@ -65,7 +66,7 @@ export default function Page() {
         <p className="text-gray-700 leading-relaxed mb-4">デジタル税関申告書(EDF)　※グアムから第三国へ乗り継ぐ場合も提出が必要</p>
         <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)またはビザを取得していない方は、上記に加えて事前に電子渡航認証“G-CNMI ETA”を申請する必要があります。なお、承認済みのESTAおよびG-CNMI ETAの認証情報はオンライン上で管理されているため、グアム入国時に提示する必要はありません。</p>
         <p className="text-gray-700 leading-relaxed mb-4">グアムデジタル税関申告書(EDF)</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「グアムデジタル税関申告書(GUAM ELECTRONIC DECLARATION FORM)」とは、グアム政府観光局(GVB)、グアム国際空港公団(GIAA)、グアム税関検疫局(CQA)が共同開発した税関申告書です。2025年2月4日より、紙面の税関申告書は廃止され「グアムデジタル税関申告書」による事前申請が義務付けられました。申請は渡航日の3日前から可能で、申請完了後は申請情報が保存されたQRコードが発行されます。グアム到着後、税関検査場にてQRコードの画面を提示し、専用の電子端末にかざすことで税関申告手続きは完了します。
+        <p className="text-gray-700 leading-relaxed mb-4">「グアムデジタル税関申告書(GUAM ELECTRONIC DECLARATION FORM)」とは、<a href="https://www.visitguam.jp/planning/immigration-to-guam/#child" target="_blank" rel="noopener noreferrer" className="text-[#c41e3a] hover:underline">グアム政府観光局</a>(GVB)、グアム国際空港公団(GIAA)、<a href="https://cqa.guam.gov/" target="_blank" rel="noopener noreferrer" className="text-[#c41e3a] hover:underline">グアム税関検疫局</a>(CQA)が共同開発した税関申告書です。2025年2月4日より、紙面の税関申告書は廃止され「グアムデジタル税関申告書」による事前申請が義務付けられました。申請は渡航日の3日前から可能で、申請完了後は申請情報が保存されたQRコードが発行されます。グアム到着後、税関検査場にてQRコードの画面を提示し、専用の電子端末にかざすことで税関申告手続きは完了します。
 グアムデジタル税関申告書(EDF)は、グアム税関検疫局公式サイトから、パソコンまたはスマートフォンで申請手続きが可能です。</p>
         <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">未成年者の渡航に必要な書類について</h3>
         <p className="text-gray-700 leading-relaxed mb-4">CBP(アメリカ合衆国税関・国境警備局)では、18歳未満の未成年者が単独で渡航する場合、または片親のみが同行する場合に、同行しない親、または両親が作成した渡航同意書(英文)を持参することを強く推奨しています。</p>

@@ -64,7 +64,7 @@ a:hover .img-hover-shrink {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #1a2744 0%, #2c3e6b 40%, #1a2744 100%);
+  background: linear-gradient(135deg, rgba(26,39,68,0.85) 0%, rgba(44,62,107,0.8) 40%, rgba(26,39,68,0.9) 100%), url('https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=1920&q=80') center/cover no-repeat;
   overflow: hidden;
 }
 .hero-section::before {
