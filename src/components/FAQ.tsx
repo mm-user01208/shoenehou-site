@@ -26,7 +26,7 @@ export default function FAQ({ items, title }: { items: FAQItem[]; title?: string
               <span className="text-xl flex-shrink-0" style={{ color: '#1a2744' }}>{openIndex === i ? '−' : '+'}</span>
             </button>
             <div className={`faq-answer ${openIndex === i ? 'open' : ''}`} style={{ padding: openIndex === i ? '0 1.25rem 1.25rem 3.75rem' : '0 1.25rem 0 3.75rem' }}>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+              <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.a }} />
             </div>
           </div>
         ))}
