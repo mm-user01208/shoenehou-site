@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+3:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"ESTA(エスタ)の有効期限と再申請・確認の方法 | US ESTA Apply Website"}],["$","meta","1",{"name":"description","content":"ESTAの有効期限は2年間です。渡米前に期限が切れている場合は、ESTAの再申請が必要となります。本記事では、ESTAの有効期限の確認手順や、申請情報の修正方法について解説します。"}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yKzCWGq95aAs7iuPQDpIg"}

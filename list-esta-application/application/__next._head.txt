@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+3:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"アプリを使ったESTA(エスタ)申請方法を解説 | US ESTA Apply Website"}],["$","meta","1",{"name":"description","content":"CBP(アメリカ合衆国税関・国境警備局)は、電子渡航認証システムESTA(エスタ)の公式アプリを提供しています。アプリでの申請方法や必要書類、注意点などを詳しく解説します。"}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yKzCWGq95aAs7iuPQDpIg"}

@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+3:I[97367,["/shoenehou-site/_next/static/chunks/07xn_t0m70nze.js","/shoenehou-site/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"個人情報保護に関する基本方針 | US ESTA Apply Website"}],["$","meta","1",{"name":"description","content":"US ESTA Apply Websiteでは、個人情報を適切に取り扱うため個人情報保護方針を定め、管理体制の徹底に努めています。お客様が安心してESTAの申請手続きをご利用いただける環境づくりを行っています。"}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yKzCWGq95aAs7iuPQDpIg"}
