@@ -15,13 +15,13 @@ const steps = [
 ];
 
 const articleCards = [
-  { title: 'ESTA(エスタ)とは？', href: '/list-esta-application/esta', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=400&h=250&fit=crop' },
-  { title: '公式ウェブサイトについて解説', href: '/list-esta-application/official-cbp', image: 'https://images.unsplash.com/photo-1569025743873-ea3a9ber472f?w=400&h=250&fit=crop' },
+  { title: 'ESTA(エスタ)とは？', href: '/list-esta-application/esta', image: 'https://images.unsplash.com/photo-1575936123452-b67c3203c95c?w=400&h=250&fit=crop' },
+  { title: '公式ウェブサイトについて解説', href: '/list-esta-application/official-cbp', image: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=400&h=250&fit=crop' },
   { title: '出生地や住所の書き方', href: '/list-esta-application/place-of-birth', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop' },
   { title: 'ESTAの申請方法を解説', href: '/list-esta-application/esta-flow', image: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&h=250&fit=crop' },
   { title: '公式ウェブサイトでの申請方法', href: '/list-esta-application/cbp-flow', image: 'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=400&h=250&fit=crop' },
   { title: '米国内の連絡先情報', href: '/us-contact-details', image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&h=250&fit=crop' },
-  { title: 'ESTAの有効期限と再申請', href: '/list-esta-application/expiration-date', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=400&h=250&fit=crop' },
+  { title: 'ESTAの有効期限と再申請', href: '/list-esta-application/expiration-date', image: 'https://images.unsplash.com/photo-1575936123452-b67c3203c95c?w=400&h=250&fit=crop' },
   { title: 'アプリのESTA申請方法', href: '/list-esta-application/application', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop' },
   { title: 'グアム入国にESTAは必要？', href: '/list-esta-application/guam', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=250&fit=crop' },
 ];
@@ -151,7 +151,8 @@ export default function Page() {
       {/* Article Cards */}
       <section className="section-white py-16">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-10 text-center scroll-underline visible" style={{ color: '#1a2744' }}>ESTA申請関連情報</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center scroll-underline visible" style={{ color: '#1a2744' }}>ESTA申請関連情報</h2>
+          <p className="text-center mb-10"><Link href="/list-esta-application" className="text-[#c41e3a] hover:underline text-sm font-medium">一覧を見る →</Link></p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {articleCards.map((card, i) => (
               <Link key={i} href={card.href} className="block rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
