@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -15,15 +16,15 @@ export default function Page() {
         <div className="bg-[#f8fafc] border border-gray-200 rounded-lg p-5 my-6">
           <p className="text-base font-bold text-[#1a2744] mb-3 flex items-center gap-2"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>目次</p>
           <ul className="space-y-2 text-sm">
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><span>支払い時に利用可能なクレジットカード</span></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><span>申請料の内訳</span></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><span>領収書の発行方法</span></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><span>キャンセル方法について</span></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><span>当サイトの申請代行サービスについて</span></li>
+            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-1" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">支払い時に利用可能なクレジットカード</a></li>
+            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-2" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">申請料の内訳</a></li>
+            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-3" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">領収書の発行方法</a></li>
+            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-4" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">キャンセル方法について</a></li>
+            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-5" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">当サイトの申請代行サービスについて</a></li>
           </ul>
         </div>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">支払い時に利用可能なクレジットカード</h3>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">申請料の内訳</h3>
+        <h3 id="section-1" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">支払い時に利用可能なクレジットカード</h3>
+        <h3 id="section-2" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">申請料の内訳</h3>
         <p className="text-gray-700 leading-relaxed mb-4">当サイトにてESTA(エスタ)を申請される場合、申請手数料のお支払いが必要です。申請料金には、ESTAを管轄するDHS(米国国土安全保障省)への申請料に加え、当サイトでの申請代行サービス料が含まれます。
 以下では、ESTA申請手数料(申請代行サービス料を含む)およびDHS(米国国土安全保障省)への申請料の内訳について解説します。</p>
         <p className="text-gray-700 leading-relaxed mb-4">ESTA申請手数料の内訳</p>
@@ -39,16 +40,16 @@ export default function Page() {
 料金はクレジットカードによる前払いとなり、申込が完了し「申請料お支払いページ」にて「今すぐ支払う」ボタンを押した時点で決済が行われます。
 手数料のお支払いには、クレジットカード(Visa、MasterCard、JCB、American Express、Diners Club)のみご利用いただけます。申請情報の入力後にクレジットカード決済画面が表示されますので、フォームの案内に従って必要事項を正確にご入力ください。
 お支払い方法の詳細については、「支払い方法解説」をご確認ください。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">領収書の発行方法</h3>
+        <h3 id="section-3" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">領収書の発行方法</h3>
         <p className="text-gray-700 leading-relaxed mb-4">当サイトでは、ESTA申請料の領収書を PDF形式にて発行しております。
 ご希望の場合は、お問い合わせフォームより、問い合わせ種別「領収書について」を選択し、氏名などの必要事項をご入力のうえ送信してください。</p>
         <p className="text-gray-700 leading-relaxed mb-4">内容を確認し、ご本人確認が完了次第、領収書をメールにてお送りいたします。
 なお、領収書の宛名や但し書きにご指定がある場合は、あわせてご記載ください。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">キャンセル方法について</h3>
+        <h3 id="section-4" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">キャンセル方法について</h3>
         <p className="text-gray-700 leading-relaxed mb-4">お客様からお預かりした情報をもとに、DHS（アメリカ合衆国国土安全保障省）のシステム上でESTA(エスタ)申請の登録を開始する前にキャンセルのご連絡をいただいた場合は、決済手数料900円のみをご負担いただき、差額の金額を返金させていただきます。
 なお、適格性や国籍に関する質問などへのご回答内容によっては、申請手続き継続のために、メールにて追加のご質問をさせていただく場合があります。この場合、お客様からのご回答をいただくまで、申請手続きは一時保留とさせていただきます。また、当サイトからの追加質問に対し、2週間以内にご回答を確認できなかった場合は、申請のお申し込みをキャンセル扱いとさせていただきます。その際も、すでに頂戴している料金から決済手数料900円を差し引いた金額を返金いたします。
 一方で、申請の登録が完了し、当該システムに申請状況が反映された後は、キャンセルおよび返金を承ることはできません。これは、申請状況が「認証保留中」の場合も同様です。DHS（アメリカ合衆国国土安全保障省）のシステム仕様上、申請後に申請内容や認証そのものを取り消すことはできません。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">当サイトの申請代行サービスについて</h3>
+        <h3 id="section-5" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">当サイトの申請代行サービスについて</h3>
         <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Website では、複雑なESTA申請手続きをお客様に代わって代行・サポートいたします。ESTAは、ビザ免除プログラム(VWP)の一環として、日本を含む42か国の市民が、ビザを取得せずに90日以内の観光・商用・乗り継ぎ目的でアメリカへ渡航する際に事前申請が必要な電子渡航認証制度です。</p>
         <p className="text-gray-700 leading-relaxed mb-4">サポート内容</p>
         <p className="text-gray-700 leading-relaxed mb-4">日本語表記の申請フォームで手続きが可能。申請結果も日本語のメールでご案内</p>
@@ -66,17 +67,17 @@ export default function Page() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-lg font-bold text-[#1a2744] mb-4">関連記事</h3>
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">ESTA(エスタ)とは？事前入国審査制度を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">【記入例付き】ESTAの申請方法を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">出生地や住所の書き方を紹介</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">米国内の連絡先情報の記入方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">ESTAの申請料金</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">ESTAの有効期限と再申請・確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">公式ウェブサイトについて解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">ESTA申請方法と取得手順を徹底解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">アプリのESTA申請方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">ESTA申請状況の確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#1a2744]">グアム入国にESTAは必要？</span></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA(エスタ)とは？事前入国審査制度を解説</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta-flow" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">【記入例付き】ESTAの申請方法を解説</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/place-of-birth" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">出生地や住所の書き方を紹介</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/us-contact-details" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">米国内の連絡先情報の記入方法</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/fee" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTAの申請料金</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/expiration-date" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTAの有効期限と再申請・確認方法</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/official-cbp" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">公式ウェブサイトについて解説</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/cbp-flow" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請方法と取得手順を徹底解説</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/application" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">アプリのESTA申請方法</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/status-check" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請状況の確認方法</Link></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/guam" className="text-sm text-[#1a2744] hover:text-[#c41e3a] transition-colors">グアム入国にESTAは必要？</Link></div>
           </div>
         </div>
       </div>

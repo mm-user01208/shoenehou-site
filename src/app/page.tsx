@@ -15,15 +15,15 @@ const steps = [
 ];
 
 const articleCards = [
-  { title: 'ESTA(エスタ)とは？', href: '/list-esta-application/esta', gradient: 'card-gradient-1' },
-  { title: '公式ウェブサイトについて解説', href: '/list-esta-application/official-cbp', gradient: 'card-gradient-2' },
-  { title: '出生地や住所の書き方', href: '/list-esta-application/place-of-birth', gradient: 'card-gradient-3' },
-  { title: 'ESTAの申請方法を解説', href: '/list-esta-application/esta-flow', gradient: 'card-gradient-4' },
-  { title: '公式ウェブサイトでの申請方法', href: '/list-esta-application/cbp-flow', gradient: 'card-gradient-5' },
-  { title: '米国内の連絡先情報', href: '/us-contact-details', gradient: 'card-gradient-6' },
-  { title: 'ESTAの有効期限と再申請', href: '/list-esta-application/expiration-date', gradient: 'card-gradient-1' },
-  { title: 'アプリのESTA申請方法', href: '/list-esta-application/application', gradient: 'card-gradient-2' },
-  { title: 'グアム入国にESTAは必要？', href: '/list-esta-application/guam', gradient: 'card-gradient-5' },
+  { title: 'ESTA(エスタ)とは？', href: '/list-esta-application/esta', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=400&h=250&fit=crop' },
+  { title: '公式ウェブサイトについて解説', href: '/list-esta-application/official-cbp', image: 'https://images.unsplash.com/photo-1569025743873-ea3a9ber472f?w=400&h=250&fit=crop' },
+  { title: '出生地や住所の書き方', href: '/list-esta-application/place-of-birth', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop' },
+  { title: 'ESTAの申請方法を解説', href: '/list-esta-application/esta-flow', image: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&h=250&fit=crop' },
+  { title: '公式ウェブサイトでの申請方法', href: '/list-esta-application/cbp-flow', image: 'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=400&h=250&fit=crop' },
+  { title: '米国内の連絡先情報', href: '/us-contact-details', image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&h=250&fit=crop' },
+  { title: 'ESTAの有効期限と再申請', href: '/list-esta-application/expiration-date', image: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=400&h=250&fit=crop' },
+  { title: 'アプリのESTA申請方法', href: '/list-esta-application/application', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop' },
+  { title: 'グアム入国にESTAは必要？', href: '/list-esta-application/guam', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=250&fit=crop' },
 ];
 
 export default function Page() {
@@ -155,8 +155,8 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {articleCards.map((card, i) => (
               <Link key={i} href={card.href} className="block rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
-                <div className={`${card.gradient} h-44 img-hover-shrink flex items-center justify-center`}>
-                  <span className="text-white text-4xl opacity-30">✈</span>
+                <div className="h-44 overflow-hidden">
+                  <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-95 transition-transform duration-300" />
                 </div>
                 <div className="p-4 bg-white">
                   <h3 className="font-medium text-sm" style={{ color: '#1a2744' }}>{card.title}</h3>
