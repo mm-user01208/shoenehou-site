@@ -12,9 +12,9 @@ export default function Page() {
       <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
       <Breadcrumb items={[{"label": "ESTA申請関連情報一覧"}]} />
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-lg font-bold text-[#1a2744] mb-4">関連記事</h3>
+          <h3 className="text-lg font-bold text-[#1a2744] mb-4">記事一覧</h3>
           <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA(エスタ)とは？事前入国審査制度を解説</span></div>
+            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline"><a href="https://www.shoenehou-online.jp/list-esta-application/esta" target="_blank">ESTA(エスタ)とは？事前入国審査制度を解説</a>></></span></div>
         <p className="text-gray-700 leading-relaxed mb-4">短期間の観光や商用を目的としてアメリカへ渡航する場合は、電子渡航認証ESTA(エスタ)の申請が必要です。</p>
             <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">【記入例付き】ESTAの申請方法を解説</span></div>
         <p className="text-gray-700 leading-relaxed mb-4">ESTAを申請するには、有効なパスポート、クレジットカード、メールアドレスが必要です。記入例を交えながら、申請方法を解説します。</p>
