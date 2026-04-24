@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'ESTA(エスタ)申請状況 | US ESTA Apply Website',
   description: 'ESTAの申請状況と審査結果、登録情報を確認する方法を解説します。ESTA申請の認証可否を確認する際は、ローマ字表記の姓名・生年月日・申請IDの入力が必要です。',
+  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/status-check/' },
 };
 
 export default function Page() {

@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'グアム入国にESTA(エスタ)は必要？入国審査についても紹介 | US ESTA Apply Website',
   description: 'グアムまたは北マリアナ諸島への入国では、渡航目的や滞在日数によってESTA(エスタ)の取得が求められます。本記事では、ESTAの申請方法をはじめ、グアム入国時の手続きについて解説します。',
+  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/guam/' },
 };
 
 export default function Page() {

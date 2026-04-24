@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = {
   title: 'ESTA(エスタ)の申請料金 | ESTA USA Entry',
   description: '当サイトではESTAの申請手続きの代行サービスを行います。当サイトにおける申請サービスの料金やお支払い方法、領収書の発行、キャンセルポリシーについて解説します。',
+  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/fee/' },
 };
 
 export default function Page() {

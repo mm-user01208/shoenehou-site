@@ -3,8 +3,9 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'ESTA(エスタ)の有効期限と再申請・確認の方法 | US ESTA Apply Website',
-  description: 'ESTAの有効期限は2年間です。渡米前に期限が切れている場合は、ESTAの再申請が必要となります。本記事では、ESTAの有効期限の確認手順や、申請情報の修正方法について解説します。',
+  title: 'ESTA(エスタ)の有効期限は2年間｜確認方法・更新・再申請の手順【2026年最新】',
+  description: 'ESTAの有効期限は取得日から2年間です。有効期限の確認方法、期限切れ時の再申請手順、パスポート更新時の注意点をわかりやすく解説。更新の方法もステップバイステップで紹介します。',
+  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/expiration-date/' },
 };
 
 export default function Page() {
