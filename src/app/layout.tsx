@@ -33,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
+        <div className="md:hidden text-right py-1 px-4 text-[10px] text-gray-400 bg-gray-50 border-b border-gray-100">PRを含みます</div>
         <main>{children}</main>
         <Footer />
         <FixedCTA />

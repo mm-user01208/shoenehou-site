@@ -70,6 +70,7 @@ export default function Header() {
           <Link href="/" className="text-gray-200 hover:text-white text-sm font-medium transition-colors">HOME</Link>
           <DropdownItem label="ESTA申請関連情報一覧" href="/list-esta-application" subLinks={estaLinks} />
           <DropdownItem label="サイト情報一覧" href="/list-site-information" subLinks={siteLinks} />
+          <span className="ml-2 text-[10px] text-gray-400">PRを含みます</span>
         </nav>
       </div>
       {open && (

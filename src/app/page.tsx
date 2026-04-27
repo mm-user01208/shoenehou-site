@@ -44,8 +44,25 @@ export default function Page() {
     { q: 'ESTA公式サイトについて', a: '<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer" class="text-[#c41e3a] hover:underline">CBP(アメリカ合衆国税関・国境警備局)</a>公式サイトからESTA(エスタ)を申請する場合は、<a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer" class="text-[#c41e3a] hover:underline">こちら</a>よりお手続きください。公式サイトは日本語表示に切り替えることが可能ですが、審査はCBPが行うため、申請フォームへの入力はすべて英語(ローマ字)で行う必要があります。また、問い合わせ対応も英語のみとなるためご注意ください。 US ESTA Apply Websiteでは、日本語でのお問い合わせ対応や、分かりづらい入力項目のサポートを通じて、お客様の<a href="/list-site-information/entry" class="text-[#c41e3a] hover:underline">ESTA申請</a>（お申し込み）を日本語でサポートいたします。' },
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a.replace(/<[^>]*>/g, ''),
+      },
+    })),
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="hero-section">
         <div className="relative z-10 px-4 py-20 max-w-3xl mx-auto">
