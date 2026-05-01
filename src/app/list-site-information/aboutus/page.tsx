@@ -13,6 +13,7 @@ export default function Page() {
       <Breadcrumb items={[{"label": "サイト情報一覧", "href": "/list-site-information"}, {"label": "特定商取引法に基づく表記・運営者情報"}]} />
         <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">特定商取引法に基づく表記・運営者情報</h1>
         <p className="text-gray-700 leading-relaxed mb-4">サイト名</p>
+        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Website</p>
         <p className="text-gray-700 leading-relaxed mb-4">運営責任者</p>
         <p className="text-gray-700 leading-relaxed mb-4">大山 由美子</p>
         <p className="text-gray-700 leading-relaxed mb-4">所在地</p>

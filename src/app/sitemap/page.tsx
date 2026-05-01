@@ -19,6 +19,16 @@ const estaLinks = [
   { title: 'アプリのESTA申請方法', href: '/list-esta-application/application' },
   { title: 'ESTA申請状況の確認方法', href: '/list-esta-application/status-check' },
   { title: 'グアム入国にESTAは必要？', href: '/list-esta-application/guam' },
+  { title: 'ESTA公式サイトと偽サイトの見分け方', href: '/list-esta-application/official-vs-fake' },
+  { title: 'ESTA申請の住所・出生地・勤務先の書き方', href: '/list-esta-application/address-guide' },
+  { title: 'ESTAのグループ申請・家族申請の方法', href: '/list-esta-application/group-family' },
+  { title: 'ESTAとパスポートの関係', href: '/list-esta-application/passport' },
+  { title: '子供・未成年のESTA申請方法', href: '/list-esta-application/children' },
+  { title: 'ESTA申請が却下・拒否された場合の対処法', href: '/list-esta-application/denied' },
+  { title: 'ハワイ旅行とESTA', href: '/list-esta-application/hawaii' },
+  { title: 'アメリカ乗り継ぎ(トランジット)とESTA', href: '/list-esta-application/transit' },
+  { title: 'ESTAの更新・延長方法', href: '/list-esta-application/renewal' },
+  { title: 'ESTA申請の料金・費用ガイド', href: '/list-esta-application/cost' },
 ];
 
 const siteLinks = [
