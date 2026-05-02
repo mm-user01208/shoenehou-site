@@ -11,6 +11,52 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ESTAの有効期限を延長することはできますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ、ESTAには更新や延長の機能はありません。有効期限が切れた場合は、新規で再申請する必要があります。再申請の手順は初回申請と同じで、すべての情報を改めて入力し、申請手数料を支払います。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ESTAの再申請はいつ行うべきですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "おすすめの再申請時期は、有効期限が切れる1ヶ月前、または次回の渡航予定日の1ヶ月前のいずれか早い方です。少なくとも渡航日の3日前（72時間前）までには申請を完了させてください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "前回の申請データを使って再申請できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ、ESTAの再申請時に前回の申請データは引き継がれません。すべての情報（氏名、パスポート番号、連絡先、滞在先など）を最初から入力し直す必要があります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "パスポートを更新したらESTAはどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "パスポートを更新すると、有効期間内のESTAであっても自動的に失効します。ESTAはパスポート番号に紐づけて管理されているため、新しいパスポートの情報でESTAを再申請する必要があります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ESTAの有効期限が切れた状態でアメリカに行けますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ、ESTAの有効期限が切れた状態ではアメリカに渡航できません。航空会社のチェックインカウンターで搭乗を拒否される可能性があります。渡航前に必ずESTAの有効期限を確認してください。"
+            }
+          }
+        ]
+      }) }} />
       <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
       <Breadcrumb items={[{"label": "ESTA申請関連情報一覧", "href": "/list-esta-application"}, {"label": "ESTAの更新・延長方法を解説｜期限切れ前の再申請手順【2026年】"}]} />
         <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">ESTAの更新・延長方法を解説

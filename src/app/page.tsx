@@ -3,8 +3,8 @@ import FAQ from '@/components/FAQ';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ESTA(エスタ)申請サイト｜アメリカ渡航に必要な電子渡航認証【2026年】',
-  description: 'ESTA(エスタ)はアメリカへの短期渡航に必要な電子渡航認証です。申請方法・料金・有効期限・記入例を日本語でわかりやすく解説。出発72時間前までに申請を完了してください。',
+  title: 'ESTA(エスタ)申請｜CBP公式準拠の電子渡航認証申請サイト【2026年最新】',
+  description: 'ESTA(エスタ)公式申請サイト。アメリカ渡航に必要な電子渡航認証の申請方法・記入例・料金・有効期限を日本語で解説。ESTAとは何か、申請の流れ、よくある質問まで網羅。出発72時間前までにお手続きください。',
   alternates: { canonical: 'https://shoenehou-online.jp/' },
 };
 

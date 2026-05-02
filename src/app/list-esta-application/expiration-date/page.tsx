@@ -4,13 +4,59 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'ESTA(エスタ)の有効期限は2年間｜確認方法・更新・再申請の手順【2026年最新】',
-  description: 'ESTAの有効期限は取得日から2年間です。有効期限の確認方法、期限切れ時の再申請手順、パスポート更新時の注意点をわかりやすく解説。更新の方法もステップバイステップで紹介します。',
+  description: 'ESTAの有効期限は2年間。有効期限の確認方法を画像付きで解説。期限切れ時の再申請手順・パスポート更新時の注意点・滞在中に期限が切れた場合の対処法まで網羅。今すぐ有効期限を確認しましょう。',
   alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/expiration-date/' },
 };
 
 export default function Page() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ESTAの有効期限はどのくらいですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ESTAの有効期限は原則2年間です。ただし、ESTA申請時に使用したパスポートの有効期限が2年未満の場合は、ESTAもそのパスポートの有効期限と同日に失効します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ESTAの有効期限を確認する方法は？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "当サイトを通じてESTAを申請された方は、お問い合わせフォームから有効期限の照会が可能です。CBP公式サイトから申請された方は、ESTA申請公式サイトへ直接お問い合わせください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ESTAの更新はできますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ESTAには更新制度はありません。有効期限が切れた場合やパスポート情報に変更が生じた場合は、新たにESTAを再申請する必要があります。再申請には有効なパスポート、クレジットカード、メールアドレスが必要です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "アメリカ滞在中にESTAの有効期限が切れた場合はどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ESTAの有効性が確認されるのはアメリカ入国時であるため、滞在中や出国時にESTAの有効期限が切れていても原則として影響はありません。入国時に承認されていれば、最長90日間のアメリカ滞在が認められます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ESTAの再申請はいつでもできますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、ESTAの再申請はいつでも可能です。有効期限内であっても再申請でき、回数に制限はありません。ただし、新たにESTAが承認された場合、それまでのESTAは無効となります。"
+            }
+          }
+        ]
+      }) }} />
       <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
       <Breadcrumb items={[{"label": "ESTA申請関連情報一覧", "href": "/list-esta-application"}, {"label": "ESTA(エスタ)の有効期限と再申請・確認の方法"}]} />
         <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">ESTA(エスタ)の有効期限と再申請・確認の方法</h1>
