@@ -67,19 +67,21 @@ export default function Page() {
       <section className="hero-section">
         <div className="relative z-10 px-4 py-20 max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: "'Noto Serif JP', serif", textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}>
-            アメリカ渡航にはESTAの申請が必要です
+            アメリカ渡航にはESTAの申請が必要です。
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8">
-            申請には最大3日かかるため、余裕を持ってお手続きください。
-          </p>
-          <Link
-            href="/list-site-information/entry"
-            className="inline-flex items-center gap-2 text-white font-bold py-4 px-10 rounded-lg text-lg transition-all hover:opacity-90"
-            style={{ background: '#c41e3a' }}
-          >
-            <span>✓</span>
-            <span>ESTA申請をはじめる</span>
-          </Link>
+          <div className="md:flex md:items-end md:gap-8">
+            <p className="text-lg md:text-xl text-gray-200 mb-4 md:mb-0 md:flex-1">
+              申請完了まで最大3日ほどかかるため、余裕をもってお手続きください。
+            </p>
+            <Link
+              href="/list-site-information/entry"
+              className="inline-flex items-center gap-2 text-white font-bold py-4 px-10 rounded-lg text-lg transition-all hover:opacity-90 flex-shrink-0"
+              style={{ background: '#c41e3a' }}
+            >
+              <span>✓</span>
+              <span>ESTA申請をはじめる</span>
+            </Link>
+          </div>
         </div>
       </section>
 
