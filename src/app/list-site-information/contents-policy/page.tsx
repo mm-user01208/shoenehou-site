@@ -1,85 +1,106 @@
 import type { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'コンテンツポリシー | US ESTA Apply Website',
-  description: 'US ESTA Apply Websiteは、アメリカ渡航に必要な電子渡航認証システム“EATA(エスタ)”の申請代行サイトです。本記事では、サイト概要や運営者情報、記事制作の流れについて紹介します。',
+  description: 'US ESTA Apply Websiteのコンテンツポリシーです。サイトの概要、運営者情報、提供している情報、記事制作のプロセスを掲載しています。',
 };
 
-export default function Page() {
-  return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
-      <Breadcrumb items={[{"label": "サイト情報一覧", "href": "/list-site-information"}, {"label": "コンテンツポリシー"}]} />
-        <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">コンテンツポリシー</h1>
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-lg font-bold text-[#1a2744] mb-4">関連記事</h3>
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">US ESTA Apply Websiteの概要</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Websiteは、アメリカへの渡航を予定されている方を対象に、電子渡航認証システム「ESTA(エスタ)」の申請手続きをサポートするサービスを提供するサイトです。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAの複雑な申請手続きを簡単に行えるよう、日本語対応の申請フォームやシステムを導入し、専門スタッフによる充実したサポート体制を整えています。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">また、ESTA申請代行サービスに加え、アメリカ渡航に必要な情報を幅広く提供しています。初めてアメリカを訪れる方から、何度も渡航されている方まで、幅広いニーズに応えられるよう基礎的な申請方法や手順、米国ビザ制度の詳細、入国審査の流れ、公的機関が発表した情報を踏まえた記事などを掲載し、常に最新情報の発信に努めています。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">当サイトの目的は、ESTA申請に関する不安や疑問を解消し、スムーズなアメリカ渡航を実現することです。申請代行サービスの提供およびアメリカ渡航に関する情報発信を通じて、お客様が安心して渡航準備を進められる環境を提供し続けています。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">US ESTA Apply WebsiteでESTA申請を行うメリット</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Websiteでは、90日以内の観光または商用を目的としてアメリカへ渡航する際に必要となる電子渡航認証「ESTA(エスタ)」の申請代行およびサポートを行っています。申請フォームは日本語に対応しており、パスポート情報や個人情報、渡航先に関する質問についても、画面の案内に従って入力することでスムーズに手続きが完了できます。また、申請方法を丁寧に解説した記事や、入力ミスが起きやすい項目・間違えやすい項目に関する記入例も掲載しているため、不備による申請却下や審査遅延のリスクを軽減できます。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">申請手続き中に不明点や疑問が生じた場合は、当サイトの「お問い合わせフォーム」よりご連絡いただけます。経験豊富なスタッフが迅速に対応し、疑問を解消しながら申請手続きを進めることが可能です。さらに、申請完了後の修正や変更に関する質問にも対応しており、アメリカ渡航まで一貫したサポート体制を整えています。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">初めてのアメリカ渡航で不安を感じている方から、複雑な手続きに戸惑っている方まで、さまざまな状況のお客様に安心してご利用いただけるサイト運営を心掛けています。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">運営者の基本情報・事業内容</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">サイト名</p>
-        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Website</p>
-        <p className="text-gray-700 leading-relaxed mb-4">運営責任者</p>
-        <p className="text-gray-700 leading-relaxed mb-4">大山 由美子</p>
-        <p className="text-gray-700 leading-relaxed mb-4">所在地</p>
-        <p className="text-gray-700 leading-relaxed mb-4">東京都港区港南2-3-1 大信秋山ビル</p>
-        <p className="text-gray-700 leading-relaxed mb-4">電話番号</p>
-        <p className="text-gray-700 leading-relaxed mb-4">03-6899-5503</p>
-        <p className="text-gray-700 leading-relaxed mb-4">提供している情報・</p>
-        <p className="text-gray-700 leading-relaxed mb-4">サポート内容</p>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請代行サイト「US ESTA Apply Website」の企画・運営を通じて、アメリカへの渡航を予定されている方に向けた情報提供および申請手続きのサポートを行っています。ESTA申請のサポートをはじめ、ESTAや米国ビザに関する基礎知識や制度の概要、最新情報など、アメリカ渡航に役立つさまざまな情報を掲載しています。
-「US ESTA Apply Website」が提供するサービスは以下のとおりです。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">提供サービス一覧</p>
-        <p className="text-gray-700 leading-relaxed mb-4">電子渡航認証システム「ESTA」の申請サポート</p>
-        <p className="text-gray-700 leading-relaxed mb-4">電子渡航認証システム「ESTA」の基本情報の提供</p>
-        <p className="text-gray-700 leading-relaxed mb-4">米国ビザに関する基本情報の提供</p>
-        <p className="text-gray-700 leading-relaxed mb-4">渡航先・国別の査証(ビザ)情報の紹介</p>
-        <p className="text-gray-700 leading-relaxed mb-4">アメリカ政府の公式ウェブサイトに関する情報の案内</p>
-        <p className="text-gray-700 leading-relaxed mb-4">※情報の正確性を保つため、アメリカの公的機関による発表や政府サイトを定期的に確認し、当サイトの内容も随時更新しています。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">US ESTA Apply Websiteが提供している情報</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Websiteでは、ESTA申請代行サービスに加え、アメリカ渡航に関する実用的かつ最新の情報を幅広く提供しています。当サイトに掲載している記事は、専門知識を備えたライターが中心となって作成しており、難解になりがちな内容を日本語で分かりやすく解説しています。また、渡航前の準備段階から現地滞在中に役立つ情報まで網羅している点も、当サイト  の大きな特長です。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">ESTAの基本情報と申請方法</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">US ESTA Apply Websiteでは、電子渡航認証システム「ESTA(エスタ)」に関する情報を発信しています。パソコン版およびスマートフォン版の申請方法や手順、申請後のステータス確認方法、再申請の手続きまで、初めてアメリカを訪れる方でも安心して渡航準備ができるよう、分かりやすく解説した記事を多数掲載しています。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">米国ビザに関する情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAの申請要件を満たさない方や、アメリカでの長期滞在、留学、就労などを目的として渡航を希望される方は、米国ビザの取得が必要となります。当サイトでは、観光ビザ、学生ビザ、就労ビザなど各ビザカテゴリーに関する詳しい情報を紹介しています。各ビザの特徴や申請要件、申請方法、必要書類について解説した記事を多数掲載しており、ESTAによる渡航が可能かどうかを判断する際の参考としてもご活用いただけます。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">渡航先・国別のビザ情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">アメリカの人気渡航先である“ハワイ”や“ロサンゼルス”の空港に到着してから入国審査を受けるまでの流れをはじめ、グアムや北マリアナ諸島への渡航、さらにアメリカで乗り換えが必要となる渡航先“キューバ”や“サイパン”におけるESTA申請に関する情報など、複数の記事を掲載しています。各渡航先によって入国条件や手続きが異なるため、国・地域別に詳しい内容を分かりやすく紹介していま す。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">アメリカ政府公式ウェブサイト・関連機関の情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">アメリカ渡航に関する正確な情報を得るためには、公的機関が発信する最新情報を確認することが重要です。当サイトでは、アメリカ国土交通省(DHS)や税関・国境警備局(CBP)など、ESTA制度を管轄する政府機関の公式ウェブサイトの情報を紹介し、ESTA申請制度の根拠となる公式発表や最新の渡航情報へ直接アクセスできるようサポートしています。申請代行サービスの利用と併せて、公的機関が発信する一次情報を確認できるため、誤った情報によるトラブル防止にもつながります。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">US ESTA Apply Website記事制作の手順</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">「US ESTA Apply Website」では、信頼性の高い情報提供を実現するため、明確な記事制作のプロセスを設けています。企画段階から記事公開後に至るまで一貫した管理体制を整え、常に最新かつ正確な情報を維持することを重視しています。これらの工程は当サイトのライティングチームが中心となって進めており、情報の精査や記事の品質管理を徹底しながら、ユーザーの皆様にとって実用性の高いコンテンツ制作を行っています。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">1.　記事内容の企画・構成決定</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">はじめに、アメリカの渡航制度やESTA申請に精通したライティングチームが、読者のニーズや最新の渡航情報を踏まえて協議し、記事のテーマを選定します。その後、検索傾向や旅行者が抱きやすい疑問点を分析し、「本当に必要とされている情報は何か」を重視したうえで、記事の方針と内容を決定します。記事の方向性を明確にした後は、読者に寄り沿った内容になるよう、チーム内で意見を共有しながらページ全体の構成を丁寧に組み立てていきます。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">2.　調査・記事作成</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">記事の構成に基づき、アメリカ渡航制度やESTA申請に関する専門的な知識を備えたライターが、情報の調査および記事の執筆を行います。公的機関の発表資料をはじめ、航空会社や入国管理当局など、信頼性の高い情報源を基に正確性を重視した実用性の高い記事を作成しています。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">特に、米国ビザを利用したアメリカ渡航や、空港から市街地への移動手段に関する情報については、実際の体験を踏まえて執筆することで、読者のニーズにより的確に応えられる、信頼性の高い内容となるよう努めています。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">3.　記事の校閲・ファクトチェック</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">執筆後の記事は、ライティングチームの複数名が校閲・事実確認を行い、文章の品質をチェックしています。情報の正確性や表現の分かりやすさ、最新情報との整合性、誤解を招く表現の有無などを細かく確認し、必要に応じて修正を加えます。こうした複数人によるチェック体制により、専門性と信頼性を兼ね備えた記事へと仕上げています。</p>
-        <h3 className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">4.　記事の入稿、定期的な更新作業</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">記事の完成後は、「US ESTA Apply Website」に掲載します。公開後は、PC・スマートフォン・タブレットなど複数のデバイスで、レイアウトの崩れがないか、画像表示に不具合がないか、どの端末でも読みやすいかなどを確認し、念入りに最終チェックを行います。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">さらに、記事公開後も定期的にメンテナンスを実施しています。アメリカ渡航に関する情報は日々更新されるため、公開済みの記事についても継続的に内容を見直し、必要に応じて修正を行うことで、長期にわたり信頼できる情報を提供しています。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA(エスタ)とは？事前入国審査制度を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">【記入例付き】ESTAの申請方法を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">出生地や住所の書き方を紹介</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">米国内の連絡先情報の記入方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTAの申請料金</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTAの有効期限と再申請・確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">公式ウェブサイトについて解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請方法と取得手順を徹底解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">アプリのESTA申請方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請状況の確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">グアム入国にESTAは必要？</span></div>
-          </div>
-        </div>
-      </div>
+const BODY_HTML = `<div class="redesign-detail">
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="crumb">
+      <a href="/">HOME</a><span>›</span>
+      <a href="/list-site-information">サイト情報一覧</a><span>›</span>
+      <em>コンテンツポリシー</em>
+    </nav>
+    <p class="article__eyebrow">Content Policy</p>
+    <h1 class="article__title">コンテンツポリシー</h1>
+    <p class="article__lede">当サイトの概要・運営者情報・提供する情報・記事制作のプロセスをご案内します。</p>
+  </div>
+</section>
+
+<section class="article-main">
+  <div class="article-main__inner">
+    <aside class="toc">
+      <p class="toc__head">目次</p>
+      <ol>
+        <li><a href="#sec-01">US ESTA Apply Websiteの概要</a></li>
+        <li><a href="#sec-02">運営者の基本情報・事業内容</a></li>
+        <li><a href="#sec-03">US ESTA Apply Websiteが提供している情報</a></li>
+        <li><a href="#sec-04">US ESTA Apply Website 記事制作の手順</a></li>
+      </ol>
+    </aside>
+    <article class="article-body">
+      <section id="sec-01" class="fade-up">
+        <h2>US ESTA Apply Websiteの概要</h2>
+        <p>US ESTA Apply Websiteは、アメリカへの渡航を予定されている方を対象に、電子渡航認証システム「ESTA(エスタ)」の申請手続きをサポートするサービスを提供するサイトです。</p>
+        <p>ESTAの複雑な申請手続きを簡単に行えるよう、日本語対応の申請フォームやシステムを導入し、専門スタッフによる充実したサポート体制を整えています。</p>
+        <p>また、ESTA申請代行サービスに加え、アメリカ渡航に必要な情報を幅広く提供しています。初めてアメリカを訪れる方から、何度も渡航されている方まで、幅広いニーズに応えられるよう基礎的な申請方法や手順、米国ビザ制度の詳細、入国審査の流れ、公的機関が発表した情報を踏まえた記事などを掲載し、常に最新情報の発信に努めています。</p>
+        <p>当サイトの目的は、ESTA申請に関する不安や疑問を解消し、スムーズなアメリカ渡航を実現することです。申請代行サービスの提供およびアメリカ渡航に関する情報発信を通じて、お客様が安心して渡航準備を進められる環境を提供し続けています。</p>
+        <h3>US ESTA Apply WebsiteでESTA申請を行うメリット</h3>
+        <p>US ESTA Apply Websiteでは、90日以内の観光または商用を目的としてアメリカへ渡航する際に必要となる電子渡航認証「ESTA(エスタ)」の申請代行およびサポートを行っています。申請フォームは日本語に対応しており、パスポート情報や個人情報、渡航先に関する質問についても、画面の案内に従って入力することでスムーズに手続きが完了できます。また、申請方法を丁寧に解説した記事や、入力ミスが起きやすい項目・間違えやすい項目に関する記入例も掲載しているため、不備による申請却下や審査遅延のリスクを軽減できます。</p>
+        <p>申請手続き中に不明点や疑問が生じた場合は、当サイトの「お問い合わせフォーム」よりご連絡いただけます。経験豊富なスタッフが迅速に対応し、疑問を解消しながら申請手続きを進めることが可能です。さらに、申請完了後の修正や変更に関する質問にも対応しており、アメリカ渡航まで一貫したサポート体制を整えています。</p>
+        <p>初めてのアメリカ渡航で不安を感じている方から、複雑な手続きに戸惑っている方まで、さまざまな状況のお客様に安心してご利用いただけるサイト運営を心掛けています。</p>
+      </section>
+      <section id="sec-02" class="fade-up">
+        <h2>運営者の基本情報・事業内容</h2>
+        <table>
+          <tbody>
+            <tr><th>サイト名</th><td>US ESTA Apply Website</td></tr>
+            <tr><th>運営責任者</th><td>大山 由美子</td></tr>
+            <tr><th>所在地</th><td>東京都港区港南2-3-1 大信秋山ビル</td></tr>
+            <tr><th>電話番号</th><td>03-6899-5503</td></tr>
+          </tbody>
+        </table>
+        <p>ESTA申請代行サイト「US ESTA Apply Website」の企画・運営を通じて、アメリカへの渡航を予定されている方に向けた情報提供および申請手続きのサポートを行っています。ESTA申請のサポートをはじめ、ESTAや米国ビザに関する基礎知識や制度の概要、最新情報など、アメリカ渡航に役立つさまざまな情報を掲載しています。</p>
+        <p>「US ESTA Apply Website」が提供するサービスは以下のとおりです。</p>
+        <ul>
+          <li>電子渡航認証システム「ESTA」の申請サポート</li>
+          <li>電子渡航認証システム「ESTA」の基本情報の提供</li>
+          <li>米国ビザに関する基本情報の提供</li>
+          <li>渡航先・国別の査証(ビザ)情報の紹介</li>
+          <li>アメリカ政府の公式ウェブサイトに関する情報の案内</li>
+        </ul>
+        <p>※情報の正確性を保つため、アメリカの公的機関による発表や政府サイトを定期的に確認し、当サイトの内容も随時更新しています。</p>
+      </section>
+      <section id="sec-03" class="fade-up">
+        <h2>US ESTA Apply Websiteが提供している情報</h2>
+        <p>US ESTA Apply Websiteでは、ESTA申請代行サービスに加え、アメリカ渡航に関する実用的かつ最新の情報を幅広く提供しています。当サイトに掲載している記事は、専門知識を備えたライターが中心となって作成しており、難解になりがちな内容を日本語で分かりやすく解説しています。また、渡航前の準備段階から現地滞在中に役立つ情報まで網羅している点も、当サイトの大きな特長です。</p>
+        <h3>ESTAの基本情報と申請方法</h3>
+        <p>US ESTA Apply Websiteでは、電子渡航認証システム「ESTA(エスタ)」に関する情報を発信しています。パソコン版およびスマートフォン版の申請方法や手順、申請後のステータス確認方法、再申請の手続きまで、初めてアメリカを訪れる方でも安心して渡航準備ができるよう、分かりやすく解説した記事を多数掲載しています。</p>
+        <h3>米国ビザに関する情報</h3>
+        <p>ESTAの申請要件を満たさない方や、アメリカでの長期滞在、留学、就労などを目的として渡航を希望される方は、米国ビザの取得が必要となります。当サイトでは、観光ビザ、学生ビザ、就労ビザなど各ビザカテゴリーに関する詳しい情報を紹介しています。各ビザの特徴や申請要件、申請方法、必要書類について解説した記事を多数掲載しており、ESTAによる渡航が可能かどうかを判断する際の参考としてもご活用いただけます。</p>
+        <h3>渡航先・国別のビザ情報</h3>
+        <p>アメリカの人気渡航先である「ハワイ」や「ロサンゼルス」の空港に到着してから入国審査を受けるまでの流れをはじめ、グアムや北マリアナ諸島への渡航、さらにアメリカで乗り換えが必要となる渡航先「キューバ」や「サイパン」におけるESTA申請に関する情報など、複数の記事を掲載しています。各渡航先によって入国条件や手続きが異なるため、国・地域別に詳しい内容を分かりやすく紹介しています。</p>
+        <h3>アメリカ政府公式ウェブサイト・関連機関の情報</h3>
+        <p>アメリカ渡航に関する正確な情報を得るためには、公的機関が発信する最新情報を確認することが重要です。当サイトでは、アメリカ国土安全保障省(DHS)や税関・国境警備局(CBP)など、ESTA制度を管轄する政府機関の公式ウェブサイトの情報を紹介し、ESTA申請制度の根拠となる公式発表や最新の渡航情報へ直接アクセスできるようサポートしています。申請代行サービスの利用と併せて、公的機関が発信する一次情報を確認できるため、誤った情報によるトラブル防止にもつながります。</p>
+      </section>
+      <section id="sec-04" class="fade-up">
+        <h2>US ESTA Apply Website 記事制作の手順</h2>
+        <p>「US ESTA Apply Website」では、信頼性の高い情報提供を実現するため、明確な記事制作のプロセスを設けています。企画段階から記事公開後に至るまで一貫した管理体制を整え、常に最新かつ正確な情報を維持することを重視しています。これらの工程は当サイトのライティングチームが中心となって進めており、情報の精査や記事の品質管理を徹底しながら、ユーザーの皆様にとって実用性の高いコンテンツ制作を行っています。</p>
+        <h3>1. 記事内容の企画・構成決定</h3>
+        <p>はじめに、アメリカの渡航制度やESTA申請に精通したライティングチームが、読者のニーズや最新の渡航情報を踏まえて協議し、記事のテーマを選定します。その後、検索傾向や旅行者が抱きやすい疑問点を分析し、「本当に必要とされている情報は何か」を重視したうえで、記事の方針と内容を決定します。記事の方向性を明確にした後は、読者に寄り添った内容になるよう、チーム内で意見を共有しながらページ全体の構成を丁寧に組み立てていきます。</p>
+        <h3>2. 調査・記事作成</h3>
+        <p>記事の構成に基づき、アメリカ渡航制度やESTA申請に関する専門的な知識を備えたライターが、情報の調査および記事の執筆を行います。公的機関の発表資料をはじめ、航空会社や入国管理当局など、信頼性の高い情報源を基に正確性を重視した実用性の高い記事を作成しています。</p>
+        <p>特に、米国ビザを利用したアメリカ渡航や、空港から市街地への移動手段に関する情報については、実際の体験を踏まえて執筆することで、読者のニーズにより的確に応えられる、信頼性の高い内容となるよう努めています。</p>
+        <h3>3. 記事の校閲・ファクトチェック</h3>
+        <p>執筆後の記事は、ライティングチームの複数名が校閲・事実確認を行い、文章の品質をチェックしています。情報の正確性や表現の分かりやすさ、最新情報との整合性、誤解を招く表現の有無などを細かく確認し、必要に応じて修正を加えます。こうした複数人によるチェック体制により、専門性と信頼性を兼ね備えた記事へと仕上げています。</p>
+        <h3>4. 記事の入稿、定期的な更新作業</h3>
+        <p>記事の完成後は、「US ESTA Apply Website」に掲載します。公開後は、PC・スマートフォン・タブレットなど複数のデバイスで、レイアウトの崩れがないか、画像表示に不具合がないか、どの端末でも読みやすいかなどを確認し、念入りに最終チェックを行います。</p>
+        <p>さらに、記事公開後も定期的にメンテナンスを実施しています。アメリカ渡航に関する情報は日々更新されるため、公開済みの記事についても継続的に内容を見直し、必要に応じて修正を行うことで、長期にわたり信頼できる情報を提供しています。</p>
+      </section>
     </article>
-  );
+  </div>
+</section>
+
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+</div><!--$--><!--/$-->`;
+
+export default function Page() {
+  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

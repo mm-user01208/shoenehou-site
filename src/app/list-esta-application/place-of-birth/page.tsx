@@ -1,477 +1,145 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'ESTA(エスタ)申請の住所・出生地の書き方【記入例付き】英語表記ガイド',
-  description: 'ESTA申請の住所・出生地の英語表記を記入例付きで解説。東京・大阪・札幌・仙台・福岡など主要都市の具体的な入力例を掲載。出生地と本籍地の違い、国籍と出生国の使い分けも紹介。',
-  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/place-of-birth/' },
+  title: 'ESTA(エスタ)申請時の出生地や住所の書き方を解説 | US ESTA Apply Website',
+  description: 'ESTA(エスタ)の審査はアメリカCBPによって行われるため、申請フォームはすべて英語(ローマ字)での入力が必須です。出生地と現住所の入力方法を、記入例付きで解説します。',
 };
 
-export default function Page() {
-  return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "ESTA申請の「出生地」には何を入力すればよいですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "出生地（Birthplace）には、本籍地や住民票の登録地ではなく、実際に生まれた都道府県または市区町村をローマ字で入力します。例えば、東京都千代田区で出生した方は「TOKYO」または「CHIYODA-KU」と入力します。不明な場合は空欄でも申請可能です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "「国籍」と「出生国」の違いは何ですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "国籍（Nationality）は現在法的に保有している国籍を、出生国（Country of Birth）は生まれた国を指します。日本国内で生まれた日本国籍者は両方とも「JAPAN」を選択しますが、海外で生まれた場合は出生国に該当する国を選択してください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請で日本の住所はどう英語表記しますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "日本の住所を英語圏の書き方（小さい単位から大きい単位へ）で入力します。例：「東京都港区芝浦1丁目1-1 ABCコーポ301号」の場合、「#301 ABC Corp, 1-1 Shibaura 1-chome, Minato-ku, Tokyo」のように入力します。都道府県名の「Prefecture」は省略可能です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "マンション名や部屋番号も入力する必要がありますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "アパートやマンションにお住まいの場合は、建物名や部屋番号も入力することが推奨されています。入力の順番は「部屋番号→建物名→番地→町名→市区町村→都道府県」です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "住所のローマ字表記で「丁目」はどう書きますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "「丁目」はそのまま「-chome」とローマ字表記するか、数字にハイフンを使って省略できます。例えば「青葉台2丁目5番4号」は「2-5-4 Aobadai」または「2-5-4 Aobadai 2-chome」と記載します。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請の住所欄で「Prefecture」は省略できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい、ESTA申請フォームでは都道府県名の「Prefecture」は省略可能です。「Tokyo」「Osaka」「Hokkaido」のように都道府県名だけで入力しても問題ありません。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "勤務先の住所もESTA申請で入力が必要ですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "現在または過去に就労経験がある方は、勤務先の情報（会社名・住所・電話番号）の入力が求められます。ただし不明な項目は空欄でも構いません。勤務先の住所も自宅住所と同様にローマ字で入力してください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "出生地が分からない場合はどうすればいいですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "出生地（出生都市）の入力は任意項目のため、不明な場合は空欄でも申請可能です。母子手帳や戸籍謄本を確認すると出生地を特定できます。出生国のみ「JAPAN」を選択すれば問題ありません。"
-            }
-          }
-        ]
-      }) }} />
-      <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
-      <Breadcrumb items={[{"label": "ESTA申請関連情報一覧", "href": "/list-esta-application"}, {"label": "ESTA(エスタ)申請時の出生地や住所の書き方を解説"}]} />
-        <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">ESTA(エスタ)申請時の
-出生地や住所の書き方を解説</h1>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)は、アメリカ国土安全保障省の管轄下にある税関・国境警備局(CBP)によって運営されているため、申請フォームの項目はすべて英語(ローマ字)で入力する必要があります。なかでも出生地や住所の入力は、日本語表記をどのように英語に変換すればよいか迷いやすい項目です。入力に誤りがあると、審査の遅延や再申請が必要になる可能性もあるため、正確な入力が求められます。本記事では、ESTA申請フォームにおける出生地や住所の正しい入力方法について、具体例を交えながら詳しく解説します。</p>
-        <div className="bg-[#f8fafc] border border-gray-200 rounded-lg p-5 my-6">
-          <p className="text-base font-bold text-[#1a2744] mb-3 flex items-center gap-2"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>目次</p>
-          <ul className="space-y-2 text-sm">
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-1" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">出生地(出生都市)について</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-birth-examples" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">都道府県別・出生地の入力例一覧</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-2" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">国籍と出生国について</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-3" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">現住所の入力方法</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-format" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">住所の各項目の入力先ガイド</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-4" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">北海道札幌市にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-5" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">宮城県仙台市にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-6" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">東京都港区にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-nagoya" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">愛知県名古屋市にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-7" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">大阪府大阪市にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-8" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">福岡県福岡市にお住まいの方の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-workplace" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">勤務先住所の入力例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-mistakes" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">よくある間違いと正しい書き方</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-faq" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">よくある質問</a></li>
-          </ul>
-        </div>
+const BODY_HTML = `<div class="redesign-detail">
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="crumb" aria-label="パンくず">
+      <a href="/">HOME</a><span>›</span>
+      <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
+      <em>ESTA(エスタ)申請時の出生地や住所の書き方を解説</em>
+    </nav>
+    <p class="article__eyebrow">Place of Birth</p>
+    <h1 class="article__title">ESTA(エスタ)申請時の出生地や住所の書き方を解説</h1>
+    <p class="article__lede">ESTA(エスタ)は、アメリカ国土安全保障省の管轄下にある税関・国境警備局(CBP)によって運営されているため、申請フォームの項目はすべて英語(ローマ字)で入力する必要があります。本記事ではESTA申請フォームにおける出生地や住所の正しい入力方法を、具体例を交えながら詳しく解説します。</p>
+  </div>
+</section>
 
-        <h2 id="section-1" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">出生地(出生都市)について</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請フォームにおける「出生地(Birthplace)」とは、申請者本人が実際に生まれた都市名を入力する項目です。本籍地や住民票の登録地ではなく、実際に出生した都道府県または市区町村を指します。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">米国の入国管理を担う米国税関・国境警備局(CBP)は、ESTA申請時に入力された個人情報をもとに事前審査を行います。出生地の情報は、同姓同名者との識別や過去の渡航履歴の照合などに利用される重要な情報の一つであるため、正確な都市名をローマ字で入力することが重要です。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">例えば、東京都千代田区で出生した方は「TOKYO」または「CHIYODA-KU」、神奈川県横浜市の方は、「KANAGAWA」または「YOKOHAMA-SHI」と入力します。出生地が不明な場合は、空欄でも申請は可能です。</p>
-        <div className="bg-[#f0f7ff] border-l-4 border-blue-400 p-4 mb-4">
-          <p className="text-gray-700 text-sm"><span className="font-bold">出生地の調べ方：</span>出生地が分からない場合は、母子手帳や戸籍謄本を確認してください。母子手帳には出産した病院名と住所が記載されています。戸籍謄本では「出生地」の欄に記載があります。いずれも確認できない場合は、出生都市は空欄で申請し、出生国のみ「JAPAN」を選択すれば問題ありません。</p>
-        </div>
+<section class="article-main">
+  <div class="article-main__inner">
+    <aside class="toc">
+      <p class="toc__head">目次</p>
+      <ol>
+        <li><a href="#sec-01">出生地(出生都市)について</a></li>
+        <li><a href="#sec-02">国籍と出生国について</a></li>
+        <li><a href="#sec-03">現住所の入力方法</a></li>
+        <li><a href="#sec-04">北海道札幌市にお住まいの方の入力例</a></li>
+        <li><a href="#sec-05">宮城県仙台市にお住まいの方の入力例</a></li>
+        <li><a href="#sec-06">東京都港区にお住まいの方の入力例</a></li>
+        <li><a href="#sec-07">大阪府大阪市にお住まいの方の入力例</a></li>
+        <li><a href="#sec-08">福岡県福岡市にお住まいの方の入力例</a></li>
+      </ol>
+    </aside>
 
-        <h2 id="section-birth-examples" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">都道府県別・出生地の入力例一覧</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">主な都道府県の出生地(出生都市)のローマ字表記例を以下にまとめました。都道府県名または市区町村名のいずれで入力しても問題ありません。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">出生地(日本語)</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">入力例(都道府県)</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">入力例(市区町村)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">北海道札幌市</td><td className="border border-gray-300 px-4 py-2">HOKKAIDO</td><td className="border border-gray-300 px-4 py-2">SAPPORO</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">宮城県仙台市</td><td className="border border-gray-300 px-4 py-2">MIYAGI</td><td className="border border-gray-300 px-4 py-2">SENDAI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">東京都千代田区</td><td className="border border-gray-300 px-4 py-2">TOKYO</td><td className="border border-gray-300 px-4 py-2">CHIYODA-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">東京都新宿区</td><td className="border border-gray-300 px-4 py-2">TOKYO</td><td className="border border-gray-300 px-4 py-2">SHINJUKU-KU</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">東京都渋谷区</td><td className="border border-gray-300 px-4 py-2">TOKYO</td><td className="border border-gray-300 px-4 py-2">SHIBUYA-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">神奈川県横浜市</td><td className="border border-gray-300 px-4 py-2">KANAGAWA</td><td className="border border-gray-300 px-4 py-2">YOKOHAMA</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">埼玉県さいたま市</td><td className="border border-gray-300 px-4 py-2">SAITAMA</td><td className="border border-gray-300 px-4 py-2">SAITAMA-SHI</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">千葉県千葉市</td><td className="border border-gray-300 px-4 py-2">CHIBA</td><td className="border border-gray-300 px-4 py-2">CHIBA-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">愛知県名古屋市</td><td className="border border-gray-300 px-4 py-2">AICHI</td><td className="border border-gray-300 px-4 py-2">NAGOYA</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">京都府京都市</td><td className="border border-gray-300 px-4 py-2">KYOTO</td><td className="border border-gray-300 px-4 py-2">KYOTO-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">大阪府大阪市</td><td className="border border-gray-300 px-4 py-2">OSAKA</td><td className="border border-gray-300 px-4 py-2">OSAKA-SHI</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">兵庫県神戸市</td><td className="border border-gray-300 px-4 py-2">HYOGO</td><td className="border border-gray-300 px-4 py-2">KOBE</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">広島県広島市</td><td className="border border-gray-300 px-4 py-2">HIROSHIMA</td><td className="border border-gray-300 px-4 py-2">HIROSHIMA-SHI</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">福岡県福岡市</td><td className="border border-gray-300 px-4 py-2">FUKUOKA</td><td className="border border-gray-300 px-4 py-2">FUKUOKA-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">沖縄県那覇市</td><td className="border border-gray-300 px-4 py-2">OKINAWA</td><td className="border border-gray-300 px-4 py-2">NAHA</td></tr>
-            </tbody>
-          </table>
-        </div>
+    <article class="article-body">
 
-        <h2 id="section-2" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">国籍と出生国について</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請フォームには、「国籍(Nationality)」と「出生国(Country of Birth)」を入力する項目があります。これらは意味が似ているため混同しやすいですが、それぞれ異なる情報を指します。国籍は現在法的に保有している国籍を、出生国は生まれた国を指します。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">日本国内で生まれ、日本国籍のみを保有している方はいずれもJAPANを選択してください。ただし、海外(アメリカ)で生まれた日本国籍者の場合は、「国籍：JAPAN」「出生国：USA」を選択します。この情報は、審査において二重国籍や帰化歴の確認にも利用されるため、虚偽の入力は避け正確な情報を選択してください。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">ケース</th>
-                <th className="border border-gray-300 px-4 py-2 text-center">国籍(Nationality)</th>
-                <th className="border border-gray-300 px-4 py-2 text-center">出生国(Country of Birth)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">日本で生まれた日本国籍者</td><td className="border border-gray-300 px-4 py-2 text-center">JAPAN</td><td className="border border-gray-300 px-4 py-2 text-center">JAPAN</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">アメリカで生まれた日本国籍者</td><td className="border border-gray-300 px-4 py-2 text-center">JAPAN</td><td className="border border-gray-300 px-4 py-2 text-center">USA</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">韓国で生まれ日本に帰化した方</td><td className="border border-gray-300 px-4 py-2 text-center">JAPAN</td><td className="border border-gray-300 px-4 py-2 text-center">SOUTH KOREA</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">ブラジルで生まれた日本国籍者</td><td className="border border-gray-300 px-4 py-2 text-center">JAPAN</td><td className="border border-gray-300 px-4 py-2 text-center">BRAZIL</td></tr>
-            </tbody>
-          </table>
-        </div>
+      <section id="sec-01" class="fade-up">
+        <h2>出生地(出生都市)について</h2>
+        <p>ESTA申請フォームにおける「出生地(Birthplace)」とは、申請者本人が実際に生まれた都市名を入力する項目です。本籍地や住民票の登録地ではなく、実際に出生した都道府県または市区町村を指します。</p>
+        <p>米国の入国管理を担う米国税関・国境警備局(CBP)は、ESTA申請時に入力された個人情報をもとに事前審査を行います。出生地の情報は、同姓同名者との識別や過去の渡航履歴の照合などに利用される重要な情報の一つであるため、正確な都市名をローマ字で入力することが重要です。</p>
+        <p>例えば、東京都千代田区で出生した方は「TOKYO」または「CHIYODA-KU」、神奈川県横浜市の方は、「KANAGAWA」または「YOKOHAMA-SHI」と入力します。出生地が不明な場合は、空欄でも申請は可能です。</p>
+      </section>
 
-        <h2 id="section-3" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">現住所の入力方法</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請フォームの「現住所(Current Address)」には、日本国内の住所を英語(ローマ字)表記に変換して入力する必要があります。米国での審査・照合を前提としているため、日本語や漢字での入力は認められていません。
-住所の入力方法は、日本の住所を英語(ローマ字)に変換したうえで、英語圏の書き方(小さい単位から大きい単位へ)で入力するのが一般的です。また、アパートやマンションにお住まいの場合は、建物名や部屋番号も入力することが推奨されています。その際の順番は、「部屋番号→建物名→番地→町名→市区町村→都道府県」と入力しましょう。
-日本の都道府県を英語で表す場合、通常は&quot;Tokyo Prefecture(東京都)&quot;や&quot;Osaka Prefecture(大阪府)&quot;のように「都道府県名+prefectures(プレフェクチャーズ)」と表記しますが、ESTA申請フォームでは&quot;prefectures&quot;を省略しても問題ありません。</p>
+      <section id="sec-02" class="fade-up">
+        <h2>国籍と出生国について</h2>
+        <p>ESTA申請フォームには、「国籍(Nationality)」と「出生国(Country of Birth)」を入力する項目があります。これらは意味が似ているため混同しやすいですが、それぞれ異なる情報を指します。国籍は現在法的に保有している国籍を、出生国は生まれた国を指します。</p>
+        <p>日本国内で生まれ、日本国籍のみを保有している方はいずれもJAPANを選択してください。ただし、海外(アメリカ)で生まれた日本国籍者の場合は、「国籍：JAPAN」「出生国：USA」を選択します。この情報は、審査において二重国籍や帰化歴の確認にも利用されるため、虚偽の入力は避け正確な情報を選択してください。</p>
+      </section>
 
-        <h2 id="section-format" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">住所の各項目の入力先ガイド</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請フォームの住所入力欄は複数の項目に分かれています。日本の住所をどのフィールドに入力すべきかを以下にまとめました。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">フォームの項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">入力する内容</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">入力例</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">Address Line 1</td><td className="border border-gray-300 px-4 py-2">番地・町名（建物名・部屋番号含む）</td><td className="border border-gray-300 px-4 py-2">#301 ABC CORP 1-1 SHIBAURA 1-CHOME</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">Address Line 2</td><td className="border border-gray-300 px-4 py-2">市区町村・区名など</td><td className="border border-gray-300 px-4 py-2">MINATO-KU</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">City</td><td className="border border-gray-300 px-4 py-2">市区町村名</td><td className="border border-gray-300 px-4 py-2">MINATO-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">State / Province</td><td className="border border-gray-300 px-4 py-2">都道府県名</td><td className="border border-gray-300 px-4 py-2">TOKYO</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">Country</td><td className="border border-gray-300 px-4 py-2">国名</td><td className="border border-gray-300 px-4 py-2">JAPAN</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">Zip Code</td><td className="border border-gray-300 px-4 py-2">郵便番号</td><td className="border border-gray-300 px-4 py-2">105-0023</td></tr>
-            </tbody>
-          </table>
-        </div>
+      <section id="sec-03" class="fade-up">
+        <h2>現住所の入力方法</h2>
+        <p>ESTA申請フォームの「現住所(Current Address)」には、日本国内の住所を英語(ローマ字)表記に変換して入力する必要があります。米国での審査・照合を前提としているため、日本語や漢字での入力は認められていません。</p>
+        <p>住所の入力方法は、日本の住所を英語(ローマ字)に変換したうえで、英語圏の書き方(小さい単位から大きい単位へ)で入力するのが一般的です。また、アパートやマンションにお住まいの場合は、建物名や部屋番号も入力することが推奨されています。その際の順番は、「部屋番号→建物名→番地→町名→市区町村→都道府県」と入力しましょう。</p>
+        <p>日本の都道府県を英語で表す場合、通常は"Tokyo Prefecture(東京都)"や"Osaka Prefecture(大阪府)"のように「都道府県名+prefectures(プレフェクチャーズ)」と表記しますが、ESTA申請フォームでは"prefectures"を省略しても問題ありません。</p>
+        <p>以下は、主な都市の英語(ローマ字)表記での住所記入例です。</p>
+      </section>
 
-        <p className="text-gray-700 leading-relaxed mb-4">以下は、主な都市の英語(ローマ字)表記での住所記入例です。</p>
+      <section id="sec-04" class="fade-up">
+        <h2>北海道札幌市にお住まいの方の入力例</h2>
+        <p>日本語住所：北海道札幌市北区北8条西1丁目1-1　ABCハイツ101号</p>
+        <table>
+          <tbody>
+            <tr><th>Address Line 1（番地）</th><td>1-1 Nishi 1-Chome Kita 8-Jo</td></tr>
+            <tr><th>Address Line 2（建物名・部屋番号）</th><td>#101 ABC Heights</td></tr>
+            <tr><th>City（市区町村）</th><td>Kita-ku, Sapporo-shi</td></tr>
+            <tr><th>State（都道府県）</th><td>Hokkaido</td></tr>
+            <tr><th>Postal Code（郵便番号）</th><td>060-0808</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-4" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">北海道札幌市にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：北海道札幌市北区北8条西1丁目1-1 ABCハイツ101号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">101号</td><td className="border border-gray-300 px-4 py-2">#101</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCハイツ</td><td className="border border-gray-300 px-4 py-2">ABC HAITSU</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">1-1</td><td className="border border-gray-300 px-4 py-2">1-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">北8条西1丁目</td><td className="border border-gray-300 px-4 py-2">KITA 8-JO NISHI 1-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">北区</td><td className="border border-gray-300 px-4 py-2">KITA-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">市名</td><td className="border border-gray-300 px-4 py-2">札幌市</td><td className="border border-gray-300 px-4 py-2">SAPPORO-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">北海道</td><td className="border border-gray-300 px-4 py-2">HOKKAIDO</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#101 ABC HAITSU, 1-1 KITA 8-JO NISHI 1-CHOME, KITA-KU, SAPPORO-SHI, HOKKAIDO</p>
+      <section id="sec-05" class="fade-up">
+        <h2>宮城県仙台市にお住まいの方の入力例</h2>
+        <p>日本語住所：宮城県仙台市若林区五橋1丁目1-1 ABCアパート201号</p>
+        <table>
+          <tbody>
+            <tr><th>Address Line 1（番地）</th><td>1-1 Itsutsubashi 1-Chome</td></tr>
+            <tr><th>Address Line 2（建物名・部屋番号）</th><td>#201 ABC Apartment</td></tr>
+            <tr><th>City（市区町村）</th><td>Wakabayashi-ku, Sendai-shi</td></tr>
+            <tr><th>State（都道府県）</th><td>Miyagi</td></tr>
+            <tr><th>Postal Code（郵便番号）</th><td>984-0072</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-5" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">宮城県仙台市にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：宮城県仙台市若林区五橋1丁目1-1 ABCアパート201号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">201号</td><td className="border border-gray-300 px-4 py-2">#201</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCアパート</td><td className="border border-gray-300 px-4 py-2">ABC APAATO</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">1-1</td><td className="border border-gray-300 px-4 py-2">1-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">五橋1丁目</td><td className="border border-gray-300 px-4 py-2">ITSUTSUBASHI 1-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">若林区</td><td className="border border-gray-300 px-4 py-2">WAKABAYASHI-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">市名</td><td className="border border-gray-300 px-4 py-2">仙台市</td><td className="border border-gray-300 px-4 py-2">SENDAI-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">宮城県</td><td className="border border-gray-300 px-4 py-2">MIYAGI</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#201 ABC APAATO, 1-1 ITSUTSUBASHI 1-CHOME, WAKABAYASHI-KU, SENDAI-SHI, MIYAGI</p>
+      <section id="sec-06" class="fade-up">
+        <h2>東京都港区にお住まいの方の入力例</h2>
+        <p>日本語住所：東京都港区芝浦1丁目1-1 ABCコーポ301号</p>
+        <table>
+          <tbody>
+            <tr><th>Address Line 1（番地）</th><td>1-1 Shibaura 1-Chome</td></tr>
+            <tr><th>Address Line 2（建物名・部屋番号）</th><td>#301 ABC Corp</td></tr>
+            <tr><th>City（市区町村）</th><td>Minato-ku</td></tr>
+            <tr><th>State（都道府県）</th><td>Tokyo</td></tr>
+            <tr><th>Postal Code（郵便番号）</th><td>108-0023</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-6" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">東京都港区にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：東京都港区芝浦1丁目1-1 ABCコーポ301号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">301号</td><td className="border border-gray-300 px-4 py-2">#301</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCコーポ</td><td className="border border-gray-300 px-4 py-2">ABC KOOPO</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">1-1</td><td className="border border-gray-300 px-4 py-2">1-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">芝浦1丁目</td><td className="border border-gray-300 px-4 py-2">SHIBAURA 1-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">港区</td><td className="border border-gray-300 px-4 py-2">MINATO-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">東京都</td><td className="border border-gray-300 px-4 py-2">TOKYO</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#301 ABC KOOPO, 1-1 SHIBAURA 1-CHOME, MINATO-KU, TOKYO</p>
+      <section id="sec-07" class="fade-up">
+        <h2>大阪府大阪市にお住まいの方の入力例</h2>
+        <p>日本語住所：大阪府大阪市西区江戸堀1丁目1-1 ABCビル401号</p>
+        <table>
+          <tbody>
+            <tr><th>Address Line 1（番地）</th><td>1-1 Edobori 1-Chome</td></tr>
+            <tr><th>Address Line 2（建物名・部屋番号）</th><td>#401 ABC Building</td></tr>
+            <tr><th>City（市区町村）</th><td>Nishi-ku, Osaka-shi</td></tr>
+            <tr><th>State（都道府県）</th><td>Osaka</td></tr>
+            <tr><th>Postal Code（郵便番号）</th><td>550-0002</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-nagoya" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">愛知県名古屋市にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：愛知県名古屋市中区栄3丁目5-1 ABCレジデンス602号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">602号</td><td className="border border-gray-300 px-4 py-2">#602</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCレジデンス</td><td className="border border-gray-300 px-4 py-2">ABC REJIDENSU</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">5-1</td><td className="border border-gray-300 px-4 py-2">5-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">栄3丁目</td><td className="border border-gray-300 px-4 py-2">SAKAE 3-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">中区</td><td className="border border-gray-300 px-4 py-2">NAKA-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">市名</td><td className="border border-gray-300 px-4 py-2">名古屋市</td><td className="border border-gray-300 px-4 py-2">NAGOYA-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">愛知県</td><td className="border border-gray-300 px-4 py-2">AICHI</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#602 ABC REJIDENSU, 5-1 SAKAE 3-CHOME, NAKA-KU, NAGOYA-SHI, AICHI</p>
+      <section id="sec-08" class="fade-up">
+        <h2>福岡県福岡市にお住まいの方の入力例</h2>
+        <p>日本語住所：福岡県福岡市博多区中洲1丁目1-1　ABCマンション501号</p>
+        <table>
+          <tbody>
+            <tr><th>Address Line 1（番地）</th><td>1-1 Nakasu 1-Chome</td></tr>
+            <tr><th>Address Line 2（建物名・部屋番号）</th><td>#501 ABC Mansion</td></tr>
+            <tr><th>City（市区町村）</th><td>Hakata-ku, Fukuoka-shi</td></tr>
+            <tr><th>State（都道府県）</th><td>Fukuoka</td></tr>
+            <tr><th>Postal Code（郵便番号）</th><td>810-0801</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-7" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">大阪府大阪市にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：大阪府大阪市西区江戸堀1丁目1-1 ABCビル401号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">401号</td><td className="border border-gray-300 px-4 py-2">#401</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCビル</td><td className="border border-gray-300 px-4 py-2">ABC BIRU</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">1-1</td><td className="border border-gray-300 px-4 py-2">1-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">江戸堀1丁目</td><td className="border border-gray-300 px-4 py-2">EDOBORI 1-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">西区</td><td className="border border-gray-300 px-4 py-2">NISHI-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">市名</td><td className="border border-gray-300 px-4 py-2">大阪市</td><td className="border border-gray-300 px-4 py-2">OSAKA-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">大阪府</td><td className="border border-gray-300 px-4 py-2">OSAKA</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#401 ABC BIRU, 1-1 EDOBORI 1-CHOME, NISHI-KU, OSAKA-SHI, OSAKA</p>
-
-        <h2 id="section-8" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">福岡県福岡市にお住まいの方の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-2">日本語住所：福岡県福岡市博多区中洲1丁目1-1 ABCマンション501号</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">部屋番号</td><td className="border border-gray-300 px-4 py-2">501号</td><td className="border border-gray-300 px-4 py-2">#501</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">建物名</td><td className="border border-gray-300 px-4 py-2">ABCマンション</td><td className="border border-gray-300 px-4 py-2">ABC MANSHON</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">番地</td><td className="border border-gray-300 px-4 py-2">1-1</td><td className="border border-gray-300 px-4 py-2">1-1</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">町名</td><td className="border border-gray-300 px-4 py-2">中洲1丁目</td><td className="border border-gray-300 px-4 py-2">NAKASU 1-CHOME</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">市区町村</td><td className="border border-gray-300 px-4 py-2">博多区</td><td className="border border-gray-300 px-4 py-2">HAKATA-KU</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">市名</td><td className="border border-gray-300 px-4 py-2">福岡市</td><td className="border border-gray-300 px-4 py-2">FUKUOKA-SHI</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">都道府県</td><td className="border border-gray-300 px-4 py-2">福岡県</td><td className="border border-gray-300 px-4 py-2">FUKUOKA</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">一行で記載する場合：#501 ABC MANSHON, 1-1 NAKASU 1-CHOME, HAKATA-KU, FUKUOKA-SHI, FUKUOKA</p>
-
-        <h2 id="section-workplace" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">勤務先住所の入力例</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">現在または過去に就労経験がある方は、ESTA申請フォームで勤務先の情報も入力が求められます。勤務先の住所も自宅住所と同様に、ローマ字で小さい単位から大きい単位の順で入力します。</p>
-        <p className="text-gray-700 leading-relaxed mb-2">勤務先の入力例：ABC株式会社（東京都中央区日本橋1-1-1）</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">項目</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">日本語</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">英語(ローマ字)表記</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">会社名</td><td className="border border-gray-300 px-4 py-2">ABC株式会社</td><td className="border border-gray-300 px-4 py-2">ABC KABUSHIKI KAISHA</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">住所</td><td className="border border-gray-300 px-4 py-2">東京都中央区日本橋1-1-1</td><td className="border border-gray-300 px-4 py-2">1-1-1 NIHONBASHI, CHUO-KU, TOKYO</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">電話番号</td><td className="border border-gray-300 px-4 py-2">03-1234-5678</td><td className="border border-gray-300 px-4 py-2">03-1234-5678</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">勤務先の英語名が不明な場合は、会社名をそのままローマ字表記で入力しても問題ありません。「株式会社」は「KABUSHIKI KAISHA」または「Co., Ltd.」と入力できます。不明な項目は空欄でも構いません。</p>
-
-        <h2 id="section-mistakes" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">よくある間違いと正しい書き方</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請の住所・出生地入力でよくある間違いと、正しい入力方法を以下にまとめました。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">間違い例</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">正しい入力</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">解説</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">住所を日本語順で入力（東京都→港区→芝浦...）</td>
-                <td className="border border-gray-300 px-4 py-2">英語順で入力（芝浦→港区→東京都）</td>
-                <td className="border border-gray-300 px-4 py-2">英語圏の住所は小→大の順</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">住所に漢字やカタカナを使う</td>
-                <td className="border border-gray-300 px-4 py-2">すべてローマ字（英語）で入力</td>
-                <td className="border border-gray-300 px-4 py-2">日本語は受理されない</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">本籍地を出生地として入力</td>
-                <td className="border border-gray-300 px-4 py-2">実際に生まれた場所を入力</td>
-                <td className="border border-gray-300 px-4 py-2">本籍地と出生地は異なる</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">マンション名・部屋番号を省略</td>
-                <td className="border border-gray-300 px-4 py-2">建物名・部屋番号も入力</td>
-                <td className="border border-gray-300 px-4 py-2">正確な住所特定のため推奨</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">「Tokyo-to」のように都を含める</td>
-                <td className="border border-gray-300 px-4 py-2">「TOKYO」のみでOK</td>
-                <td className="border border-gray-300 px-4 py-2">都道府県の接尾辞は省略可</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">郵便番号にハイフンを入れない</td>
-                <td className="border border-gray-300 px-4 py-2">105-0023のようにハイフン付きで入力</td>
-                <td className="border border-gray-300 px-4 py-2">日本の郵便番号はハイフン付き</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">「区」を英訳して「Ward」と入力</td>
-                <td className="border border-gray-300 px-4 py-2">「KU」とローマ字表記で入力</td>
-                <td className="border border-gray-300 px-4 py-2">ローマ字表記が推奨</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2 id="section-faq" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">よくある質問</h2>
-        <div className="space-y-4 mb-8">
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請の「出生地」には何を入力すればよいですか？</p>
-            <p className="text-gray-700 leading-relaxed">出生地（Birthplace）には、本籍地や住民票の登録地ではなく、実際に生まれた都道府県または市区町村をローマ字で入力します。例えば、東京都千代田区で出生した方は「TOKYO」または「CHIYODA-KU」と入力します。不明な場合は空欄でも申請可能です。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 「国籍」と「出生国」の違いは何ですか？</p>
-            <p className="text-gray-700 leading-relaxed">国籍（Nationality）は現在法的に保有している国籍を、出生国（Country of Birth）は生まれた国を指します。日本国内で生まれた日本国籍者は両方とも「JAPAN」を選択しますが、海外で生まれた場合は出生国に該当する国を選択してください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請で日本の住所はどう英語表記しますか？</p>
-            <p className="text-gray-700 leading-relaxed">日本の住所を英語圏の書き方（小さい単位から大きい単位へ）で入力します。例：「東京都港区芝浦1丁目1-1 ABCコーポ301号」の場合、「#301 ABC KOOPO, 1-1 SHIBAURA 1-CHOME, MINATO-KU, TOKYO」のように入力します。都道府県名の「Prefecture」は省略可能です。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. マンション名や部屋番号も入力する必要がありますか？</p>
-            <p className="text-gray-700 leading-relaxed">アパートやマンションにお住まいの場合は、建物名や部屋番号も入力することが推奨されています。入力の順番は「部屋番号→建物名→番地→町名→市区町村→都道府県」です。部屋番号は「#301」のように「#」を付けて入力します。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 住所のローマ字表記で「丁目」はどう書きますか？</p>
-            <p className="text-gray-700 leading-relaxed">「丁目」はそのまま「-chome」とローマ字表記するか、数字にハイフンを使って省略できます。例えば「青葉台2丁目5番4号」は「2-5-4 AOBADAI」または「2-5-4 AOBADAI 2-CHOME」と記載します。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請の住所欄で「Prefecture」は省略できますか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、ESTA申請フォームでは都道府県名の「Prefecture」は省略可能です。「TOKYO」「OSAKA」「HOKKAIDO」のように都道府県名だけで入力しても問題ありません。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 勤務先の住所もESTA申請で入力が必要ですか？</p>
-            <p className="text-gray-700 leading-relaxed">現在または過去に就労経験がある方は、勤務先の情報（会社名・住所・電話番号）の入力が求められます。ただし不明な項目は空欄でも構いません。勤務先の住所も自宅住所と同様にローマ字で入力してください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 出生地が分からない場合はどうすればいいですか？</p>
-            <p className="text-gray-700 leading-relaxed">出生地（出生都市）の入力は任意項目のため、不明な場合は空欄でも申請可能です。母子手帳や戸籍謄本を確認すると出生地を特定できます。出生国のみ「JAPAN」を選択すれば問題ありません。</p>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-lg font-bold text-[#1a2744] mb-4">関連記事</h3>
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA(エスタ)とは？事前入国審査制度を解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta-flow" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">【記入例付き】ESTAの申請方法を解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/place-of-birth" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">出生地や住所の書き方を紹介</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/us-contact-details" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">米国内の連絡先情報の記入方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/fee" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTAの申請料金</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/expiration-date" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTAの有効期限と再申請・確認方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/official-cbp" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">公式ウェブサイトについて解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/cbp-flow" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA申請方法と取得手順を徹底解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/application" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">アプリのESTA申請方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/status-check" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA申請状況の確認方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/guam" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">グアム入国にESTAは必要？</Link></div>
-          </div>
-        </div>
-        <div className="bg-[#f8fafc] border border-gray-200 rounded-lg p-5 my-6">
-          <p className="text-base font-bold text-[#1a2744] mb-3">関連ページ</p>
-          <ul className="space-y-2">
-            <li><Link href="/list-esta-application/address-guide/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTA申請時の住所の書き方ガイド</Link></li>
-            <li><Link href="/list-esta-application/esta-flow/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTA(エスタ)の申請方法を解説</Link></li>
-            <li><Link href="/list-esta-application/application/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ アプリを使ったESTA申請方法を解説</Link></li>
-            <li><Link href="/list-esta-application/group-family/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTAのグループ・家族申請について</Link></li>
-          </ul>
-        </div>
-      </div>
     </article>
-  );
+  </div>
+</section>
+
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+</div><!--$--><!--/$-->`;
+
+export default function Page() {
+  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

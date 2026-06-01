@@ -1,55 +1,49 @@
 import type { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'ESTA申請関連情報一覧 | US ESTA Apply Website',
   description: 'ESTA申請に関する要件や最新情報、注意点、申請手順、よくある質問を各ページでまとめています。渡航前に確認しておきたい重要なポイントを分かりやすく解説します。',
 };
 
+const BODY_HTML = `<div class="redesign-detail">
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="crumb">
+      <a href="/">HOME</a><span>›</span>
+      <em>ESTA申請関連情報一覧</em>
+    </nav>
+    <p class="article__eyebrow">ESTA Application Articles</p>
+    <h1 class="article__title">ESTA申請関連情報一覧</h1>
+    <p class="article__lede">ESTA(エスタ)の申請対象・手順・料金・有効期限など、渡航前に確認しておきたい要点を各記事にまとめています。<span style="white-space:nowrap">気になるトピックからご確認ください。</span></p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:72px;padding-bottom:96px">
+  <div class="section__inner fade-up">
+    <div class="related cat-grid" style="max-width:1240px">
+      <a href="/list-esta-application/esta"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？事前入国審査制度を解説</span><span class="related__excerpt">アメリカへ短期渡航する際に必要な電子渡航認証ESTA(エスタ)の概要を、申請対象者・必要要件・利用条件・取得後の有効期間まで詳しく解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/esta-flow"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">【記入例付き】ESTAの申請方法を解説</span><span class="related__excerpt">ESTA申請フォームへの入力例を交えながら、姓名や住所、パスポート情報の記入手順や注意点、申請完了までの一連の流れを分かりやすく解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/place-of-birth"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">ESTA申請時の出生地や住所の書き方を解説</span><span class="related__excerpt">ESTA申請時に求められる出生地(出生都市)や現住所のローマ字表記ルールを、市区町村レベルまでの実例を交えて具体的かつ分かりやすくご案内します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/us-contact-details"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先情報の記入方法</span><span class="related__excerpt">ESTA申請時に必要となる米国内の滞在先住所・電話番号の正しい記入方法を、宿泊先未定の場合の対応や具体的な記入例とともに詳しく紹介します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/fee"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">05.</span><span class="related__title">ESTA(エスタ)の申請料金</span><span class="related__excerpt">ESTAの公式申請手数料、当サイト経由でかかる代行手数料、対応している決済方法、領収書の発行手順と注意事項までをひとまとめに解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/expiration-date"><span class="related__media"><img src="/img/related/07-expiration.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">06.</span><span class="related__title">ESTAの有効期限と再申請・確認の方法</span><span class="related__excerpt">ESTAの有効期限は発行から2年間です。パスポート期限との関係や再申請が必要となる条件、期限切れ前の更新手順や確認方法を詳しく解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/official-cbp"><span class="related__media"><img src="/img/related/05-official-apply.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">07.</span><span class="related__title">ESTA公式ウェブサイトについて解説</span><span class="related__excerpt">CBP(米国税関・国境警備局)が運営するESTA申請の公式ウェブサイトの役割や利用方法、当サイト経由での申請との違いや注意点を詳しく解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/cbp-flow"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">08.</span><span class="related__title">ESTA申請方法と取得手順を徹底解説</span><span class="related__excerpt">CBPは出発の72時間前までの申請を推奨しています。ESTA取得に必要な情報や申請ステップ、認証完了までの一連の流れを丁寧に解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/application"><span class="related__media"><img src="/img/related/08-mobile-app.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">09.</span><span class="related__title">アプリを使ったESTA申請方法を解説</span><span class="related__excerpt">CBP One モバイルアプリを使ったESTA申請の手順や、アプリならではの便利機能、利用時の注意点・対応OSバージョンまで分かりやすく解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/status-check"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">10.</span><span class="related__title">ESTA申請状況の確認方法</span><span class="related__excerpt">ESTA申請後の審査状況や認証結果を確認する方法、姓名・生年月日・申請IDの入力手順、承認や保留・拒否となった場合の対応について解説します。</span><span class="related__more">Read more</span></span></a>
+      <a href="/list-esta-application/guam"><span class="related__media"><img src="/img/related/09-guam.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">11.</span><span class="related__title">グアム入国にESTAは必要？</span><span class="related__excerpt">グアムや北マリアナ諸島へ渡航する際のESTAの要否、必要書類、申請タイミング、入国時の注意点や乗継ぎ時のルールまでまとめて解説します。</span><span class="related__more">Read more</span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+</div><!--$--><!--/$-->`;
+
 export default function Page() {
-  return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
-      <Breadcrumb items={[{"label": "ESTA申請関連情報一覧"}]} />
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-lg font-bold text-[#1a2744] mb-4">ESTA申請関連情報一覧</h3>
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline"><a href="https://www.shoenehou-online.jp/list-esta-application/esta" target="_blank">ESTA(エスタ)とは？事前入国審査制度を解説</a></span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">短期間の観光や商用を目的としてアメリカへ渡航する場合は、電子渡航認証ESTA(エスタ)の申請が必要です。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">【記入例付き】ESTAの申請方法を解説</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAを申請するには、有効なパスポート、クレジットカード、メールアドレスが必要です。記入例を交えながら、申請方法を解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請時の出生地や住所の書き方を解説</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請時に求められる出生地（出生都市）および現住所の入力方法について、正しい記載例を用いて分かりやすくご案内します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">米国内の連絡先情報の記入方法</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請時に必要な米国内の連絡先(住所・電話番号)の記入方法について、記入例を交えて分かりやすく紹介します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA(エスタ)の申請料金</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請の際に必要となる手数料をはじめ、当サイトでのお支払い方法やサービスの料金、領収書の発行方法について詳しく解説しています。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTAの有効期限と再申請・確認の方法</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">アメリカへ渡航する前にESTAの有効期限が切れている場合は、再申請が必要です。ESTAの再申請が必要となる場合や修正方法について解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA公式ウェブサイトについて解説</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">CBP（米国税関・国境警備局）が運営するESTA申請の公式ウェブサイトについて、その役割や利用方法を詳しくわかりやすく解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請方法と取得手順を徹底解説</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAを管轄するCBP（米国税関・国境警備局）は、出発72時間前までの申請を推奨しています。必要な情報と申請手順を解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">アプリを使ったESTA申請方法を解説</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">CBP（アメリカ合衆国税関・国境警備局）が提供する電子渡航認証システムESTAの公式アプリについて詳しく解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請状況の確認方法</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請後に申請状況と審査結果を確認する方法・手順を解説します。確認には姓名・生年月日・申請IDの入力が必要です</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">グアム入国にESTAは必要？</span></div>
-        <p className="text-gray-700 leading-relaxed mb-4">グアムまたは北マリアナ諸島への渡航では、ESTA(エスタ)の事前申請が必要な場合があります。ESTAの申請手順や、グアム入国時に必要な書類などについて解説します。</p>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA(エスタ)とは？事前入国審査制度を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">【記入例付き】ESTAの申請方法を解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">出生地や住所の書き方を紹介</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">米国内の連絡先情報の記入方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTAの申請料金</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTAの有効期限と再申請・確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">公式ウェブサイトについて解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請方法と取得手順を徹底解説</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">アプリのESTA申請方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">ESTA申請状況の確認方法</span></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><span className="text-sm text-[#c41e3a] hover:underline">グアム入国にESTAは必要？</span></div>
-          </div>
-        </div>
-      </div>
-    </article>
-  );
+  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

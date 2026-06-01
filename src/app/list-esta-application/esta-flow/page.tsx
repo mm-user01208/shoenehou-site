@@ -1,430 +1,208 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: '【2026年最新・記入例付き】ESTA(エスタ)申請方法と書き方を徹底解説',
-  description: 'ESTA(エスタ)の申請方法を記入例付きで徹底解説。約10分で完了する申請手順を17ステップで紹介。住所・出生地・勤務先の書き方、よくある入力ミスと対処法も網羅。スマホ・PCどちらでも申請可能。',
-  alternates: { canonical: 'https://shoenehou-online.jp/list-esta-application/esta-flow/' },
+  title: '【記入例付き】ESTA(エスタ)の申請方法を解説 | US ESTA Apply Website',
+  description: 'ESTA(エスタ)の申請では、氏名や生年月日など個人情報の入力が求められます。本記事では、申請をスムーズに進められるよう、記入例を交えて申請方法を紹介します。',
 };
 
-export default function Page() {
-  return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "ESTA申請に必要な書類は何ですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ESTA申請には、有効なパスポート、申請料の支払いに使用するクレジットカード（Visa、Master Card、JCB、American Express、Diners Club）、メールアドレスの3点が必要です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請にはどのくらい時間がかかりますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ESTAの申請手続きはおよそ10分で完了します。審査結果は通常、申請完了後から数時間以内に通知されますが、最大で72時間かかる場合もあります。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請フォームは日本語で入力できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "申請フォームは日本語で表示されますが、審査を行うのはCBP（アメリカ合衆国税関・国境警備局）であるため、氏名や住所などの情報はすべてローマ字（英語）で入力する必要があります。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請はいつまでに行うべきですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "CBPおよびDHS（アメリカ国土安全保障省）は、出発日の少なくとも3日前（72時間前）までに申請を行うことを推奨しています。出発日や宿泊先が未定でも申請可能です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請で適格性の質問に「はい」と回答した場合どうなりますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "犯罪歴や健康状態に関する9項目の質問のうち、いずれかに「はい」を選択した場合、ESTAの利用が認められない可能性があります。誤って回答した場合は、CBP公式サイトの「CBP情報センター」から問い合わせが可能です。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請で入力ミスをした場合はどうすればいいですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "申請完了前であれば、確認画面で修正が可能です。申請完了後にミスに気づいた場合は、再度新規申請を行う必要があります。氏名やパスポート番号の入力ミスは審査に影響するため、送信前に必ず確認してください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請はスマホからでもできますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい、スマートフォンやタブレットからも申請可能です。CBP公式アプリ「ESTA Mobile」を利用すれば、パスポートのスキャンや顔写真の撮影もスマホ1台で完結します。PCのブラウザからも同様に申請できます。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請は出発日や滞在先が未定でも申請できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい、渡航日や滞在先が未定の状態でもESTAの申請は可能です。滞在先の情報が不明な場合は空欄のまま申請できます。ただし、渡航日の72時間前までには申請を完了させることが推奨されています。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "家族全員分のESTAを一度に申請できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "公式ウェブサイトではグループ申請機能を利用して最大50人まで一括で申請・管理できます。ただし、入力内容は1人ずつ個別に入力する必要があります。アプリの場合はグループ申請に対応していないため、1人ずつ申請してください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ESTA申請の途中で中断した場合、続きから再開できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい、申請途中で保存した場合は、申請番号を使って続きから再開できます。ただし、保存せずにブラウザを閉じた場合は最初からやり直す必要があります。申請番号はメモやスクリーンショットで控えておくことをおすすめします。"
-            }
-          }
-        ]
-      }) }} />
-      <div className="bg-white rounded-lg shadow-sm p-6 md:p-10">
-      <Breadcrumb items={[{"label": "ESTA申請関連情報一覧", "href": "/list-esta-application"}, {"label": "【記入例付き】ESTA(エスタ)の申請方法を解説"}]} />
-        <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-2 pb-3 border-b-2 border-[#c41e3a]">【記入例付き】ESTA(エスタ)の申請方法を解説</h1>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAは、アメリカを観光する際に必要な電子渡航認証です。日本国籍の方がアメリカへ渡航するには、オンラインでのESTA申請が必須で、「渡航認証許可」を取得することで最大90日間の滞在が認められます。渡航目的は短期間の観光・商用・乗り継ぎに限定され、ESTAを利用しての留学や就労などは認められていません。また、ESTAは年齢を問わず全ての渡航者に対して申請が義務付けられるため、家族やグループで渡米する場合は、忘れずに全員分の申請を行ってください。</p>
-        <div className="bg-[#f8fafc] border border-gray-200 rounded-lg p-5 my-6">
-          <p className="text-base font-bold text-[#1a2744] mb-3 flex items-center gap-2"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>目次</p>
-          <ul className="space-y-2 text-sm">
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-1" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">電子渡航認証システム"ESTA"の概要を解説</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-2" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請に必要な書類</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-prep" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">申請前の準備チェックリスト</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-3" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTAの申請方法（全ステップ解説）</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-time" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">各ステップの所要時間目安</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-mistakes" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">よくある入力ミスと対処法</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-4" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請のタイミングと有効期限</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-5" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請時の住所記載方法と記入例</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-6" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTAの申請ステータスと審査結果の確認手順</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-7" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請時に注意すべき点</a></li>
-            <li className="text-gray-600 flex items-start gap-2"><span className="text-[#c41e3a] mt-0.5 flex-shrink-0">▸</span><a href="#section-8" className="text-[#1a2744] hover:text-[#c41e3a] transition-colors">ESTA申請・利用に関するよくある質問一覧</a></li>
-          </ul>
-        </div>
-        <h2 id="section-1" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">電子渡航認証システム"ESTA"の概要を解説</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">日本国籍者がアメリカへ渡航する際には、事前に電子渡航認証ESTA(エスタ)の取得が求められます。これはアメリカ政府が定めるビザ免除プログラム(VWP)に基づくもので、ESTA申請により「渡航認証許可」を取得した場合に限り、ビザなしでの渡米が可能です。ESTAは、日本を含むVWP参加国の市民が90日以内の短期観光、商用、乗り継ぎを目的として渡米する場合に限り利用できます。留学、就労、永住などを希望する場合はESTAの対象外となるため、渡米には在日米国大使館または総領事館にて、渡航目的に応じたビザの取得をご検討ください。なお、VWP参加国の市民であっても、過去にアメリカへの入国を拒否された方や重大な犯罪歴がある方は、ESTAの利用が認められない場合があります。
-申請時には、米国国土安全保障省申請料($40.27)および別途手数料のお支払いが必要です。お支払いには各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)がご利用いただけます。</p>
+const BODY_HTML = `<div class="redesign-detail">
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="crumb" aria-label="パンくず">
+      <a href="/">HOME</a><span>›</span>
+      <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
+      <em>【記入例付き】ESTA(エスタ)の申請方法を解説</em>
+    </nav>
+    <p class="article__eyebrow">Application Steps</p>
+    <h1 class="article__title">【記入例付き】ESTA(エスタ)の申請方法を解説</h1>
+    <p class="article__lede">ESTAは、アメリカを観光する際に必要な電子渡航認証です。日本国籍の方がアメリカへ渡航するには、オンラインでのESTA申請が必須で、「渡航認証許可」を取得することで最大90日間の滞在が認められます。渡航目的は短期間の観光・商用・乗り継ぎに限定され、ESTAを利用しての留学や就労などは認められていません。また、ESTAは年齢を問わず全ての渡航者に対して申請が義務付けられるため、家族やグループで渡米する場合は、忘れずに全員分の申請を行ってください。</p>
+  </div>
+</section>
 
-        <h2 id="section-2" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTA申請に必要な書類</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)申請には、下記の3点が必要です。</p>
-        <ul className="list-disc pl-6 space-y-2 mb-4">
-          <li className="text-gray-700">有効なパスポート（ICチップ搭載のもの）</li>
-          <li className="text-gray-700">申請料の支払いに使用するクレジットカード（Visa、Master Card、JCB、American Express、Diners Club）</li>
-          <li className="text-gray-700">受信可能なメールアドレス</li>
+<section class="article-main">
+  <div class="article-main__inner">
+    <aside class="toc">
+      <p class="toc__head">目次</p>
+      <ol>
+        <li><a href="#sec-01">電子渡航認証システム"ESTA"の概要を解説</a></li>
+        <li><a href="#sec-02">ESTA申請に必要な書類</a></li>
+        <li><a href="#sec-03">ESTAの申請方法</a></li>
+        <li><a href="#sec-04">ESTA申請のタイミングと有効期限</a></li>
+        <li><a href="#sec-05">ESTA申請時の住所記載方法と記入例</a></li>
+        <li><a href="#sec-06">ESTAの申請ステータスと審査結果の確認手順</a></li>
+        <li><a href="#sec-07">ESTA申請時に注意すべき点</a></li>
+        <li><a href="#sec-08">ESTA申請・利用に関するよくある質問一覧</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+
+      <section id="sec-01" class="fade-up">
+        <h2>電子渡航認証システム"ESTA"の概要を解説</h2>
+        <p>日本国籍者がアメリカへ渡航する際には、事前に電子渡航認証ESTA(エスタ)の取得が求められます。これはアメリカ政府が定めるビザ免除プログラム(VWP)に基づくもので、ESTA申請により「渡航認証許可」を取得した場合に限り、ビザなしでの渡米が可能です。ESTAは、日本を含むVWP参加国の市民が90日以内の短期観光、商用、乗り継ぎを目的として渡米する場合に限り利用できます。留学、就労、永住などを希望する場合はESTAの対象外となるため、渡米には在日米国大使館または総領事館にて、渡航目的に応じたビザの取得をご検討ください。なお、VWP参加国の市民であっても、過去にアメリカへの入国を拒否された方や重大な犯罪歴がある方は、ESTAの利用が認められない場合があります。</p>
+        <p>申請時には、米国国土安全保障省申請料($40.27)および別途手数料のお支払いが必要です。お支払いには各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)がご利用いただけます。</p>
+      </section>
+
+      <section id="sec-02" class="fade-up">
+        <h2>ESTA申請に必要な書類</h2>
+        <p>ESTA(エスタ)申請には、下記の3点が必要です。</p>
+        <ul>
+          <li>有効なパスポート</li>
+          <li>申請料の支払いに使用するクレジットカード</li>
+          <li>メールアドレス</li>
         </ul>
-        <p className="text-gray-700 leading-relaxed mb-4">パスポートはICチップが搭載された期限が有効なものをご用意ください。申請フォームにおけるパスポート情報は、申請者ご本人のものを入力する必要があります。代理人が申請を行う場合は、申請者のパスポートを手元に用意し、記載内容を正確に参照しながら入力してください。申請料のお支払いには、各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)が利用可能です。なお、クレジットカードは申請者名義でなくても利用できます。申請料の支払い完了後は、<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer" className="text-[#c41e3a] hover:underline">CBP(アメリカ合衆国税関・国境警備局)</a>による審査が行われます。審査結果は登録済みのメールアドレス宛に通知されますので、受信フォルダや迷惑メールフォルダなどを忘れずにご確認ください。</p>
+        <p>パスポートはICチップが搭載された期限が有効なものをご用意ください。申請フォームにおけるパスポート情報は、申請者ご本人のものを入力する必要があります。代理人が申請を行う場合は、申請者のパスポートを手元に用意し、記載内容を正確に参照しながら入力してください。申請料のお支払いには、各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)が利用可能です。なお、クレジットカードは申請者名義でなくても利用できます。申請料の支払い完了後は、<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer">CBP(アメリカ合衆国税関・国境警備局)</a>による審査が行われます。審査結果は登録済みのメールアドレス宛に通知されますので、受信フォルダや迷惑メールフォルダなどを忘れずにご確認ください。</p>
+      </section>
 
-        <h2 id="section-prep" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">申請前の準備チェックリスト</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請をスムーズに進めるために、以下の項目を事前にご準備ください。準備が整っていれば、申請手続きは約10分で完了します。</p>
-        <div className="bg-[#f0f7ff] border border-blue-200 rounded-lg p-5 mb-6">
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>パスポートが手元にあるか（有効期限内・ICチップ搭載）</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>パスポート番号を確認済みか（日本：アルファベット2文字＋数字7桁）</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>クレジットカードを準備しているか</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>受信可能なメールアドレスを用意しているか</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>現住所のローマ字表記を調べたか</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>勤務先の英語表記と住所を確認したか（就労経験がある場合）</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>アメリカでの滞在先情報を用意しているか（ホテル名・住所など、不明なら空欄可）</li>
-            <li className="flex items-start gap-2 text-gray-700"><span className="text-blue-500 font-bold mt-0.5">&#9744;</span>緊急連絡先の氏名・電話番号・メールアドレスを確認したか</li>
-          </ul>
-        </div>
-        <p className="text-gray-700 leading-relaxed mb-4">特に住所のローマ字表記は迷いやすいポイントです。詳しい書き方については「<a href="/list-esta-application/place-of-birth/" className="text-[#c41e3a] hover:underline">ESTA申請時の出生地や住所の書き方を解説</a>」のページで、都市別の記入例を紹介していますので、あわせてご確認ください。</p>
+      <section id="sec-03" class="fade-up">
+        <h2>ESTAの申請方法</h2>
+        <p>ESTA(エスタ)の申請手続きは、およそ10分で完了します。申請フォームは日本語で表示されますが、審査を行うのはCBP(アメリカ合衆国税関・国境警備局)であるため、氏名や住所などの情報はすべてローマ字(英語)で入力してください。申請フォームには、健康状態や過去の犯罪歴に関する9項目の質問があります。これらの質問に対し「はい」を選択した場合、ESTAの利用が認められない可能性があります。そのため、全項目の入力が完了したら、内容に不備がないかを必ず最終確認してください。審査結果は通常、申請完了後から数時間以内に通知されますが、最大で72時間かかる場合もあります。そのため、ESTAを管轄するCBPおよびDHS(アメリカ国土安全保障省)は、出発日の少なくとも3日前までに申請を行うことを推奨しています。</p>
+        <p>ESTAの申請手順については、以下の内容を参考にしながら、申請フォームに正確な情報を入力してください。</p>
 
-        <h2 id="section-3" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTAの申請方法（全ステップ解説）</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)の申請手続きは、およそ10分で完了します。申請フォームは日本語で表示されますが、審査を行うのはCBP(アメリカ合衆国税関・国境警備局)であるため、氏名や住所などの情報はすべてローマ字(英語)で入力してください。申請フォームには、健康状態や過去の犯罪歴に関する9項目の質問があります。これらの質問に対し「はい」を選択した場合、ESTAの利用が認められない可能性があります。そのため、全項目の入力が完了したら、内容に不備がないかを必ず最終確認してください。審査結果は通常、申請完了後から数時間以内に通知されますが、最大で72時間かかる場合もあります。そのため、ESTAを管轄するCBPおよびDHS(アメリカ国土安全保障省)は、出発日の少なくとも3日前までに申請を行うことを推奨しています。
-ESTAの申請手順については、以下の内容を参考にしながら、申請フォームに正確な情報を入力してください。</p>
+        <h3>01.　申請開始</h3>
+        <p>TOP画面の「ESTA申請をはじめる」ボタンをクリックして、申請手続きを開始しましょう。</p>
 
-        <h3 id="section-4" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">01. 申請開始</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">TOP画面の「ESTA申請をはじめる」ボタンをクリックして、申請手続きを開始しましょう。</p>
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-          <p className="text-gray-700 text-sm"><span className="font-bold">注意：</span>ESTA申請は必ず公式サイトまたは正規の申請代行サイトから行ってください。検索結果に表示される非公式サイトでは、高額な手数料を請求されるケースがあります。詳しくは「<a href="/list-esta-application/official-vs-fake/" className="text-[#c41e3a] hover:underline">ESTA公式サイトと偽サイトの見分け方</a>」をご確認ください。</p>
-        </div>
+        <h3>02.　個人情報</h3>
+        <p>「姓/名」の欄には、パスポートに記載されている氏名をローマ字(大文字)で入力してください。「姓」に苗字を、「名」には名前を入力し、スペルミスがないか必ず確認しましょう。また、旧姓などの別名・別称がある方は「別名があります」を選択し、該当する名前を入力してください。入力時には、特にFU、JI、SHA、CHAなど、間違えやすいスペルに注意しましょう。</p>
+        <p>なお、以下の国籍の方は「個人認識番号」を入力してください。こちらは任意項目のため、分からない場合は空欄でも構いません。ただし、台湾国籍の方は、パスポートに記載されている個人識別番号(英字1文字＋数字9桁)の入力が必須となります。</p>
+        <p>Belgium(BEL)、Brunei(BRN)、Chile(CHL)、Croatia(HRV)、Czech republic(CZE)、Estonia(EST)、Germany(DEU)、Greece(GRC)、Hungary(HUN)、Israel(ISR)、Luxembourg(LUX)、Malta(MLT)、Monaco(MCO)、Netherlands(NLD)、Portugal(PRT)、Singapore(SGP)、Slovakia(SVK)、Slovenia(SVN)、South Korea(KOR)、Spain(ESP)、Taiwan(TWN)</p>
 
-        <h3 id="section-5" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">02. 個人情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約2分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「姓/名」の欄には、パスポートに記載されている氏名をローマ字(大文字)で入力してください。「姓」に苗字を、「名」には名前を入力し、スペルミスがないか必ず確認しましょう。また、旧姓などの別名・別称がある方は「別名があります」を選択し、該当する名前を入力してください。入力時には、特にFU、JI、SHA、CHAなど、間違えやすいスペルに注意しましょう。
-なお、以下の国籍の方は「個人認識番号」を入力してください。こちらは任意項目のため、分からない場合は空欄でも構いません。ただし、台湾国籍の方は、パスポートに記載されている個人識別番号(英字1文字＋数字9桁)の入力が必須となります。
-Belgium(BEL)、Brunei(BRN)、Chile(CHL)、Croatia(HRV)、Czech republic(CZE)、Estonia(EST)、Germany(DEU)、Greece(GRC)、Hungary(HUN)、Israel(ISR)、Luxembourg(LUX)、Malta(MLT)、Monaco(MCO)、Netherlands(NLD)、Portugal(PRT)、Singapore(SGP)、Slovakia(SVK)、Slovenia(SVN)、South Korea(KOR)、Spain(ESP)、Taiwan(TWN)</p>
+        <h3>03.　電話番号などの連絡先</h3>
+        <p>「連絡先」の項目では、メールアドレスと電話番号の入力が必要です。特にメールアドレスについては、スペルミスがないよう正確にご入力ください。電話番号を入力する際は、最初にご自身の国籍を選択しましょう。申請が完了すると、当サイトより「申請受付完了メール」および「渡航認証可否メール」が、こちらの項目で登録されたメールアドレス宛に送信されます。</p>
 
-        <h3 id="section-6" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">03. 電話番号などの連絡先</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「連絡先」の項目では、メールアドレスと電話番号の入力が必要です。特にメールアドレスについては、スペルミスがないよう正確にご入力ください。電話番号を入力する際は、最初にご自身の国籍を選択しましょう。申請が完了すると、当サイトより「申請受付完了メール」および「渡航認証可否メール」が、こちらの項目で登録されたメールアドレス宛に送信されます。</p>
+        <h3>04.　居住地情報</h3>
+        <p>各項目の記入例を参考にしながら、ご自身の居住している住所を入力しましょう。日本国内の住所であれば、郵便番号を入力することで都道府県以降の住所が自動的に反映されます。住所のスペルに不安がある方は、こちらの郵便番号の入力をご活用ください。</p>
 
-        <h3 id="section-7" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">04. 居住地情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約2分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">各項目の記入例を参考にしながら、ご自身の居住している住所を入力しましょう。日本国内の住所であれば、郵便番号を入力することで都道府県以降の住所が自動的に反映されます。住所のスペルに不安がある方は、こちらの郵便番号の入力をご活用ください。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">住所のローマ字表記に迷った場合は、「<a href="/list-esta-application/place-of-birth/" className="text-[#c41e3a] hover:underline">ESTA申請時の出生地や住所の書き方を解説</a>」で詳しい記入例を確認できます。</p>
+        <h3>05.　パスポート・顔写真のアップロード</h3>
+        <p>パスポートの顔写真掲載ページ全体の画像と、パスポートとは異なる顔写真をアップロードしてください。影の映り込みなどにより文字や画像が判別できない場合、申請後に再度画像の提出を求められるためご注意ください。</p>
+        <p>日本国籍者のパスポート番号は、アルファベット2文字＋数字7桁の合計9桁です。入力後は、桁数や番号に誤りがないか確認しましょう。また、「発行年月日」および「有効期間満了日」は、日/月/年の順に選択してください。</p>
 
-        <h3 id="section-8" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">05. パスポート・顔写真のアップロード</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約2分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">パスポートの顔写真掲載ページ全体の画像と、パスポートとは異なる顔写真をアップロードしてください。影の映り込みなどにより文字や画像が判別できない場合、申請後に再度画像の提出を求められるためご注意ください。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">日本国籍者のパスポート番号は、アルファベット2文字＋数字7桁の合計9桁です。入力後は、桁数や番号に誤りがないか確認しましょう。また、「発行年月日」および「有効期間満了日」は、日/月/年の順に選択してください。</p>
+        <h3>06.　他国のパスポートの有無</h3>
+        <p>「他国のパスポート有無」については、国民身分証明書またはパスポートを所有している二重国籍の方は「はい」を選択してください。該当する国民身分証明書またはパスポートの情報(発給国・有効期限・ID番号など)を入力しましょう。なお、ID番号や有効期限が不明な場合でも空欄にせず、必ず「UNKNOWN(不明)」と記入または選択してください。</p>
 
-        <h3 id="section-9" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">06. 他国のパスポートの有無</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「他国のパスポート有無」については、国民身分証明書またはパスポートを所有している二重国籍の方は「はい」を選択してください。該当する国民身分証明書またはパスポートの情報(発給国・有効期限・ID番号など)を入力しましょう。なお、ID番号や有効期限が不明な場合でも空欄にせず、必ず「UNKNOWN(不明)」と記入または選択してください。</p>
+        <h3>07.　出生国・出生都市</h3>
+        <p>該当する出生国をプルダウンメニューから選択し、「出生都市」欄にはご自身の出生地をローマ字(大文字)で入力してください。なお、「出生都市」の入力は任意のため、不明な場合は空欄でも構いません。</p>
 
-        <h3 id="section-10" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">07. 出生国・出生都市</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">該当する出生国をプルダウンメニューから選択し、「出生都市」欄にはご自身の出生地をローマ字(大文字)で入力してください。なお、「出生都市」の入力は任意のため、不明な場合は空欄でも構いません。</p>
+        <h3>08.　他国の国籍・市民権の保有状況</h3>
+        <p>「他国籍の有無(現在)」の欄では、現在保有している国籍以外に別の国籍または市民権を取得している方は、「はい」を選択してください。選択後、「国籍」と「取得した経緯」の入力欄が表示されますので、該当する項目を選びましょう。</p>
+        <p>また、過去に現在とは異なる国籍または市民権を保有していた方は「他国籍の有無(過去)」の欄で「はい」を選択してください。そのうえで、「過去に保有していた国籍」、「他国籍の取得日」、「他国籍の放棄日」の各項目を正確に選択してください。これらはすべて必須項目となるため、入力後は記入漏れがないか必ず確認しましょう。</p>
 
-        <h3 id="section-11" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">08. 他国の国籍・市民権の保有状況</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「他国籍の有無(現在)」の欄では、現在保有している国籍以外に別の国籍または市民権を取得している方は、「はい」を選択してください。選択後、「国籍」と「取得した経緯」の入力欄が表示されますので、該当する項目を選びましょう。
-また、過去に現在とは異なる国籍または市民権を保有していた方は「他国籍の有無(過去)」の欄で「はい」を選択してください。そのうえで、「過去に保有していた国籍」、「他国籍の取得日」、「他国籍の放棄日」の各項目を正確に選択してください。これらはすべて必須項目となるため、入力後は記入漏れがないか必ず確認しましょう。</p>
+        <h3>09.　GE/NEXUS/SENTRIのメンバー情報</h3>
+        <p>CBP(アメリカ合衆国税関・国境警備局)が管轄する事前認証制度「トラステッド・トラベラー・プログラム(TTP)」では、現在5種類のプログラムが運用されています。これらのうち、「CBP Global Entry/NEXUS/SENTRI」のいずれに参加している方は、「はい」を選択し「PASS ID」欄に該当する9桁の番号を入力してください。</p>
 
-        <h3 id="section-12" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">09. GE/NEXUS/SENTRIのメンバー情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">CBP(アメリカ合衆国税関・国境警備局)が管轄する事前認証制度「トラステッド・トラベラー・プログラム(TTP)」では、現在5種類のプログラムが運用されています。これらのうち、「CBP Global Entry/NEXUS/SENTRI」のいずれに参加している方は、「はい」を選択し「PASS ID」欄に該当する9桁の番号を入力してください。</p>
+        <h3>10.　渡航目的・滞在先の登録</h3>
+        <p>最上部の「渡航目的の確認事項」では、アメリカを経由し他国へ乗り継ぐ方は「はい」、アメリカに入国し滞在する方は「いいえ」を選択してください。「いいえ」を選んだ場合、次の項目として「滞在先の住所、電話番号を登録しますか？」と表示されます。滞在先の連絡先が分かる方は「はい」を選択し、滞在先の詳細(名称や住所など)を入力しましょう。なお、詳細が分からない項目は空欄でも構いません。滞在先が未定の場合は、「いいえ」を選択してください。</p>
 
-        <h3 id="section-13" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">10. 渡航目的・滞在先の登録</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">最上部の「渡航目的の確認事項」では、アメリカを経由し他国へ乗り継ぐ方は「はい」、アメリカに入国し滞在する方は「いいえ」を選択してください。「いいえ」を選んだ場合、次の項目として「滞在先の住所、電話番号を登録しますか？」と表示されます。滞在先の連絡先が分かる方は「はい」を選択し、滞在先の詳細(名称や住所など)を入力しましょう。なお、詳細が分からない項目は空欄でも構いません。滞在先が未定の場合は、「いいえ」を選択してください。</p>
+        <h3>11.　就労経験の申告</h3>
+        <p>こちらの項目では、雇用状況に関する回答を求められます。現在または過去に就労経験がある方は「はい」を選択してください。雇用形態または勤務先のいずれかを回答し、勤務先の情報(住所や電話番号など)を入力しましょう。不明な項目については、空欄でも構いません。一度も就労した経験がない方は、「いいえ」を選択してください。</p>
 
-        <h3 id="section-14" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">11. 就労経験の申告</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">こちらの項目では、雇用状況に関する回答を求められます。現在または過去に就労経験がある方は「はい」を選択してください。雇用形態または勤務先のいずれかを回答し、勤務先の情報(住所や電話番号など)を入力しましょう。不明な項目については、空欄でも構いません。一度も就労した経験がない方は、「いいえ」を選択してください。</p>
+        <h3>12.　SNSのアカウント情報</h3>
+        <p>ご自身が利用しているSNSアカウントを登録する場合は「はい」を、登録を希望しない方やSNSを利用していない方は「いいえ」を選択してください。「はい」を選択した場合は、該当するSNSをプルダウンメニューから選び、SNS内で使用しているIDまたはアカウント名を入力しましょう。</p>
 
-        <h3 id="section-15" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">12. SNSのアカウント情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">ご自身が利用しているSNSアカウントを登録する場合は「はい」を、登録を希望しない方やSNSを利用していない方は「いいえ」を選択してください。「はい」を選択した場合は、該当するSNSをプルダウンメニューから選び、SNS内で使用しているIDまたはアカウント名を入力しましょう。</p>
+        <h3>13.　緊急連絡先の情報</h3>
+        <p>緊急連絡先の登録について回答してください。登録を希望する方は「はい」を選択し、緊急時に連絡可能な家族や友人などの氏名、メールアドレス、電話番号を入力しましょう。これらはいずれも任意項目のため、連絡先が分かる場合のみ該当項目をご入力ください。不明な項目は、空欄でも構いません。</p>
 
-        <h3 id="section-16" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">13. 緊急連絡先の情報</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">緊急連絡先の登録について回答してください。登録を希望する方は「はい」を選択し、緊急時に連絡可能な家族や友人などの氏名、メールアドレス、電話番号を入力しましょう。これらはいずれも任意項目のため、連絡先が分かる場合のみ該当項目をご入力ください。不明な項目は、空欄でも構いません。</p>
+        <h3>14.　両親の氏名</h3>
+        <p>両親の名前が分かっており、登録を希望する方は「はい」を選択し、該当する方の氏名をローマ字で入力してください。なお、血縁上の両親に加え、養子や親族後見人の名前も登録可能です。両親の名前を登録しない場合は、「いいえ」と選択してください。</p>
 
-        <h3 id="section-17" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">14. 両親の氏名</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約30秒</p>
-        <p className="text-gray-700 leading-relaxed mb-4">両親の名前が分かっており、登録を希望する方は「はい」を選択し、該当する方の氏名をローマ字で入力してください。なお、血縁上の両親に加え、養子や親族後見人の名前も登録可能です。両親の名前を登録しない場合は、「いいえ」と選択してください。</p>
+        <h3>15.　適格性に関する質問事項</h3>
+        <p>こちらの項目では、過去の犯罪歴や健康状態などに関する質問が含まれています。9つの質問内容をよく確認のうえ、「はい」または「いいえ」で回答してください。なお、いずれかの質問に「はい」と回答した場合、ESTAの利用は認められないため注意が必要です。</p>
 
-        <h3 id="section-18" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">15. 適格性に関する質問事項</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">こちらの項目では、過去の犯罪歴や健康状態などに関する質問が含まれています。9つの質問内容をよく確認のうえ、「はい」または「いいえ」で回答してください。なお、いずれかの質問に「はい」と回答した場合、ESTAの利用は認められないため注意が必要です。</p>
-        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
-          <p className="text-gray-700 text-sm"><span className="font-bold">重要：</span>適格性の質問に誤って「はい」と回答してしまった場合は、送信前であれば修正可能です。送信後に誤りに気づいた場合は、CBP公式サイトの「CBP情報センター」から問い合わせてください。虚偽の申告は入国拒否やビザ取消の原因となりますので、正確に回答してください。</p>
-        </div>
+        <h3>16.　同意事項の確認</h3>
+        <p>「免責事項」および「利用規約」を確認のうえ、「同意する」のチェックボックスにチェックを入れてください。</p>
 
-        <h3 id="section-19" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">16. 同意事項の確認</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">「免責事項」および「利用規約」を確認のうえ、「同意する」のチェックボックスにチェックを入れてください。</p>
+        <h3>17.　申請内容の最終確認</h3>
+        <p>「入力内容の確認へ進む」をクリックし、申請内容に不備がないか確認してください。特に、氏名・パスポート情報・生年月日などの重要事項は、入力ミスがないよう十分ご注意ください。申請内容の確認が完了しましたら、申請料のお支払いへ進みましょう。</p>
+        <p>以上で、ESTA申請情報の入力は完了です。</p>
 
-        <h3 id="section-20" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">17. 申請内容の最終確認</h3>
-        <p className="text-gray-700 leading-relaxed mb-2">所要時間の目安：約1分</p>
-        <p className="text-gray-700 leading-relaxed mb-4">「入力内容の確認へ進む」をクリックし、申請内容に不備がないか確認してください。特に、氏名・パスポート情報・生年月日などの重要事項は、入力ミスがないよう十分ご注意ください。申請内容の確認が完了しましたら、申請料のお支払いへ進みましょう。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">以上で、ESTA申請情報の入力は完了です。</p>
+        <h3>18.　申請料の支払い</h3>
+        <p>申請料のお支払い方法はクレジットカードのみとなります。各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)が利用可能です。なお、カードは申請者本人の名義でなくても審査には影響ありません。そのため、ご家族やグループでの申請において代表者がまとめて支払う場合も、申請者以外のカードでのお支払いが可能です。</p>
+        <p>申請手数料の内訳は、アメリカ国土安全保障省申請料($40.27)に加え、申請代行サービス料として24,200円(税込)を頂戴いたします。</p>
 
-        <h3 id="section-21" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">18. 申請料の支払い</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">申請料のお支払い方法はクレジットカードのみとなります。各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)が利用可能です。なお、カードは申請者本人の名義でなくても審査には影響ありません。そのため、ご家族やグループでの申請において代表者がまとめて支払う場合も、申請者以外のカードでのお支払いが可能です。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">申請手数料の内訳は、アメリカ国土安全保障省申請料($40.27)に加え、申請代行サービス料として24,200円(税込)を頂戴いたします。</p>
+        <h3>19.　申請手続きの完了</h3>
+        <p>お支払いが完了し、「申請完了」と表示された時点でESTA申請の手続きはすべて終了となります。</p>
 
-        <h3 id="section-22" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">19. 申請手続きの完了</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">お支払いが完了し、「申請完了」と表示された時点でESTA申請の手続きはすべて終了となります。</p>
+        <h3>20.　申請受付完了の通知</h3>
+        <p>ESTA申請が完了しましたら、当サイトより「申請受付完了メール」が送信されます。申請時に登録したメールアドレス宛に送信されますので、申請後は該当のメールフォルダをご確認ください。なお、フリーメールをご利用の場合、迷惑メールフォルダなどに振り分けられる場合があります。万が一、「申請受付完了メール」が確認できない場合は、お問い合わせフォームより、登録したメールアドレス・お名前・パスポート番号を記載のうえご連絡ください。</p>
 
-        <h3 id="section-23" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">20. 申請受付完了の通知</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請が完了しましたら、当サイトより「申請受付完了メール」が送信されます。申請時に登録したメールアドレス宛に送信されますので、申請後は該当のメールフォルダをご確認ください。なお、フリーメールをご利用の場合、迷惑メールフォルダなどに振り分けられる場合があります。万が一、「申請受付完了メール」が確認できない場合は、お問い合わせフォームより、登録したメールアドレス・お名前・パスポート番号を記載のうえご連絡ください。</p>
+        <h3>21.　渡航認証可否の通知</h3>
+        <p>ESTA申請後、登録済みのメールアドレス宛に「渡航認証可否メール」が送信されます。このメールには、ESTAの審査結果が記載されていますので、必ずご確認ください。なお、審査には最大72時間かかる場合があり、即時に承認されるとは限りません。審査中の申請ステータスは「渡航認証保留中」と表示されます。申請日に「渡航認証可否メール」が通知されなかった場合は、翌日に再度メールフォルダをご確認ください。審査後は「渡航認証許可」と「渡航認証拒否」のいずれかの結果が通知されます。</p>
+      </section>
 
-        <h3 id="section-24" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">21. 渡航認証可否の通知</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請後、登録済みのメールアドレス宛に「渡航認証可否メール」が送信されます。このメールには、ESTAの審査結果が記載されていますので、必ずご確認ください。なお、審査には最大72時間かかる場合があり、即時に承認されるとは限りません。審査中の申請ステータスは「渡航認証保留中」と表示されます。申請日に「渡航認証可否メール」が通知されなかった場合は、翌日に再度メールフォルダをご確認ください。審査後は「渡航認証許可」と「渡航認証拒否」のいずれかの結果が通知されます。</p>
+      <section id="sec-04" class="fade-up">
+        <h2>ESTA申請のタイミングと有効期限</h2>
+        <p>ESTAの審査には最大3日間かかる場合があります。そのため、DHS(アメリカ国土安全保障省)では、出発日の72時間前までにESTAを申請し、「渡航認証許可」を取得することが推奨されています。申請後は、CBP(アメリカ合衆国税関・国境警備局)による審査が行われ、審査結果が確認され次第、当サイトより「渡航認証可否メール」が送信されます。審査結果は、「渡航認証許可」または「渡航認証拒否」のいずれかとなります。通知内容によって対応が異なりますので、必ず「渡航認証可否メール」をご確認ください。渡航認証が承認された場合は「渡航認証許可」の通知が届きますが、申請内容に不備があった場合などには「渡航認証拒否」と通知されます。「渡航認証拒否」の通知を受けた場合、ESTAを利用した渡航は認められませんのでご注意ください。</p>
+        <p>ESTAの有効期限は2年間で、この期間内であれば複数回の渡米が可能です。ただし、パスポートの有効期限が2年未満の場合、ESTAもパスポートの有効期限と同時に失効します。あらかじめパスポートの有効期限をご確認いただき、2年未満である場合は更新後にESTAを申請することをおすすめします。</p>
+      </section>
 
-        <h2 id="section-time" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">各ステップの所要時間目安</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請の全体の所要時間は約10分ですが、各ステップごとの目安時間は以下の通りです。事前に必要書類を準備しておくことで、よりスムーズに進められます。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">ステップ</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">内容</th>
-                <th className="border border-gray-300 px-4 py-2 text-center">所要時間</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">01</td><td className="border border-gray-300 px-4 py-2">申請開始</td><td className="border border-gray-300 px-4 py-2 text-center">約1分</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">02-03</td><td className="border border-gray-300 px-4 py-2">個人情報・連絡先</td><td className="border border-gray-300 px-4 py-2 text-center">約3分</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">04-05</td><td className="border border-gray-300 px-4 py-2">居住地・パスポート情報</td><td className="border border-gray-300 px-4 py-2 text-center">約2分</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">06-09</td><td className="border border-gray-300 px-4 py-2">国籍・出生地・TTPメンバー情報</td><td className="border border-gray-300 px-4 py-2 text-center">約1分</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">10-14</td><td className="border border-gray-300 px-4 py-2">渡航情報・就労・SNS・緊急連絡先・両親</td><td className="border border-gray-300 px-4 py-2 text-center">約2分</td></tr>
-              <tr className="bg-gray-50"><td className="border border-gray-300 px-4 py-2">15-17</td><td className="border border-gray-300 px-4 py-2">適格性質問・同意・最終確認</td><td className="border border-gray-300 px-4 py-2 text-center">約1分</td></tr>
-              <tr className="bg-white"><td className="border border-gray-300 px-4 py-2">18-21</td><td className="border border-gray-300 px-4 py-2">支払い・完了・通知確認</td><td className="border border-gray-300 px-4 py-2 text-center">約1分</td></tr>
-              <tr className="bg-[#f0f7ff] font-bold"><td className="border border-gray-300 px-4 py-2" colSpan={2}>合計</td><td className="border border-gray-300 px-4 py-2 text-center">約10分</td></tr>
-            </tbody>
-          </table>
-        </div>
+      <section id="sec-05" class="fade-up">
+        <h2>ESTA申請時の住所記載方法と記入例</h2>
+        <p>ESTA(エスタ)申請フォームでは、住所をローマ字(大文字)で入力する必要があります。申請時にスペルミスがあると、入力不備とみなされる可能性がありますのでご注意ください。入力後は、スペルに誤りがないか必ず確認しましょう。</p>
+        <p>以下では、住所の記入例について解説します。</p>
+        <p>住所："東京都目黒区青葉台2-5-4　SBコート303号"の記入例</p>
+        <table>
+          <tbody>
+            <tr><th>都道府県/東京都</th><td>TOKYO</td></tr>
+            <tr><th>市区町村/目黒区青葉台</th><td>MEGURO-KU AOBADAI</td></tr>
+            <tr><th>丁番地/2-5-4</th><td>2-5-4</td></tr>
+            <tr><th>建物名/SBコート</th><td>SB KOUTO</td></tr>
+            <tr><th>部屋番号/303号</th><td>303</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <h2 id="section-mistakes" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">よくある入力ミスと対処法</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請で頻繁に発生する入力ミスとその対処法をまとめました。申請前に以下のポイントを確認し、ミスを防ぎましょう。</p>
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 text-sm">
-            <thead>
-              <tr className="bg-[#1a2744] text-white">
-                <th className="border border-gray-300 px-4 py-2 text-left">よくあるミス</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">正しい入力方法</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">影響</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">氏名のスペルミス（例：SATOU→SATO）</td>
-                <td className="border border-gray-300 px-4 py-2">パスポート記載通りに入力</td>
-                <td className="border border-gray-300 px-4 py-2">審査遅延・搭乗拒否の可能性</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">パスポート番号の桁数間違い</td>
-                <td className="border border-gray-300 px-4 py-2">アルファベット2文字＋数字7桁（合計9桁）</td>
-                <td className="border border-gray-300 px-4 py-2">審査エラー</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">生年月日の日/月の入力順序ミス</td>
-                <td className="border border-gray-300 px-4 py-2">日/月/年の順で選択</td>
-                <td className="border border-gray-300 px-4 py-2">審査不合格の可能性</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">住所を日本語で入力</td>
-                <td className="border border-gray-300 px-4 py-2">ローマ字（英語表記）で入力</td>
-                <td className="border border-gray-300 px-4 py-2">入力不備とみなされる</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">メールアドレスの入力ミス</td>
-                <td className="border border-gray-300 px-4 py-2">受信確認済みのアドレスを入力</td>
-                <td className="border border-gray-300 px-4 py-2">審査結果が届かない</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">適格性の質問で誤って「はい」を選択</td>
-                <td className="border border-gray-300 px-4 py-2">質問内容をよく読み正確に回答</td>
-                <td className="border border-gray-300 px-4 py-2">渡航認証拒否の可能性</td>
-              </tr>
-              <tr className="bg-white">
-                <td className="border border-gray-300 px-4 py-2">有効期限切れのパスポート情報を入力</td>
-                <td className="border border-gray-300 px-4 py-2">最新の有効パスポートの情報を入力</td>
-                <td className="border border-gray-300 px-4 py-2">申請無効</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-          <p className="text-gray-700 text-sm"><span className="font-bold">入力ミスに気づいた場合の対処法：</span>申請完了前であれば、確認画面に戻って修正できます。申請完了後に氏名やパスポート番号の誤りに気づいた場合は、正しい情報で新規に再申請してください。ESTA申請は何度でも可能ですが、その都度申請手数料が発生します。</p>
-        </div>
+      <section id="sec-06" class="fade-up">
+        <h2>ESTAの申請ステータスと審査結果の確認手順</h2>
+        <p>ESTA(エスタ)申請後は、申請ステータスおよび審査結果を確認することができます。ただし、これは当サイトでESTAを申請された方に限られます。米国CBP(アメリカ合衆国税関・国境警備局)の公式サイトで申請された場合は、当サイトでの確認はできませんのでご注意ください。申請ステータスおよび審査結果を確認する際には、氏名・生年月日・申請IDの入力が必要です。申請IDは33桁の英数字で構成されており、「申請受付完了メール」に記載されています。このメールは、申請時に登録したメールアドレス宛に送信されますので、該当のメールフォルダをご確認ください。なお、申請IDは審査結果の確認に必要となるため、「申請受付完了メール」を大切に保存しておきましょう。また、申請IDによるステータス確認は、申請日から90日間のみ有効です。</p>
 
-        <h2 id="section-25" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTA申請のタイミングと有効期限</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAの審査には最大3日間かかる場合があります。そのため、DHS(アメリカ国土安全保障省)では、出発日の72時間前までにESTAを申請し、「渡航認証許可」を取得することが推奨されています。申請後は、CBP(アメリカ合衆国税関・国境警備局)による審査が行われ、審査結果が確認され次第、当サイトより「渡航認証可否メール」が送信されます。審査結果は、「渡航認証許可」または「渡航認証拒否」のいずれかとなります。通知内容によって対応が異なりますので、必ず「渡航認証可否メール」をご確認ください。渡航認証が承認された場合は「渡航認証許可」の通知が届きますが、申請内容に不備があった場合などには「渡航認証拒否」と通知されます。「渡航認証拒否」の通知を受けた場合、ESTAを利用した渡航は認められませんのでご注意ください。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAの有効期限は2年間で、この期間内であれば複数回の渡米が可能です。ただし、パスポートの有効期限が2年未満の場合、ESTAもパスポートの有効期限と同時に失効します。あらかじめパスポートの有効期限をご確認いただき、2年未満である場合は更新後にESTAを申請することをおすすめします。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAの有効期限が切れた場合の再申請手順については、「<a href="/list-esta-application/renewal/" className="text-[#c41e3a] hover:underline">ESTAの更新・延長方法を解説</a>」で詳しくご確認いただけます。</p>
+        <h3>審査結果が通知されるまでの所要時間</h3>
+        <p>ESTA申請情報の入力が完了すると、米国CBP(アメリカ合衆国税関・国境警備局)による審査が開始されます。審査中は、申請ステータスが「渡航認証保留」と表示され、最大72時間以内に審査結果が通知されます。そのため、申請後すぐに渡航認証が承認されるとは限りませんのでご注意ください。また、申請日にステータスが変更されない場合は、翌日以降にあらためて確認しましょう。</p>
+        <p>審査結果は「渡航認証許可」または「渡航認証拒否」のいずれかとなります。申請内容に不備がなければ「渡航認証許可」と通知され、ESTA申請は完了です。その場合は、ESTAの申請番号と有効期限を渡航日まで大切に保管しておきましょう。一方、「渡航認証拒否」と通知された場合は、ESTAの利用は認められません。在日米国大使館または総領事館にて、渡航目的に応じたアメリカのビザを取得してください。</p>
+      </section>
 
-        <h2 id="section-26" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTA申請時の住所記載方法と記入例</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)申請フォームでは、住所をローマ字(大文字)で入力する必要があります。申請時にスペルミスがあると、入力不備とみなされる可能性がありますのでご注意ください。入力後は、スペルに誤りがないか必ず確認しましょう。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">以下では、住所の記入例について解説します。</p>
-        <p className="text-gray-700 leading-relaxed mb-4">住所：&quot;東京都目黒区青葉台2-5-4 SBコート303号&quot;の記入例</p>
-        <ul className="list-none space-y-1 mb-4 pl-4">
-          <li className="text-gray-700">都道府県/東京都 → TOKYO</li>
-          <li className="text-gray-700">市区町村/目黒区青葉台 → MEGURO-KU AOBADAI</li>
-          <li className="text-gray-700">丁番地/2-5-4 → 2-5-4</li>
-          <li className="text-gray-700">建物名/SBコート → SB KOUTO</li>
-          <li className="text-gray-700">部屋番号/303号 → 303</li>
+      <section id="sec-07" class="fade-up">
+        <h2>ESTA申請時に注意すべき点</h2>
+        <p>ESTA(エスタ)は、短期間の観光などを目的にアメリカへ渡航する際に必要な申請です。ただし、日本を含むビザ免除プログラム(VWP)参加国の市民であっても、以下のいずれかに該当する場合は、ESTAを利用することができません。</p>
+        <ul>
+          <li>VWP参加国の国籍者で、2021年1月12日以降にキューバへの滞在または渡航歴がある方</li>
+          <li>VWP参加国の国籍者で、スーダン、キューバ、北朝鮮、イラン、シリア、イラクのいずれかの国籍を有する二重国籍者の方</li>
+          <li>VWP参加国の国籍者で、北朝鮮、スーダン、ソマリア、イエメン、リビア、イラン、イラク、シリアへの滞在または渡航歴がある方(VWP参加国の政府職員または軍としての公務による渡航は除く)</li>
         </ul>
-        <p className="text-gray-700 leading-relaxed mb-4">その他の都市の記入例（札幌・大阪・名古屋・福岡など）については「<a href="/list-esta-application/place-of-birth/" className="text-[#c41e3a] hover:underline">ESTA申請時の出生地や住所の書き方を解説</a>」でさらに詳しくご確認いただけます。</p>
+        <p>ESTAを申請する際は、事前にビザ免除プログラムの詳細およびESTAの申請条件について確認することをお勧めします。上記に該当する場合は、申請しても渡航認証を拒否される可能性があるためご注意ください。</p>
+      </section>
 
-        <h2 id="section-27" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTAの申請ステータスと審査結果の確認手順</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)申請後は、申請ステータスおよび審査結果を確認することができます。ただし、これは当サイトでESTAを申請された方に限られます。米国CBP(アメリカ合衆国税関・国境警備局)の公式サイトで申請された場合は、当サイトでの確認はできませんのでご注意ください。申請ステータスおよび審査結果を確認する際には、氏名・生年月日・申請IDの入力が必要です。申請IDは33桁の英数字で構成されており、「申請受付完了メール」に記載されています。このメールは、申請時に登録したメールアドレス宛に送信されますので、該当のメールフォルダをご確認ください。なお、申請IDは審査結果の確認に必要となるため、「申請受付完了メール」を大切に保存しておきましょう。また、申請IDによるステータス確認は、申請日から90日間のみ有効です。</p>
+      <section id="sec-08" class="fade-up">
+        <h2>ESTA申請・利用に関するよくある質問一覧</h2>
 
-        <h3 id="section-28" className="text-lg font-bold text-[#1a2744] border-b border-gray-200 pb-2 mt-8 mb-4">審査結果が通知されるまでの所要時間</h3>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA申請情報の入力が完了すると、米国CBP(アメリカ合衆国税関・国境警備局)による審査が開始されます。審査中は、申請ステータスが「渡航認証保留」と表示され、最大72時間以内に審査結果が通知されます。そのため、申請後すぐに渡航認証が承認されるとは限りませんのでご注意ください。また、申請日にステータスが変更されない場合は、翌日以降にあらためて確認しましょう。
-審査結果は「渡航認証許可」または「渡航認証拒否」のいずれかとなります。申請内容に不備がなければ「渡航認証許可」と通知され、ESTA申請は完了です。その場合は、ESTAの申請番号と有効期限を渡航日まで大切に保管しておきましょう。一方、「渡航認証拒否」と通知された場合は、ESTAの利用は認められません。在日米国大使館または総領事館にて、渡航目的に応じたアメリカのビザを取得してください。</p>
+        <h3>ESTAとビザの相違点</h3>
+        <p>ESTA(エスタ)とは、90日以内の短期間の観光、商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証制度です。これはビザ免除プログラム(VWP)の一環として運用されており、日本を含むVWP参加国の市民は事前にESTAを取得することで、ビザなしでの渡米が認められます。なお、ESTAの審査には一定の時間を要するため、出発日の3日前までに申請することが推奨されています。一方、留学・就労・永住、または90日間を超える滞在などを目的としてアメリカへ渡航する場合にはビザの取得が必要です。ビザの種類によって申請条件や滞在可能期間が異なりますので、申請を行う際は在日米国大使館または総領事館の公式ウェブサイトで詳細をご確認ください。</p>
 
-        <h2 id="section-29" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTA申請時に注意すべき点</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTA(エスタ)は、短期間の観光などを目的にアメリカへ渡航する際に必要な申請です。ただし、日本を含むビザ免除プログラム(VWP)参加国の市民であっても、以下のいずれかに該当する場合は、ESTAを利用することができません。</p>
-        <ul className="list-disc pl-6 space-y-2 mb-4">
-          <li className="text-gray-700">VWP参加国の国籍者で、2021年1月12日以降にキューバへの滞在または渡航歴がある方</li>
-          <li className="text-gray-700">VWP参加国の国籍者で、スーダン、キューバ、北朝鮮、イラン、シリア、イラクのいずれかの国籍を有する二重国籍者の方</li>
-          <li className="text-gray-700">VWP参加国の国籍者で、北朝鮮、スーダン、ソマリア、イエメン、リビア、イラン、イラク、シリアへの滞在または渡航歴がある方(VWP参加国の政府職員または軍としての公務による渡航は除く)</li>
-        </ul>
-        <p className="text-gray-700 leading-relaxed mb-4">ESTAを申請する際は、事前にビザ免除プログラムの詳細およびESTAの申請条件について確認することをお勧めします。上記に該当する場合は、申請しても渡航認証を拒否される可能性があるためご注意ください。</p>
+        <h3>ESTAの有効期限</h3>
+        <p>ESTA(エスタ)の有効期限は2年間で、この期間内であれば複数回の渡米が可能です。ただし、申請時に登録したパスポートの有効期限が2年未満の場合は、ESTAもそのパスポートの有効期限と同日に失効しますのでご注意ください。事前にパスポートの有効期限を確認し、2年未満である場合は、更新後にESTAを申請することをおすすめします。</p>
+        <p>なお、アメリカへ入国する際に有効なESTAを所持している必要がありますが、出国時にESTAの有効期限が切れていても問題はありません。</p>
 
-        <h2 id="section-8" className="text-xl font-bold text-[#1a2744] border-b-2 border-gray-200 pb-2 mt-10 mb-4">ESTA申請・利用に関するよくある質問一覧</h2>
-        <div className="space-y-4 mb-8">
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTAとビザの違いは何ですか？</p>
-            <p className="text-gray-700 leading-relaxed">ESTA(エスタ)とは、90日以内の短期間の観光、商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証制度です。これはビザ免除プログラム(VWP)の一環として運用されており、日本を含むVWP参加国の市民は事前にESTAを取得することで、ビザなしでの渡米が認められます。なお、ESTAの審査には一定の時間を要するため、出発日の3日前までに申請することが推奨されています。一方、留学・就労・永住、または90日間を超える滞在などを目的としてアメリカへ渡航する場合にはビザの取得が必要です。ビザの種類によって申請条件や滞在可能期間が異なりますので、申請を行う際は在日米国大使館または総領事館の公式ウェブサイトで詳細をご確認ください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTAの有効期限はどれくらいですか？</p>
-            <p className="text-gray-700 leading-relaxed">ESTA(エスタ)の有効期限は2年間で、この期間内であれば複数回の渡米が可能です。ただし、申請時に登録したパスポートの有効期限が2年未満の場合は、ESTAもそのパスポートの有効期限と同日に失効しますのでご注意ください。事前にパスポートの有効期限を確認し、2年未満である場合は、更新後にESTAを申請することをおすすめします。なお、アメリカへ入国する際に有効なESTAを所持している必要がありますが、出国時にESTAの有効期限が切れていても問題はありません。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請ステータスの確認方法は？</p>
-            <p className="text-gray-700 leading-relaxed">当サイトでは、ESTA(エスタ)の申請状況を確認することができます。ただし、CBP(アメリカ合衆国税関・国境警備局)の公式サイトなど、当サイト以外でESTAを申請された場合は確認できません。また、ESTAの申請状況を確認する際は、「申請内容確認画面」にて、氏名・生年月日・33桁の申請IDの入力が必要です。申請IDは、ESTA申請完了後に当サイトから送信される「申請受付完了メール」に記載されています。なお、申請IDによる申請状況の確認は、ESTA申請完了日から90日間のみ可能です。90日を過ぎると、個人情報保護の観点から確認ができなくなるためご注意ください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. アメリカ経由で第三国へ乗り継ぐ場合もESTAは必要ですか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、ESTAは乗り換えや乗り継ぎを目的としてアメリカへ渡航する場合にも申請が必要です。万が一、ESTAを取得せずに出発日を迎えた場合、飛行機への搭乗やアメリカへの入国を拒否されるためご注意ください。また、ESTAを管轄するCBP(アメリカ合衆国税関・国境警備局)では、渡航日の3日前までにESTAを取得することが推奨されています。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 幼児・未成年者もESTA申請は必要ですか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、ESTAは年齢を問わず全ての渡航者に申請が義務付けられています。未就学児(乳幼児を含む)や未成年者であっても、渡航前にESTAの申請が必要です。未成年者のESTA申請は、保護者が代理で手続きを行ってください。また、申請時には保護者の情報ではなく、お子様本人のパスポート情報の入力が必要となります。なお、未成年者が単独でアメリカへ渡航する場合には、保護者や親族の方が作成した「渡航同意書」の提示を求められることがありますので、あらかじめご準備いただくことをおすすめします。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請で入力ミスをした場合はどうすればいいですか？</p>
-            <p className="text-gray-700 leading-relaxed">申請完了前であれば、確認画面で修正が可能です。申請完了後にミスに気づいた場合は、再度新規申請を行う必要があります。氏名やパスポート番号の入力ミスは審査に影響するため、送信前に必ず確認してください。なお、再申請時にも申請手数料が発生します。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請はスマホからでもできますか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、スマートフォンやタブレットからも申請可能です。CBP公式アプリ「ESTA Mobile」を利用すれば、パスポートのスキャンや顔写真の撮影もスマホ1台で完結します。PCのブラウザからも同様に申請できます。アプリでの申請方法の詳細は「<a href="/list-esta-application/application/" className="text-[#c41e3a] hover:underline">アプリを使ったESTA申請方法を解説</a>」をご確認ください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請は出発日や滞在先が未定でも申請できますか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、渡航日や滞在先が未定の状態でもESTAの申請は可能です。滞在先の情報が不明な場合は空欄のまま申請できます。ただし、渡航日の72時間前までには申請を完了させることが推奨されています。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. 家族全員分のESTAを一度に申請できますか？</p>
-            <p className="text-gray-700 leading-relaxed">公式ウェブサイトではグループ申請機能を利用して最大50人まで一括で申請・管理できます。ただし、入力内容は1人ずつ個別に入力する必要があります。アプリの場合はグループ申請に対応していないため、1人ずつ申請してください。家族やグループでの申請について詳しくは「<a href="/list-esta-application/group-family/" className="text-[#c41e3a] hover:underline">ESTAのグループ・家族申請について</a>」をご確認ください。</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-bold text-[#1a2744] mb-2">Q. ESTA申請の途中で中断した場合、続きから再開できますか？</p>
-            <p className="text-gray-700 leading-relaxed">はい、申請途中で保存した場合は、申請番号を使って続きから再開できます。ただし、保存せずにブラウザを閉じた場合は最初からやり直す必要があります。申請番号はメモやスクリーンショットで控えておくことをおすすめします。</p>
-          </div>
-        </div>
+        <h3>ESTA申請ステータスの確認方法</h3>
+        <p>当サイトでは、ESTA(エスタ)の申請状況を確認することができます。ただし、CBP(アメリカ合衆国税関・国境警備局)の公式サイトなど、当サイト以外でESTAを申請された場合は確認できません。また、ESTAの申請状況を確認する際は、「申請内容確認画面」にて、氏名・生年月日・33桁の申請IDの入力が必要です。申請IDは、ESTA申請完了後に当サイトから送信される「申請受付完了メール」に記載されています。なお、申請IDによる申請状況の確認は、ESTA申請完了日から90日間のみ可能です。90日を過ぎると、個人情報保護の観点から確認ができなくなるためご注意ください。</p>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-lg font-bold text-[#1a2744] mb-4">関連記事</h3>
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA(エスタ)とは？事前入国審査制度を解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/esta-flow" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">【記入例付き】ESTAの申請方法を解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/place-of-birth" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">出生地や住所の書き方を紹介</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/us-contact-details" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">米国内の連絡先情報の記入方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/fee" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTAの申請料金</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/expiration-date" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTAの有効期限と再申請・確認方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/official-cbp" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">公式ウェブサイトについて解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/cbp-flow" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA申請方法と取得手順を徹底解説</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/application" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">アプリのESTA申請方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/status-check" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">ESTA申請状況の確認方法</Link></div>
-            <div className="flex items-center gap-2 py-2 px-3 bg-[#f8fafc] rounded hover:bg-[#f0f4f8] transition-colors"><span className="text-[#c41e3a] text-xs">●</span><Link href="/list-esta-application/guam" className="text-sm text-[#c41e3a] hover:underline hover:text-[#c41e3a] transition-colors">グアム入国にESTAは必要？</Link></div>
-          </div>
-        </div>
-        <div className="bg-[#f8fafc] border border-gray-200 rounded-lg p-5 my-6">
-          <p className="text-base font-bold text-[#1a2744] mb-3">関連ページ</p>
-          <ul className="space-y-2">
-            <li><Link href="/list-esta-application/address-guide/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTA申請時の住所の書き方ガイド</Link></li>
-            <li><Link href="/list-esta-application/group-family/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTAのグループ・家族申請について</Link></li>
-            <li><Link href="/list-esta-application/passport/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTA申請に必要なパスポートについて</Link></li>
-            <li><Link href="/list-esta-application/application/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ アプリを使ったESTA申請方法を解説</Link></li>
-            <li><Link href="/list-esta-application/renewal/" className="text-[#1a2744] hover:text-[#c41e3a] text-sm transition-colors">→ ESTAの更新・延長方法を解説</Link></li>
-          </ul>
-        </div>
-      </div>
+        <h3>アメリカ経由で第三国へ乗り継ぐ場合のESTA要否</h3>
+        <p>ESTAは、乗り換えや乗り継ぎを目的としてアメリカへ渡航する場合にも申請が必要です。万が一、ESTAを取得せずに出発日を迎えた場合、飛行機への搭乗やアメリカへの入国を拒否されるためご注意ください。また、ESTAを管轄するCBP(アメリカ合衆国税関・国境警備局)では、渡航日の3日前までにESTAを取得することが推奨されています。そのため、アメリカへの渡航が決まり次第、早めに申請することをお勧めします。</p>
+
+        <h3>幼児・未成年者のESTA申請要否</h3>
+        <p>ESTAは、90日以内の観光・商用・乗り継ぎを目的としてアメリカへ渡航する、ビザ免除プログラム(VWP)参加国の市民を対象に申請が義務付けられています。そのため、未就学児(乳幼児を含む)や未成年者であっても、渡航前にESTAの申請が必要です。未成年者のESTA申請は、保護者が代理で手続きを行ってください。また、申請時には保護者の情報ではなく、お子様本人のパスポート情報の入力が必要となります。なお、未成年者が単独でアメリカへ渡航する場合には、保護者や親族の方が作成した「渡航同意書」の提示を求められることがありますので、あらかじめご準備いただくことをおすすめします。</p>
+      </section>
+
     </article>
-  );
+  </div>
+</section>
+
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+</div><!--$--><!--/$-->`;
+
+export default function Page() {
+  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }
