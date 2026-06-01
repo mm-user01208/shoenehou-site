@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'US ESTA Apply Websiteの運営者情報・特定商取引法に基づく表記です。サイト名、運営責任者、所在地、連絡先、販売価格、お支払い方法、サービス提供時期、キャンセル・返金ポリシーを掲載しています。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb">
@@ -80,8 +80,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

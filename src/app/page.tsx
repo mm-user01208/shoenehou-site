@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'アメリカ渡航に必要な電子渡航認証ESTA(エスタ)の申請窓口。申請には最大3日かかるため、余裕を持ってお手続きください。日本語でフルサポート。',
 };
 
-const BODY_HTML = `<div class="redesign-top"><!-- ===== HERO ===== -->
+const BODY_HTML = `<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero__bg">
     <img src="/img/hero-liberty.jpg" alt="" loading="eager">
@@ -291,8 +291,8 @@ const BODY_HTML = `<div class="redesign-top"><!-- ===== HERO ===== -->
   <p class="bodytext fade-up" style="margin-top:36px;max-width:880px;font-size:13.5px;line-height:2;color:var(--fg-3)">当サイトはESTA(エスタ)の申請代行サービスを提供するウェブサイトです。民間企業による運営であり、いかなる政府機関とも提携または関係はありません。電子渡航認証は、本サービスを利用せず公式サイトから直接申請することも可能です。当サイトの申請料金には、CBPへ支払う実費に加え、日本語サポートおよび代行サービスの手数料が含まれます。</p>
 </section>
 
-<!-- ===== Footer ===== --></div><!--$--><!--/$-->`;
+<!-- ===== Footer ===== -->`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-top" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

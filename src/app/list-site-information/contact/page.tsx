@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'ESTA申請やサービスに関するご質問はお問い合わせフォームよりお寄せください。日本語サポート対応です。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb">
@@ -39,8 +39,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請には最大3日かかるため、<br class="sp-br">余裕を持ってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

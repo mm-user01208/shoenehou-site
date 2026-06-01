@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'グアムまたは北マリアナ諸島への入国では、渡航目的や滞在日数によってESTA(エスタ)の取得が求められます。本記事では、ESTAの申請方法をはじめ、グアム入国時の手続きについて解説します。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
@@ -191,8 +191,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

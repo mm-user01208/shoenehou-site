@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'ESTA(エスタ)の申請では、氏名や生年月日など個人情報の入力が求められます。本記事では、申請をスムーズに進められるよう、記入例を交えて申請方法を紹介します。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
@@ -201,8 +201,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

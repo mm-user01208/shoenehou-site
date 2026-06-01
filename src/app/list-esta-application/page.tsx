@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'ESTA申請に関する要件や最新情報、注意点、申請手順、よくある質問を各ページでまとめています。渡航前に確認しておきたい重要なポイントを分かりやすく解説します。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb">
@@ -42,8 +42,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'ESTA申請は、出発の72時間前までに行うことが推奨されています。本記事では、申請に必要な書類や申請方法・手順、さらに審査結果の確認方法までを分かりやすく解説します。',
 };
 
-const BODY_HTML = `<div class="redesign-detail">
+const BODY_HTML = `
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
@@ -151,8 +151,8 @@ const BODY_HTML = `<div class="redesign-detail">
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
-</div><!--$--><!--/$-->`;
+`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }

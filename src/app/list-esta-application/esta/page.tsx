@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。申請対象者・要件・必要書類・有効期限・申請タイミングまで完全解説。',
 };
 
-const BODY_HTML = `<div class="redesign-detail"><section class="article-hero">
+const BODY_HTML = `<section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
@@ -149,8 +149,8 @@ const BODY_HTML = `<div class="redesign-detail"><section class="article-hero">
   </div>
 </section>
 
-<!-- ===== Footer (reused) ===== --></div><!--$--><!--/$-->`;
+<!-- ===== Footer (reused) ===== -->`;
 
 export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
 }
