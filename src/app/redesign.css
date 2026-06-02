@@ -58,3 +58,59 @@
 
 /* === Wiz hotfix 2026-06-01: CV button font-size 17px === */
 .hero__cta,a.cta-btn,.floating-cta__apply{font-size:17px!important}
+
+/* === Wiz hotfix 2026-06-02: FAQ dropdown 2-col + SP padding 6px + footer__main-links === */
+.gnav__dropdown-panel--faq{
+  min-width:580px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  padding:24px;
+}
+.gnav__dropdown--faq .gnav__dropdown-col{
+  display:flex;
+  flex-direction:column;
+}
+.gnav__dropdown--faq .gnav__dropdown-category{
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-size:11.5px;
+  margin-bottom:8px;
+  padding:6px 0;
+}
+.gnav__dropdown--faq .gnav__dropdown-divider{
+  border-bottom:1px solid var(--line-soft);
+  margin-bottom:8px;
+}
+.gnav__dropdown--faq .gnav__dropdown-link{
+  padding:6px 0;
+  font-size:13.5px;
+  color:var(--navy);
+  display:block;
+}
+.gnav__dropdown--faq .gnav__dropdown-link:hover{color:var(--gold)}
+
+@media (max-width:1180px){
+  .gnav__menu.is-open a,
+  .gnav__menu.is-open .gnav__dropdown-trigger,
+  .gnav__menu.is-open .gnav__dropdown-link{
+    padding-top:6px!important;
+    padding-bottom:6px!important;
+  }
+}
+
+.footer__main-links{
+  list-style:none;
+  padding:0;
+  margin:18px 0 0;
+}
+.footer__main-links li{padding:4px 0}
+.footer__main-links a{
+  color:#ffffffe0;
+  letter-spacing:.04em;
+  font-size:14px;
+  font-weight:600;
+}
+.footer__main-links a:hover{color:#fff;opacity:1}
