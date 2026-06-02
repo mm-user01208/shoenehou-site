@@ -59,17 +59,40 @@
 /* === Wiz hotfix 2026-06-01: CV button font-size 17px === */
 .hero__cta,a.cta-btn,.floating-cta__apply{font-size:17px!important}
 
-/* === Wiz hotfix 2026-06-02: FAQ dropdown 2-col + SP padding 6px + footer__main-links === */
+/* === Wiz hotfix 2026-06-02 v2: FAQ dropdown + SP padding + footer layout === */
+/* FAQ dropdown: 2 columns, clean lines, hover-open */
+.gnav__dropdown--faq{position:relative}
+.gnav__dropdown--faq:hover .gnav__dropdown-panel--faq,
+.gnav__dropdown--faq:focus-within .gnav__dropdown-panel--faq{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
 .gnav__dropdown-panel--faq{
-  min-width:580px;
+  position:absolute;
+  top:100%;
+  right:0;
+  min-width:560px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:24px;
-  padding:24px;
+  gap:0;
+  padding:8px 0;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 28px 60px -24px rgba(15,19,32,0.18);
+  z-index:80;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .2s var(--t),visibility .2s var(--t);
 }
 .gnav__dropdown--faq .gnav__dropdown-col{
   display:flex;
   flex-direction:column;
+  padding:16px 20px;
+}
+.gnav__dropdown--faq .gnav__dropdown-col:first-child{
+  border-right:1px solid var(--line-soft);
 }
 .gnav__dropdown--faq .gnav__dropdown-category{
   font-weight:700;
@@ -77,40 +100,79 @@
   letter-spacing:.16em;
   text-transform:uppercase;
   font-size:11.5px;
-  margin-bottom:8px;
-  padding:6px 0;
-}
-.gnav__dropdown--faq .gnav__dropdown-divider{
+  padding:0 0 12px;
   border-bottom:1px solid var(--line-soft);
-  margin-bottom:8px;
+  margin-bottom:6px;
 }
 .gnav__dropdown--faq .gnav__dropdown-link{
-  padding:6px 0;
+  padding:8px 0;
   font-size:13.5px;
   color:var(--navy);
   display:block;
+  white-space:nowrap;
 }
-.gnav__dropdown--faq .gnav__dropdown-link:hover{color:var(--gold)}
+.gnav__dropdown--faq .gnav__dropdown-link:hover{color:var(--gold);opacity:1}
 
+/* SP padding 6px for all menu items inside the open drawer */
 @media (max-width:1180px){
-  .gnav__menu.is-open a,
+  .gnav__menu.is-open a.gnav__menu-link,
   .gnav__menu.is-open .gnav__dropdown-trigger,
-  .gnav__menu.is-open .gnav__dropdown-link{
+  .gnav__menu.is-open .gnav__dropdown-link,
+  .gnav__menu.is-open .gnav__dropdown-category{
     padding-top:6px!important;
     padding-bottom:6px!important;
   }
+  /* In SP open drawer, the FAQ dropdown panel should appear inline */
+  .gnav__menu.is-open .gnav__dropdown-panel--faq{
+    position:static;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    display:block;
+    grid-template-columns:1fr;
+    min-width:0;
+    width:100%;
+    border:0;
+    box-shadow:none;
+    padding:0;
+  }
+  .gnav__menu.is-open .gnav__dropdown-col{
+    padding:8px 0;
+    border-right:0!important;
+  }
 }
 
+/* Footer: brand-row (logo + description + main-links horizontal) above categories */
+.footer__brand-row{
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:48px;
+  padding-bottom:28px;
+  margin-bottom:28px;
+  border-bottom:1px solid #ffffff1a;
+}
 .footer__main-links{
   list-style:none;
   padding:0;
-  margin:18px 0 0;
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 28px;
+  align-content:flex-start;
 }
-.footer__main-links li{padding:4px 0}
+.footer__main-links li{padding:0}
 .footer__main-links a{
   color:#ffffffe0;
   letter-spacing:.04em;
   font-size:14px;
   font-weight:600;
+  white-space:nowrap;
 }
 .footer__main-links a:hover{color:#fff;opacity:1}
+@media (max-width:960px){
+  .footer__brand-row{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .footer__main-links{flex-direction:column;gap:6px}
+}
