@@ -122,6 +122,22 @@ const BODY_HTML = `
   </div>
 </section>
 
+
+<!-- ===== Related articles (reused) ===== -->
+<section class="section section--cream">
+  <div class="section__inner fade-up">
+    <p class="section__eyebrow">№ — Related Articles</p>
+    <h2 class="section__title">関連記事</h2>
+    <div class="ornament"><span></span><em></em><span></span></div>
+  </div>
+  <div class="related fade-up" style="margin-top:56px">
+    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
+  </div>
+</section>
+
 <section class="cta-strip cta-strip--solid">
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
