@@ -245,11 +245,15 @@ export function absoluteUrl(path: string) {
   return `${SITE_URL}${canonical === '/' ? '/' : canonical}`;
 }
 
+export function absoluteAssetUrl(path: string) {
+  return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
+}
+
 export function seoMetadata({ path, title, description }: SeoMetadataOptions): Metadata {
   const canonical = absoluteUrl(path);
   const info = SEO_ROUTES[canonicalPath(path)];
   const metaDescription = withOfficialDisclaimer(description);
-  const image = absoluteUrl(info?.image ?? '/img/logo-shield.png');
+  const image = absoluteAssetUrl(info?.image ?? '/img/logo-shield.png');
   const isArticle = isArticlePath(canonicalPath(path));
 
   return {
@@ -329,7 +333,7 @@ function organizationSchema() {
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: `${SITE_URL}/`,
-    logo: absoluteUrl('/img/logo-shield.png'),
+    logo: absoluteAssetUrl('/img/logo-shield.png'),
     description: `ESTA申請を日本語でサポートする民間サイトです。${OFFICIAL_DISCLAIMER}`,
     contactPoint: [
       {
@@ -428,7 +432,7 @@ function howToSchema(path: string, title: string, description: string) {
     '@id': `${absoluteUrl(path)}#howto`,
     name: cleanTitle(title),
     description: withOfficialDisclaimer(description),
-    image: absoluteUrl(info?.image ?? '/img/logo-shield.png'),
+    image: absoluteAssetUrl(info?.image ?? '/img/logo-shield.png'),
     inLanguage: 'ja-JP',
     publisher: { '@id': `${SITE_URL}/#organization` },
     step: HOW_TO_STEPS[path].map((text, index) => ({
@@ -442,7 +446,7 @@ function howToSchema(path: string, title: string, description: string) {
 
 function articleSchema(path: string, title: string, description: string) {
   const info = SEO_ROUTES[path];
-  const image = absoluteUrl(info?.image ?? '/img/logo-shield.png');
+  const image = absoluteAssetUrl(info?.image ?? '/img/logo-shield.png');
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
