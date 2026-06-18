@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'ESTA(エスタ)とは？事前入国審査制度を解説【アメリカ渡航】 | US ESTA Apply Website',
-  description: 'ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。申請対象者・要件・必要書類・有効期限・申請タイミングまで完全解説。',
-};
+const PAGE_PATH = '/list-esta-application/esta/';
+const PAGE_TITLE = 'ESTA(エスタ)とは？事前入国審査制度を解説【アメリカ渡航】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。申請対象者・要件・必要書類・有効期限・申請タイミングまで完全解説。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `<section class="article-hero">
   <div class="article-hero__inner">
@@ -131,7 +143,7 @@ const BODY_HTML = `<section class="article-hero">
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航にはESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ESTA申請をはじめる</a>
 </section>
 
 <!-- ===== Related articles (reused) ===== -->
@@ -143,14 +155,14 @@ const BODY_HTML = `<section class="article-hero">
   </div>
   <div class="related fade-up" style="margin-top:56px">
     <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>
 
 <!-- ===== Footer (reused) ===== -->`;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

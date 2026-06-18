@@ -1,1 +1,6 @@
-/us-contact-details /list-esta-application/us-contact-details 301
+/us-contact-details/* /list-esta-application/us-contact-details/:splat 301
+/list-esta-application/guam/* /list-esta-guide/guam/:splat 301
+/list-esta-application/guam /list-esta-guide/guam 301
+/list-site-information/entry/* /form/step1 301
+/list-site-information/status/* /status/:splat 301
+/list-site-information/contact/* /contact/:splat 301

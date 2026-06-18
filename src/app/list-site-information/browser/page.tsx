@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '推奨ブラウザについて | US ESTA Apply Website',
-  description: '本サイトを快適にご利用いただくため、推奨ブラウザをご案内しております。推奨環境以外では、一部機能が正しく動作しない場合があります。',
-};
+const PAGE_PATH = '/list-site-information/browser/';
+const PAGE_TITLE = '推奨ブラウザについて | US ESTA Apply Website';
+const PAGE_DESCRIPTION = '本サイトを快適にご利用いただくため、推奨ブラウザをご案内しております。推奨環境以外では、一部機能が正しく動作しない場合があります。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -86,7 +98,7 @@ const BODY_HTML = `
           <li>別の推奨ブラウザに切り替えて再度アクセスする</li>
           <li>セキュリティソフトの設定で当サイトのアクセスがブロックされていないか確認する</li>
         </ul>
-        <p>上記をお試しいただいても改善しない場合は、<a href="/list-site-information/contact">お問い合わせフォーム</a>より、ご利用のOS・ブラウザ・発生状況をお知らせください。</p>
+        <p>上記をお試しいただいても改善しない場合は、<a href="/contact/">お問い合わせフォーム</a>より、ご利用のOS・ブラウザ・発生状況をお知らせください。</p>
       </section>
       <section id="sec-06" class="fade-up">
         <h2>サポート対象外のブラウザ</h2>
@@ -106,10 +118,10 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

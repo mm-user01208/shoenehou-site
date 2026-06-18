@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '特定商取引法に基づく表記・運営者情報 | US ESTA Apply Website',
-  description: 'US ESTA Apply Websiteの運営者情報・特定商取引法に基づく表記です。サイト名、運営責任者、所在地、連絡先、販売価格、お支払い方法、サービス提供時期、キャンセル・返金ポリシーを掲載しています。',
-};
+const PAGE_PATH = '/list-site-information/aboutus/';
+const PAGE_TITLE = '特定商取引法に基づく表記・運営者情報 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'US ESTA Apply Websiteの運営者情報・特定商取引法に基づく表記です。サイト名、運営責任者、所在地、連絡先、販売価格、お支払い方法、サービス提供時期、キャンセル・返金ポリシーを掲載しています。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -36,10 +48,11 @@ const BODY_HTML = `
         <table>
           <tbody>
             <tr><th>サイト名</th><td>US ESTA Apply Website</td></tr>
-            <tr><th>運営責任者</th><td>大山 由美子</td></tr>
+            <tr><th>運営会社</th><td>株式会社M2 Agency</td></tr>
+            <tr><th>運営責任者</th><td>森 美咲</td></tr>
             <tr><th>所在地</th><td>東京都港区港南2-3-1 大信秋山ビル</td></tr>
             <tr><th>電話番号</th><td>03-6899-5503</td></tr>
-            <tr><th>メールアドレス</th><td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95fcfbf3fad5e0e6f0e6e1f4b8f4e5e5f9ecbbfbf0e1">[email&#160;protected]</a></td></tr>
+            <tr><th>メールアドレス</th><td><!--email_off--><a href="mailto:info@usesta-apply.net">info@usesta-apply.net</a><!--/email_off--></td></tr>
             <tr><th>受付時間</th><td>申請のご依頼および各種お問い合わせは24時間受け付けております。</td></tr>
             <tr><th>お問い合わせ方法</th><td>原則としてメールでの対応とさせていただいております。申請内容の確認や修正、キャンセルなど正確性が求められるご連絡につきましては、メールでのお問い合わせをお願いいたします。</td></tr>
           </tbody>
@@ -78,10 +91,10 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

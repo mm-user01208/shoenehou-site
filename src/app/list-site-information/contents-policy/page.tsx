@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'コンテンツポリシー | US ESTA Apply Website',
-  description: 'US ESTA Apply Websiteのコンテンツポリシーです。サイトの概要、運営者情報、提供している情報、記事制作のプロセスを掲載しています。',
-};
+const PAGE_PATH = '/list-site-information/contents-policy/';
+const PAGE_TITLE = 'コンテンツポリシー | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'US ESTA Apply Websiteのコンテンツポリシーです。サイトの概要、運営者情報、提供している情報、記事制作のプロセスを掲載しています。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -47,7 +59,8 @@ const BODY_HTML = `
         <table>
           <tbody>
             <tr><th>サイト名</th><td>US ESTA Apply Website</td></tr>
-            <tr><th>運営責任者</th><td>大山 由美子</td></tr>
+            <tr><th>運営会社</th><td>株式会社M2 Agency</td></tr>
+            <tr><th>運営責任者</th><td>森 美咲</td></tr>
             <tr><th>所在地</th><td>東京都港区港南2-3-1 大信秋山ビル</td></tr>
             <tr><th>電話番号</th><td>03-6899-5503</td></tr>
           </tbody>
@@ -97,10 +110,10 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

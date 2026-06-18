@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '個人情報保護に関する基本方針 | US ESTA Apply Website',
-  description: 'US ESTA Apply Websiteでは、個人情報を適切に取り扱うため個人情報保護方針を定め、管理体制の徹底に努めています。お客様が安心してESTAの申請手続きをご利用いただける環境づくりを行っています。',
-};
+const PAGE_PATH = '/list-site-information/privacy-policy/';
+const PAGE_TITLE = '個人情報保護に関する基本方針 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'US ESTA Apply Websiteでは、個人情報を適切に取り扱うため個人情報保護方針を定め、管理体制の徹底に努めています。お客様が安心してESTAの申請手続きをご利用いただける環境づくりを行っています。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -102,10 +114,10 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

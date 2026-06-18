@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '【2026年最新】ESTA申請方法と取得手順を徹底解説 | US ESTA Apply Website',
-  description: 'ESTA申請は、出発の72時間前までに行うことが推奨されています。本記事では、申請に必要な書類や申請方法・手順、さらに審査結果の確認方法までを分かりやすく解説します。',
-};
+const PAGE_PATH = '/list-esta-application/cbp-flow/';
+const PAGE_TITLE = '【2026年最新】ESTA申請方法と取得手順を徹底解説 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTA申請は、出発の72時間前までに行うことが推奨されています。本記事では、申請に必要な書類や申請方法・手順、さらに審査結果の確認方法までを分かりやすく解説します。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -146,6 +158,13 @@ const BODY_HTML = `
 </section>
 
 
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+
 <!-- ===== Related articles (reused) ===== -->
 <section class="section section--cream">
   <div class="section__inner fade-up">
@@ -155,20 +174,13 @@ const BODY_HTML = `
   </div>
   <div class="related fade-up" style="margin-top:56px">
     <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
   </div>
-</section>
-
-<section class="cta-strip cta-strip--solid">
-  <p class="cta-strip__eyebrow">Start your application</p>
-  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
-  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

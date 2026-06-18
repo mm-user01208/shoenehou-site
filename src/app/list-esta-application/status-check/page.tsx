@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'ESTA(エスタ)申請状況 | US ESTA Apply Website',
-  description: 'ESTAの申請状況と審査結果、登録情報を確認する方法を解説します。ESTA申請の認証可否を確認する際は、ローマ字表記の姓名・生年月日・申請IDの入力が必要です。',
-};
+const PAGE_PATH = '/list-esta-application/status-check/';
+const PAGE_TITLE = 'ESTA(エスタ)申請状況 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTAの申請状況と審査結果、登録情報を確認する方法を解説します。ESTA申請の認証可否を確認する際は、ローマ字表記の姓名・生年月日・申請IDの入力が必要です。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -36,7 +48,7 @@ const BODY_HTML = `
 
       <section id="sec-01" class="fade-up">
         <h2>ESTA申請の認証可否確認に必要な情報</h2>
-        <p>ESTA申請後は、「<a href="/list-site-information/status">申請状況の確認</a>」ページから、現在の申請状況を確認することができます。審査には最大72時間(3日間)かかる場合があるため、申請後にステータスが「渡航認証保留中」と表示される場合は、時間をおいて再度ご確認ください。</p>
+        <p>ESTA申請後は、「<a href="/status/">申請状況の確認</a>」ページから、現在の申請状況を確認することができます。審査には最大72時間(3日間)かかる場合があるため、申請後にステータスが「渡航認証保留中」と表示される場合は、時間をおいて再度ご確認ください。</p>
         <p>申請状況を確認する際には、以下の情報の入力が必要です。</p>
 
         <h3>姓 / Surname</h3>
@@ -166,6 +178,13 @@ const BODY_HTML = `
 </section>
 
 
+<section class="cta-strip cta-strip--solid">
+  <p class="cta-strip__eyebrow">Start your application</p>
+  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+</section>
+
 <!-- ===== Related articles (reused) ===== -->
 <section class="section section--cream">
   <div class="section__inner fade-up">
@@ -175,20 +194,13 @@ const BODY_HTML = `
   </div>
   <div class="related fade-up" style="margin-top:56px">
     <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/02-official-website.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
   </div>
-</section>
-
-<section class="cta-strip cta-strip--solid">
-  <p class="cta-strip__eyebrow">Start your application</p>
-  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
-  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '利用規約 | US ESTA Apply Website',
-  description: 'US ESTA Apply Websiteの利用規約です。サービスの利用条件、禁止事項、料金・支払方法、キャンセル・返金条件、責任の範囲などを定めています。',
-};
+const PAGE_PATH = '/list-site-information/agreement/';
+const PAGE_TITLE = '利用規約 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'US ESTA Apply Websiteの利用規約です。サービスの利用条件、禁止事項、料金・支払方法、キャンセル・返金条件、責任の範囲などを定めています。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -99,7 +111,7 @@ const BODY_HTML = `
       </section>
       <section id="sec-10" class="fade-up">
         <h2>第10条（お問い合わせ）</h2>
-        <p>当サイトのサービスに関するご質問やご連絡は、<a href="/list-site-information/contact">当サイトのお問い合わせフォーム</a>より受け付けています。</p>
+        <p>当サイトのサービスに関するご質問やご連絡は、<a href="/contact/">当サイトのお問い合わせフォーム</a>より受け付けています。</p>
       </section>
     </article>
   </div>
@@ -109,10 +121,10 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 `;
 
 export default function Page() {
-  return <div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }

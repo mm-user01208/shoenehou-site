@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'アメリカ渡航にはESTAの申請が必要です｜US ESTA Apply Website',
-  description: 'アメリカ渡航に必要な電子渡航認証ESTA(エスタ)の申請窓口。申請には最大3日かかるため、余裕を持ってお手続きください。日本語でフルサポート。',
-};
+const PAGE_PATH = '/';
+const PAGE_TITLE = 'アメリカ渡航にはESTAの申請が必要です｜US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'アメリカ渡航に必要な電子渡航認証ESTA(エスタ)の申請窓口。申請には最大3日かかるため、余裕を持ってお手続きください。日本語でフルサポート。';
+
+export const metadata: Metadata = seoMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
+
+const PAGE_JSON_LD = pageJsonLd({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+});
 
 const BODY_HTML = `<!-- ===== HERO ===== -->
 <section class="hero">
@@ -17,7 +29,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
       <em>U.S. Electronic System for Travel Authorization</em>
     </h1>
     <p class="hero__lede">申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-    <div class="hero__cta-wrap"><a href="/list-site-information/entry" class="hero__cta">✓ ESTA申請をはじめる</a></div>
+    <div class="hero__cta-wrap"><a href="/form/step1" class="hero__cta">✓ ESTA申請をはじめる</a></div>
   </div>
   </section>
 
@@ -102,6 +114,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
         <li>米国ビザを取得せずに渡米する方</li>
       </ul>
       <p style="margin-top:18px">ESTAを取得せずに出発日を迎えると、飛行機への搭乗およびアメリカへの入国が認められないため、ご注意ください。DHS(アメリカ国土安全保障省)では、出発3日前までに申請手続きを完了することを推奨しています。なお、VWP参加国の市民であっても、伝染病に罹患している方や過去に重大な犯罪歴がある方はESTA申請の対象外となります。また、留学・就労・永住を目的として渡米する方も対象外となるため、渡航目的に応じた適切なビザの取得が必要です。</p>
+      <p style="margin-top:18px">ESTA申請の詳細は<a href="/list-esta-application/esta/" style="color:#b91c30;text-decoration:underline">こちら</a>をご確認ください。</p>
     </div>
     <div class="card" id="validity">
       <h3>Validity period</h3>
@@ -109,6 +122,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
       <p>ESTAの有効期限は2年間で、この期間内であれば複数回の渡米が可能です。ただし、パスポートの有効期限が2年未満の場合は、ESTAもパスポートと同日に失効しますのでご注意ください。渡航前に必ずパスポートの有効期限を確認し、期間が短い場合は更新後に改めてESTAを申請しましょう。</p>
       <p>なお、ESTAはアメリカへの入国時に有効である必要があり、出国時に期限が切れていても問題ありません。アメリカを経由して第三国へ向かう場合にも、有効なESTAが必要となります。(※ブルネイおよびハンガリーのパスポート保持者に限り、ESTAの有効期限は1年間となります。)</p>
       <p>ESTAには更新制度がないため、失効した場合は再申請が必要です。また、パスポートの更新や、氏名・生年月日・国籍などの重要な個人情報に変更があった場合にも再申請を行ってください。再申請には、有効なパスポートと申請料の支払いに使用するクレジットカードが必要です。</p>
+      <p style="margin-top:18px">ESTAの有効期限と再申請の詳細は<a href="/list-esta-application/expiration-date/" style="color:#b91c30;text-decoration:underline">こちら</a>をご確認ください。</p>
     </div>
   </div>
 </section>
@@ -136,7 +150,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     </div>
   </div>
   <div class="bodytext fade-up" style="margin-top:48px">
-    <p>クレジットカードは、Visa、MasterCard、JCB、American Express、Diners Clubが利用可能です。申請者ご本人の名義でなくても、審査には影響ありません。申請時には、氏名・性別・生年月日・パスポート情報などの基本情報に加えて、健康状態や犯罪歴に関する質問への回答が求められます。これらの質問のいずれかに該当する場合、ESTAによる渡航は認められないためご注意ください。</p>
+    <p>クレジットカードは、Visa、MasterCard、JCB、American Express、Diners Clubが利用可能です。申請者ご本人の名義でなくても、審査には影響ありません。申請時には、氏名・性別・生年月日・パスポート情報などの基本情報に加えて、健康状態や犯罪歴に関する質問への回答が求められます。これらの質問のいずれかに該当する場合、ESTAによる渡航は認められないためご注意ください。<br>ESTAの申請方法の詳細は<a href="/list-esta-application/esta-flow/" style="color:#b91c30;text-decoration:underline">こちら</a>をご確認ください。</p>
   </div>
 </section>
 
@@ -151,6 +165,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     <p>ESTAは、スマートフォンやタブレット端末を使用してアプリからの申請も可能です。CBP(アメリカ合衆国税関・国境警備局)は、2023年6月21日よりモバイルアプリ「ESTA Mobile」(Android/iOS)の提供を開始しています。</p>
     <p>はじめにパスポートをスキャンし、氏名・生年月日・国籍・性別・パスポート番号・パスポート発行年月日・パスポートの有効期限などの情報が申請フォームに反映されます。申請情報は自動で入力され、スペルミスを防止できる点がアプリで申請する大きなメリットです。</p>
     <p>申請フォームでは、氏名などの申請者情報やパスポート情報のほかに、個人情報(住所や電話番号)、滞在先情報、渡航歴や犯罪歴に関する質問の回答も求められます。アプリを利用してのESTA申請には、有効なパスポート、メールアドレス、クレジットカード、パスポート顔写真ページの画像およびパスポートとは異なる顔写真が必要です。</p>
+    <p style="margin-top:18px">ESTAアプリ申請の詳細は<a href="/list-esta-application/application/" style="color:#b91c30;text-decoration:underline">こちら</a>をご確認ください。</p>
   </div>
 </section>
 
@@ -159,7 +174,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/list-site-information/entry" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 
 <!-- ===== FAQ ===== -->
@@ -184,7 +199,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     </details>
     <details>
       <summary>ESTAの有効期限と再申請が必要なケースについて</summary>
-      <div class="answer"><p>ESTA(エスタ)の有効期限は、発行日より2年間です。ただし、パスポートの有効期限が2年未満の場合は、パスポートの期限と同じ日にESTAも失効します。ESTAが失効した後に再び渡米を予定している方は、再申請が必要です。なお、ビザを利用して渡航する場合は再申請の必要はありません。ESTAには「更新制度」はないため、再申請を行うことになります。再申請の際は、申請フォームに必要事項を入力し、申請費用の支払いが必要です。新たにESTAを取得した時点で有効期限が設定され、既存の認証情報は無効となります。</p></div>
+      <div class="answer"><p>ESTA(エスタ)の有効期限は、発行日より2年間です。ただし、パスポートの有効期限が2年未満の場合は、パスポートの期限と同じ日にESTAも失効します。ESTAが失効した後に再び渡米を予定している方は、再申請が必要です。なお、ビザを利用して渡航する場合は再申請の必要はありません。ESTAには「更新制度」はないため、再申請を行うことになります。再申請の際は、申請フォームに必要事項を入力し、申請費用の支払いが必要です。新たにESTAを取得した時点で有効期限が設定され、既存の認証情報は無効となります。</p><p style="margin-top:18px">ESTAの有効期限と再申請の詳細は<a href="/list-esta-application/expiration-date/" style="color:#b91c30;text-decoration:underline">こちら</a>をご確認ください。</p></div>
     </details>
     <details>
       <summary>ESTA取得後のアメリカ入国可否について</summary>
@@ -237,14 +252,14 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     <p style="text-align:center;margin:30px 0 56px;font-size:13px;letter-spacing:.16em;color:var(--gold);font-weight:700;text-transform:uppercase"><a href="/list-esta-application" style="color:inherit;text-decoration:none">一覧を見る →</a></p>
   </div>
   <div class="related fade-up">
-    <a href="#"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/05-official-apply.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">公式ウェブサイトでの申請方法</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">05.</span><span class="related__title">米国内の連絡先情報</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/07-expiration.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">06.</span><span class="related__title">ESTAの有効期限と再申請</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/08-mobile-app.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">07.</span><span class="related__title">アプリのESTA申請方法</span><span class="related__more">Read more</span></span></a>
-    <a href="#"><span class="related__media"><img src="/img/related/09-guam.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">08.</span><span class="related__title">グアム入国にESTAは必要？</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/official-cbp/"><span class="related__media"><img src="/img/related/official-cbp.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">公式ウェブサイトでの申請方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">05.</span><span class="related__title">米国内の連絡先情報</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/expiration-date/"><span class="related__media"><img src="/img/related/expiration-date.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">06.</span><span class="related__title">ESTAの有効期限と再申請</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/application/"><span class="related__media"><img src="/img/related/application.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">07.</span><span class="related__title">アプリのESTA申請方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/guam/"><span class="related__media"><img src="/img/related/guam.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">08.</span><span class="related__title">グアム入国にESTAは必要？</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>
 
@@ -258,7 +273,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
   <div class="notice4 fade-up" style="margin-top:56px">
     <div class="notice4__item">
       <span class="badge">01 / Payment</span>
-      <h3>クレジットカードでのお支払いについて</h3>
+      <h3>お支払いについて</h3>
       <p>ESTA申請料のお支払いには、Visa、MasterCard、JCB、American Express、Diners Clubのクレジットカードがご利用いただけます。申請者ご本人の名義でないカードでもお支払い可能です。</p>
     </div>
     <div class="notice4__item">
@@ -273,7 +288,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     </div>
     <div class="notice4__item">
       <span class="badge">04 / CBP Inquiry</span>
-      <h3>CBP公式サイトでのお問い合わせ</h3>
+      <h3>CBPサイトでのお問い合わせ</h3>
       <p>ESTAに関する一般的な質問と回答は、CBP Info Centerに英語で公開されています。</p>
     </div>
   </div>
@@ -294,5 +309,5 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
 <!-- ===== Footer ===== -->`;
 
 export default function Page() {
-  return <div className="redesign-top" dangerouslySetInnerHTML={{ __html: BODY_HTML }} />;
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-top" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
 }
