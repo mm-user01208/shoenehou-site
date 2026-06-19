@@ -296,10 +296,10 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
   <div class="applinks fade-up">
     <h4>公式リンク集</h4>
     <ul>
-      <li><a href="#">米国CBP ESTA申請サイト</a></li>
-      <li><a href="#">在日米国大使館サイト</a></li>
-      <li><a href="#">外務省 ESTA関連ページ</a></li>
-      <li><a href="#">CBP(米国税関・国境警備局)公式サイト</a></li>
+      <li><a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer">米国CBP ESTA申請サイト</a></li>
+      <li><a href="https://jp.usembassy.gov/ja/visas-ja/esta-information-ja/" target="_blank" rel="noopener noreferrer">在日米国大使館サイト</a></li>
+      <li><a href="https://www.mofa.go.jp/mofaj/toko/passport/us_esta.html" target="_blank" rel="noopener noreferrer">外務省 ESTA関連ページ</a></li>
+      <li><a href="https://www.cbp.gov/travel/international-visitors/esta" target="_blank" rel="noopener noreferrer">CBP(米国税関・国境警備局)公式サイト</a></li>
     </ul>
   </div>
 
