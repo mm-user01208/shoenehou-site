@@ -552,3 +552,50 @@
 .article-body .quote-box__en{color:#2e3340;margin:0 0 10px;font-family:ui-monospace,SF Mono,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.75}
 
 .article-body .quote-box__jp{color:var(--fg-2);margin:0;font-size:14.5px;line-height:1.85}
+/* === パンくず/国リスト/書類リスト/メリットパネル CSS復元(19fc4a16より・欠落分) === */
+
+.crumb{letter-spacing:.04em;color:var(--fg-3);flex-wrap:wrap;gap:6px 10px;margin-bottom:14px;font-size:12.5px;display:flex}
+
+.crumb a{color:var(--fg-3)}
+
+.crumb a:hover{color:var(--navy);opacity:1}
+
+.crumb span{color:var(--gold)}
+
+.crumb em{color:var(--navy);font-style:normal;font-weight:600}
+
+.country-list{background:var(--paper);border:1px solid var(--line);margin:0 0 22px;padding:28px 32px}
+
+.country-list__title{font-family:var(--sans);color:var(--gold);letter-spacing:.26em;text-transform:uppercase;align-items:center;gap:12px;margin-bottom:18px;font-size:12px;font-weight:700;display:flex}
+
+.country-list__title:before{content:"";background:var(--gold);width:24px;height:1px;display:block}
+
+.country-list__body{color:var(--fg-2);letter-spacing:.04em;font-size:14.5px;line-height:2.1}
+
+.doc-list{background:var(--paper);border:1px solid var(--line);grid-template-columns:repeat(3,1fr);gap:0;margin:0 0 28px;display:grid}
+
+.doc-list__item{border-right:1px solid var(--line);padding:32px 28px;position:relative}
+
+.doc-list__item:last-child{border-right:0}
+
+.doc-list__icon{border:1.5px solid var(--gold);width:42px;height:42px;color:var(--gold);font-family:var(--sans);letter-spacing:.02em;justify-content:center;align-items:center;margin-bottom:20px;font-size:15px;font-weight:700;display:flex}
+
+.doc-list__item p{font-family:var(--serif);color:var(--navy);letter-spacing:.005em;margin:0;font-size:15.5px;font-weight:600;line-height:1.7}
+
+@media (max-width:760px){.doc-list{grid-template-columns:1fr}.doc-list__item{border-right:0;border-bottom:1px solid var(--line)}.doc-list__item:last-child{border-bottom:0}}
+
+.merits-panel{background:var(--paper);border:1px solid var(--line);margin:0 0 22px;padding:36px 40px}
+
+.merits-panel__title{font-family:var(--sans);color:var(--gold);letter-spacing:.26em;text-transform:uppercase;align-items:center;gap:12px;margin-bottom:22px;font-size:12.5px;font-weight:700;display:flex}
+
+.merits-panel__title:before{content:"";background:var(--gold);width:28px;height:1px;display:block}
+
+.merits-panel ol{counter-reset:merit;grid-template-columns:1fr 1fr;gap:12px 32px;margin:0;padding:0;list-style:none;display:grid}
+
+.merits-panel li{counter-increment:merit;color:var(--fg-2);border-bottom:1px dashed var(--line-soft);padding:10px 0 10px 38px;font-size:14.5px;line-height:1.6;position:relative}
+
+.merits-panel li:before{content:counter(merit,decimal-leading-zero);font-family:var(--sans);color:var(--gold);letter-spacing:.05em;font-size:11.5px;font-weight:700;position:absolute;top:11px;left:0}
+
+@media (max-width:760px){.merits-panel{padding:24px 22px}.merits-panel ol{grid-template-columns:1fr;gap:0}}
+
+@media (max-width:960px){.crumb{margin-bottom:10px;font-size:12px}.country-list{padding:20px 22px}.country-list__body{font-size:13.5px;line-height:2}}
