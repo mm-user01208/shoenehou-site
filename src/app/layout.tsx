@@ -4,6 +4,7 @@ import './redesign.css';
 import ShellHeader from '@/components/ShellHeader';
 import ShellFooter from '@/components/ShellFooter';
 import ShellFloatingFab from '@/components/ShellFloatingFab';
+import ShellReveal from '@/components/ShellReveal';
 
 export const metadata: Metadata = {
   title: 'US ESTA Apply Website',
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <ShellFooter />
         <ShellFloatingFab />
+        <ShellReveal />
       </body>
     </html>
   );
