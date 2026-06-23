@@ -22,7 +22,7 @@ export default function ShellHeader() {
     // Close on link click in mobile
     const handleLink = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (window.innerWidth > 1180) return;
+      if (window.innerWidth > 960) return;
       // SP: カテゴリ名タップは遷移せずアコーディオン開閉
       const cat = t.closest('.gnav__dropdown-category') as HTMLElement | null;
       if (cat) {

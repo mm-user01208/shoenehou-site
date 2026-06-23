@@ -318,8 +318,10 @@ export function JsonLd({ data }: { data: JsonLdData }) {
 }
 
 function withOfficialDisclaimer(description: string) {
-  if (description.includes(OFFICIAL_DISCLAIMER)) return description;
-  return `${description} ${OFFICIAL_DISCLAIMER}`;
+  // 2026-06-23: meta description/JSON-LD への定型ディスクリプション付加を全ページ廃止(wiz_0001指示B)。
+  // 「公式サイトではない」旨はフッター等のページ表示で担保。
+  void OFFICIAL_DISCLAIMER;
+  return description;
 }
 
 function cleanTitle(title: string) {
