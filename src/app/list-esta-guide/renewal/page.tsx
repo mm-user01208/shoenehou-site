@@ -341,35 +341,35 @@ const BODY_HTML = `
         <h2>よくある質問</h2>
         <div class="faq" style="margin-top:32px">
           <details open>
-            <summary>Q. ESTAの有効期限を延長することはできますか？</summary>
+            <summary>ESTAの有効期限を延長することはできますか？</summary>
             <div class="answer"><p>いいえ、ESTAには更新や延長の機能はありません。有効期限が切れた場合は、新規で再申請する必要があります。再申請の手順は初回申請と同じで、すべての情報を改めて入力し、申請手数料を支払います。</p></div>
           </details>
           <details>
-            <summary>Q. ESTAの有効期限が切れた状態でアメリカに行けますか？</summary>
+            <summary>ESTAの有効期限が切れた状態でアメリカに行けますか？</summary>
             <div class="answer"><p>いいえ、ESTAの有効期限が切れた状態ではアメリカに渡航できません。航空会社のチェックインカウンターで搭乗を拒否される可能性があります。渡航前に必ずESTAの有効期限を確認し、期限が切れている場合は新規で再申請を行ってください。</p></div>
           </details>
           <details>
-            <summary>Q. 前回の申請データを使って再申請できますか？</summary>
+            <summary>前回の申請データを使って再申請できますか？</summary>
             <div class="answer"><p>いいえ、ESTAの再申請時に前回の申請データは引き継がれません。すべての情報(氏名、パスポート番号、連絡先、滞在先など)を最初から入力し直す必要があります。再申請をスムーズに進めるため、前回の申請情報をメモやスクリーンショットで保存しておくことをおすすめします。</p></div>
           </details>
           <details>
-            <summary>Q. パスポートを更新したらESTAはどうなりますか？</summary>
+            <summary>パスポートを更新したらESTAはどうなりますか？</summary>
             <div class="answer"><p>パスポートを更新すると、有効期間内のESTAであっても自動的に失効します。ESTAはパスポート番号に紐づけて管理されているため、パスポート番号が変わると以前のESTAは使用できなくなります。新しいパスポートの情報でESTAを再申請してください。</p></div>
           </details>
           <details>
-            <summary>Q. ESTAの再申請にかかる費用はいくらですか？</summary>
+            <summary>ESTAの再申請にかかる費用はいくらですか？</summary>
             <div class="answer"><p>ESTAの再申請にかかる費用は新規申請と同額で、米国国土安全保障省申請料として$40.27が必要です。前回のESTAが有効期間内であっても、再申請時には改めて申請料が発生します。割引や免除はありません。</p></div>
           </details>
           <details>
-            <summary>Q. ESTAの有効期限内でも再申請はできますか？</summary>
+            <summary>ESTAの有効期限内でも再申請はできますか？</summary>
             <div class="answer"><p>はい、ESTAの有効期限内であっても新規で再申請することは可能です。ただし、新しいESTAが承認された時点で以前のESTAは自動的に無効となります。有効期間の残日数が無駄になる可能性があるため、渡航予定の1ヶ月前を目安に再申請することをおすすめします。</p></div>
           </details>
           <details>
-            <summary>Q. 結婚などで氏名が変わった場合、ESTAの再申請は必要ですか？</summary>
+            <summary>結婚などで氏名が変わった場合、ESTAの再申請は必要ですか？</summary>
             <div class="answer"><p>はい、結婚や離婚などで氏名が変わり新しいパスポートを取得した場合は、ESTAの再申請が必要です。ESTAはパスポート情報に紐づけて管理されているため、パスポート情報が変わった場合は新しい情報でESTAを再申請してください。</p></div>
           </details>
           <details>
-            <summary>Q. ESTAの期限切れ後、再申請しないまま放置するとペナルティはありますか？</summary>
+            <summary>ESTAの期限切れ後、再申請しないまま放置するとペナルティはありますか？</summary>
             <div class="answer"><p>いいえ、ESTAの有効期限が切れた後に再申請しなくてもペナルティは一切ありません。次回アメリカへ渡航する予定が決まった時点で、改めて新規申請を行ってください。ただし、有効期限が切れた状態でアメリカに渡航しようとすると搭乗拒否の可能性がありますのでご注意ください。</p></div>
           </details>
         </div>

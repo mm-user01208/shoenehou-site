@@ -89,23 +89,23 @@ const BODY_HTML = `
         <h2>よくある質問</h2>
         <div class="faq" style="margin-top:32px">
           <details open>
-            <summary>Q. ESTAが却下された後、再申請はできますか？</summary>
+            <summary>ESTAが却下された後、再申請はできますか？</summary>
             <div class="answer"><p>はい、ESTAの再申請は可能です。ただし、入力ミスが原因で拒否された場合は正しい情報で再申請することで承認される可能性がありますが、犯罪歴やオーバーステイ歴など、入力ミス以外の理由で拒否された場合は、再申請しても同じ結果となる可能性が高くなります。その場合は、ビザの取得を検討してください。</p></div>
           </details>
           <details>
-            <summary>Q. ESTA拒否の理由を確認することはできますか？</summary>
+            <summary>ESTA拒否の理由を確認することはできますか？</summary>
             <div class="answer"><p>CBP(アメリカ合衆国税関・国境警備局)は、ESTAが拒否された具体的な理由を申請者に開示していません。ただし、DHS TRIP(Traveler Compliance Inquiry)を利用して調査を依頼することは可能です。米国国土安全保障省のウェブサイトからオンラインで申請できます。</p></div>
           </details>
           <details>
-            <summary>Q. ESTAが拒否されたら、もうアメリカには行けませんか？</summary>
+            <summary>ESTAが拒否されたら、もうアメリカには行けませんか？</summary>
             <div class="answer"><p>ESTAが拒否された場合でも、ビザ(査証)を取得すればアメリカに渡航することが可能です。在日米国大使館または領事館にてビザの申請手続きを行ってください。観光目的の場合はB-2ビザ、商用目的の場合はB-1ビザを申請することになります。</p></div>
           </details>
           <details>
-            <summary>Q. ESTA却下後、どれくらいの期間を空ければ再申請できますか？</summary>
+            <summary>ESTA却下後、どれくらいの期間を空ければ再申請できますか？</summary>
             <div class="answer"><p>ESTAの再申請に待機期間は定められていません。却下後すぐに再申請することも可能です。ただし、同じ情報で再申請した場合は同じ結果となる可能性が高いため、拒否された原因を特定・解消したうえで再申請することをおすすめします。入力ミスが原因であった場合は、正しい情報で速やかに再申請してください。</p></div>
           </details>
           <details>
-            <summary>Q. 家族のうち1人だけESTAが拒否された場合はどうすればよいですか？</summary>
+            <summary>家族のうち1人だけESTAが拒否された場合はどうすればよいですか？</summary>
             <div class="answer"><p>グループ申請で家族のうち1名のみESTAが拒否された場合でも、他の家族の渡航認証には影響しません。拒否された方のみ、再申請またはビザの取得が必要となります。他の家族は承認されたESTAで問題なく渡航できます。</p></div>
           </details>
         </div>

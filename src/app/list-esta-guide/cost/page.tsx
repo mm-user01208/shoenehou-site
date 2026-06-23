@@ -92,23 +92,23 @@ const BODY_HTML = `
         <h2>よくある質問</h2>
         <div class="faq" style="margin-top:32px">
           <details open>
-            <summary>Q. ESTA申請の公式料金はいくらですか？</summary>
+            <summary>ESTA申請の公式料金はいくらですか？</summary>
             <div class="answer"><p>公式サイト(CBP)からESTAを申請した場合の手数料は$21(米ドル)です。日本円に換算すると約3,200円前後ですが、為替レートの変動により金額は前後します。この料金は渡航者1名ごとに発生します。</p></div>
           </details>
           <details>
-            <summary>Q. ESTA申請が拒否された場合でも料金はかかりますか？</summary>
+            <summary>ESTA申請が拒否された場合でも料金はかかりますか？</summary>
             <div class="answer"><p>はい、申請が拒否された場合でも審査手数料の$4は返金されません。ただし、渡航認証手数料の$17は、ESTAが承認された場合にのみ課金されるため、拒否された場合は請求されません。</p></div>
           </details>
           <details>
-            <summary>Q. 代行サイトと公式サイトの違いは何ですか？</summary>
+            <summary>代行サイトと公式サイトの違いは何ですか？</summary>
             <div class="answer"><p>公式サイトはCBP(アメリカ合衆国税関・国境警備局)が直接運営しており、申請料金は$21です。代行サイトは民間企業が運営しており、公式の申請手数料に加えてサービス料が上乗せされるため、料金は5,000円〜15,000円程度になります。代行サイトでは日本語サポートや入力チェックなどのサービスが含まれます。</p></div>
           </details>
           <details>
-            <summary>Q. ESTA申請の支払いにデビットカードは使えますか？</summary>
+            <summary>ESTA申請の支払いにデビットカードは使えますか？</summary>
             <div class="answer"><p>Visa、MasterCard、JCBなどのブランドロゴが付いたデビットカードであれば使用できる場合があります。ただし、カードの種類や発行元によっては決済が承認されないケースもあるため、クレジットカードの利用をおすすめします。PayPalでの支払いも可能です。</p></div>
           </details>
           <details>
-            <summary>Q. 家族分のESTAをまとめて支払うことはできますか？</summary>
+            <summary>家族分のESTAをまとめて支払うことはできますか？</summary>
             <div class="answer"><p>はい、グループ申請を利用すれば、代表者のクレジットカードで家族全員分の申請手数料をまとめて支払うことが可能です。ESTA申請の支払いに使用するクレジットカードは、申請者本人名義でなくても利用できます。</p></div>
           </details>
         </div>
