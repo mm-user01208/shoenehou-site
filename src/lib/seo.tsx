@@ -336,7 +336,7 @@ function organizationSchema() {
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     logo: absoluteAssetUrl('/img/logo-shield.png'),
-    description: `ESTA申請を日本語でサポートする民間サイトです。${OFFICIAL_DISCLAIMER}`,
+    description: 'ESTA申請を日本語でサポートする民間サイトです。',
     contactPoint: [
       {
         '@type': 'ContactPoint',
