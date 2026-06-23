@@ -599,3 +599,18 @@
 @media (max-width:760px){.merits-panel{padding:24px 22px}.merits-panel ol{grid-template-columns:1fr;gap:0}}
 
 @media (max-width:960px){.crumb{margin-bottom:10px;font-size:12px}.country-list{padding:20px 22px}.country-list__body{font-size:13.5px;line-height:2}}
+/* 記事内アップロード手順スクショ */
+.upload-figure{margin:24px auto;max-width:350px;text-align:center}
+.upload-figure img{border:1px solid var(--line);border-radius:10px;width:100%;height:auto;display:block;margin:0 auto}
+.upload-figure figcaption{color:var(--fg-3);font-size:12.5px;letter-spacing:.02em;margin-top:10px;line-height:1.6}
+.doc-list{margin:20px 0}
+.doc-list__item{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--paper);padding:18px 20px;margin-bottom:12px;font-size:15px;line-height:1.8}
+.doc-list__icon{flex-shrink:0;width:30px;height:30px;border:1.5px solid var(--gold);color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.merits-panel{border:1px solid var(--line);background:var(--paper);padding:20px 24px;margin:16px 0}
+.merits-panel__title{font-family:var(--sans);font-weight:700;color:var(--navy);margin:0 0 10px;font-size:15.5px;letter-spacing:.02em}
+
+/* 記事内テーブルをスマホで横スクロール */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+@media (max-width:720px){ .table-scroll{max-width:calc(100vw - 44px)} .table-scroll table{min-width:520px;margin:0} }
+.upload-figure--wide{max-width:600px}
+.upload-figure picture{display:block}
