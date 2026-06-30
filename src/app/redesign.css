@@ -615,26 +615,25 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部バー対策(競合方式): CTAを最下部の全幅“白帯”にし、中の赤ボタンは中央寄せ・周囲に白を残す(keta-travel / etias と同じ構造)。Safari下バーが白を拾う */
+/* iOS Safari 下部バー対策(検証): 左右・上は透明(浮きボタン)、下端だけ白(1px+safe)。ボタン下の余白は1pxに */
 @media (max-width:720px){
   .floating-cta{
-    left:0; right:0; bottom:0;
+    left:16px; right:16px;
+    bottom:calc(1px + env(safe-area-inset-bottom, 0px));
     flex-direction:column;
-    align-items:center;
-    gap:0;
-    padding:12px 16px calc(14px + env(safe-area-inset-bottom, 0px));
-    background:rgba(255,255,255,0.95);
-    -webkit-backdrop-filter:blur(6px);
-    backdrop-filter:blur(6px);
+    align-items:stretch;
+    gap:10px;
+    padding:0;
+    background:transparent;
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
   }
-  .floating-cta__apply{
-    width:auto;
-    min-width:300px;
-    max-width:360px;
-  }
-  .floating-cta__top{
-    position:absolute;
-    right:14px;
-    bottom:calc(100% + 10px);
-  }
+  .floating-cta__apply{ width:auto; min-width:0; max-width:none; }
+  .floating-cta__top{ position:static; right:auto; bottom:auto; align-self:flex-end; }
+}
+/* 下端だけ白: 画面最下端〜ボタン下(1px+safe-area)を白で埋める。左右・上は透明のまま */
+body::after{
+  content:""; position:fixed; left:0; right:0; bottom:0;
+  height:calc(1px + env(safe-area-inset-bottom, 0px));
+  background:#fff; z-index:38; pointer-events:none;
 }
