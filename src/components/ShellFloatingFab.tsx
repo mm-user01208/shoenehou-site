@@ -12,10 +12,12 @@ export default function ShellFloatingFab() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+    const isTopPage = window.location.pathname === '/' || window.location.pathname === '';
     const onScroll = () => {
       const y = window.scrollY;
       if (topBtn) topBtn.classList.toggle('is-visible', y > 600);
-      cta.classList.toggle('is-hidden', y < 200);
+      // topページのみ上部で非表示（スクロールで出る）。それ以外のページはページ表示時から常時表示。
+      cta.classList.toggle('is-hidden', isTopPage && y < 200);
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
