@@ -24,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="icon" href="/img/logo-shield.png" />
         <link rel="apple-touch-icon" href="/img/logo-shield.png" />
+        <meta name="theme-color" content="#ffffff" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TKC650FZB3"
           strategy="afterInteractive"
