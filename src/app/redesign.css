@@ -614,3 +614,9 @@
 @media (max-width:720px){ .table-scroll{max-width:calc(100vw - 44px)} .table-scroll table{min-width:520px;margin:0} }
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
+
+/* iOS Safari 下部ツールバー色対策: 全ページで白系に統一 (safari_bottom_bar note 対応) */
+html,body{background-color:#fff}
+@supports (padding-bottom: env(safe-area-inset-bottom)){
+  body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:env(safe-area-inset-bottom,0px);background:#fff;z-index:39;pointer-events:none}
+}
