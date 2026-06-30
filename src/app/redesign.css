@@ -615,25 +615,18 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部バー対策(検証): 左右・上は透明(浮きボタン)、下端だけ白(1px+safe)。ボタン下の余白は1pxに */
+/* iOS Safari 下部バー対策(検証パターン3): 半透明白の帯。上=0px / 下=calc(1px + env(safe-area-inset-bottom, 0px)) / 左右=16px */
 @media (max-width:720px){
   .floating-cta{
-    left:16px; right:16px;
-    bottom:calc(1px + env(safe-area-inset-bottom, 0px));
+    left:0; right:0; bottom:0;
     flex-direction:column;
     align-items:stretch;
     gap:10px;
-    padding:0;
-    background:transparent;
-    -webkit-backdrop-filter:none;
-    backdrop-filter:none;
+    padding:0px 16px calc(1px + env(safe-area-inset-bottom, 0px));
+    background:rgba(255,255,255,0.85);
+    -webkit-backdrop-filter:blur(6px);
+    backdrop-filter:blur(6px);
   }
   .floating-cta__apply{ width:auto; min-width:0; max-width:none; }
-  .floating-cta__top{ position:static; right:auto; bottom:auto; align-self:flex-end; }
-}
-/* 下端だけ白: 画面最下端〜ボタン下(1px+safe-area)を白で埋める。左右・上は透明のまま */
-body::after{
-  content:""; position:fixed; left:0; right:0; bottom:0;
-  height:calc(1px + env(safe-area-inset-bottom, 0px));
-  background:#fff; z-index:38; pointer-events:none;
+  .floating-cta__top{ position:absolute; right:14px; bottom:calc(100% + 10px); }
 }
