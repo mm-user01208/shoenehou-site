@@ -615,18 +615,18 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部バー対策(参考同設定 透明度20% / alpha 0.8): blur無し・ボタン元サイズ(全幅)・上下padding 2px・全幅の半透明白帯 */
+/* iOS Safari 下部バー対策(参考同設定 透明度20% / alpha 0.8): blur無し・ボタン幅をヒーローCTAと同じ277px中央寄せ・上下padding 3px・全幅の半透明白帯 */
 @media (max-width:720px){
   .floating-cta{
     left:0; right:0; bottom:0;
     flex-direction:column;
-    align-items:stretch;
+    align-items:center;
     gap:10px;
-    padding:2px 16px calc(2px + env(safe-area-inset-bottom, 0px));
+    padding:3px 16px calc(3px + env(safe-area-inset-bottom, 0px));
     background:rgba(255,255,255,0.8);
     -webkit-backdrop-filter:none;
     backdrop-filter:none;
   }
-  .floating-cta__apply{ width:auto; min-width:0; max-width:none; }
+  .floating-cta__apply{ width:277px; min-width:0; max-width:none; }
   .floating-cta__top{ position:absolute; right:14px; bottom:calc(100% + 10px); }
 }
