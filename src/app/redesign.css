@@ -615,16 +615,22 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部バー対策(競合方式): CTAを最下部の全幅“白帯”にして、Safari下バーが白を拾うようにする(keta-travel / etias と同じ構造) */
+/* iOS Safari 下部バー対策(競合方式): CTAを最下部の全幅“白帯”にし、中の赤ボタンは中央寄せ・周囲に白を残す(keta-travel / etias と同じ構造)。Safari下バーが白を拾う */
 @media (max-width:720px){
   .floating-cta{
     left:0; right:0; bottom:0;
-    align-items:stretch;
+    flex-direction:column;
+    align-items:center;
     gap:0;
-    padding:9px 16px calc(9px + env(safe-area-inset-bottom, 0px));
-    background:rgba(255,255,255,0.92);
+    padding:12px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+    background:rgba(255,255,255,0.95);
     -webkit-backdrop-filter:blur(6px);
     backdrop-filter:blur(6px);
+  }
+  .floating-cta__apply{
+    width:auto;
+    min-width:300px;
+    max-width:360px;
   }
   .floating-cta__top{
     position:absolute;
