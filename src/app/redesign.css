@@ -615,8 +615,6 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部ツールバー色対策: 全ページで白系に統一 (safari_bottom_bar note 対応) */
-html,body{background-color:#fff}
-@supports (padding-bottom: env(safe-area-inset-bottom)){
-  body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:env(safe-area-inset-bottom,0px);background:#fff;z-index:39;pointer-events:none}
-}
+/* iOS Safari 下部バー色【検証用】120px白帯・最前面 (赤の出所切り分け) */
+html,body,#__next,main{background:#fff !important}
+body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:120px;background:#fff;z-index:2147483647;pointer-events:none}
