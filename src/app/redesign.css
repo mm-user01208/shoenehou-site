@@ -615,12 +615,7 @@
 .upload-figure--wide{max-width:600px}
 .upload-figure picture{display:block}
 
-/* iOS Safari 下部バー対策(最終): CVボタンをsafe-areaの上に出し、その下端を白で埋める(赤いボタンをSafariが拾うのを防ぐ) */
+/* iOS Safari 下部バー対策(検証): 白帯は撤去。CVボタンを最小化バーの判定域より上に出して、バーが“ボタンでなく背景”を拾うようにする */
 @media (max-width:720px){
-  .floating-cta{ bottom: calc(6px + env(safe-area-inset-bottom, 0px)) !important; }
-}
-body::after{
-  content:""; position:fixed; left:0; right:0; bottom:0;
-  height: calc(6px + env(safe-area-inset-bottom, 0px));
-  background:#fff; z-index:38; pointer-events:none;
+  .floating-cta{ bottom: calc(44px + env(safe-area-inset-bottom, 0px)) !important; }
 }
