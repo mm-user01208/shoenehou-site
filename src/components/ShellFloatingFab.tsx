@@ -13,11 +13,18 @@ export default function ShellFloatingFab() {
       });
     }
     const isTopPage = window.location.pathname === '/' || window.location.pathname === '';
+    const heroCta = document.querySelector<HTMLElement>('.hero__cta');
     const onScroll = () => {
       const y = window.scrollY;
       if (topBtn) topBtn.classList.toggle('is-visible', y > 600);
-      // topページのみ上部で非表示（スクロールで出る）。それ以外のページはページ表示時から常時表示。
-      cta.classList.toggle('is-hidden', isTopPage && y < 200);
+      // topページ: ヒーロー内CVボタンが画面から完全に見えなくなったらフローティング表示。
+      // それ以外のページ: ページ表示時から常時表示。
+      if (isTopPage && heroCta) {
+        const r = heroCta.getBoundingClientRect();
+        cta.classList.toggle('is-hidden', r.bottom > 0);
+      } else {
+        cta.classList.remove('is-hidden');
+      }
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
