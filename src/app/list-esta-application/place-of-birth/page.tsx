@@ -18,6 +18,17 @@ const PAGE_JSON_LD = pageJsonLd({
 });
 
 const BODY_HTML = `
+<style>
+.imp-trustbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;margin:26px 0;padding:14px 8px;border-top:1px solid #e7e2d6;border-bottom:1px solid #e7e2d6}
+.imp-trustbar span{font-size:12.5px;color:#0a2540;font-weight:600;letter-spacing:.03em;padding:3px 16px;line-height:1.6}
+.imp-trustbar span+span{border-left:1px solid #ded7c7}
+.imp-mid{margin:34px 0;text-align:center}
+.imp-mid a{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;background:#0a2540;color:#fff;padding:14px 30px;border-radius:8px;font-weight:700;font-size:15.5px;letter-spacing:.03em}
+.imp-mid a .sub{font-size:11.5px;font-weight:400;opacity:.82}
+.imp-endnote{margin:0 auto 16px;max-width:560px;text-align:center;font-size:12.5px;letter-spacing:.03em;opacity:.92}
+.imp-endnote b{font-weight:700}
+</style>
+
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
@@ -47,6 +58,8 @@ const BODY_HTML = `
       </ol>
     </aside>
 
+    <div class="imp-trustbar"><span>不許可時は返金保証</span><span>24時間 日本語サポート</span><span>SSL暗号化で安全</span></div>
+
     <article class="article-body">
 
       <section id="sec-01" class="fade-up">
@@ -69,6 +82,8 @@ const BODY_HTML = `
         <p>日本の都道府県を英語で表す場合、通常は"Tokyo Prefecture(東京都)"や"Osaka Prefecture(大阪府)"のように「都道府県名+prefectures(プレフェクチャーズ)」と表記しますが、ESTA申請フォームでは"prefectures"を省略しても問題ありません。</p>
         <p>以下は、主な都市の英語(ローマ字)表記での住所記入例です。</p>
       </section>
+
+      <div class="imp-mid"><a href="/form/step1">この記事を見ながら、ESTA申請をはじめる<span class="sub">所要 最短5分 ／ 総額 24,200円（追加費用なし）</span></a></div>
 
       <section id="sec-04" class="fade-up">
         <h2>北海道札幌市にお住まいの方の入力例</h2>
@@ -149,7 +164,8 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <p class="imp-endnote"><b>総額 24,200円（追加費用なし）</b> ／ 不許可時は返金保証 ／ 24時間 日本語サポート</p>
+    <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
 
 <!-- ===== Related articles (reused) ===== -->
