@@ -80,6 +80,13 @@ const BODY_HTML = `<section class="article-hero">
         </ul>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-04" class="fade-up">
         <h2>ESTA申請に必要な書類と申請手順</h2>
         <p>ESTAの申請には、以下の書類が必要です。</p>

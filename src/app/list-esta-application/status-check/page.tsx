@@ -82,6 +82,13 @@ const BODY_HTML = `
         <p>入力情報が正しければ、現在のESTA審査ステータスおよび登録情報が表示されます。</p>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-03" class="fade-up">
         <h2>申請状況確認時のステータス</h2>
         <p>ESTA申請状況は、「渡航認証許可」、「渡航認証保留」、「渡航認証拒否」のいずれかが表示されます。</p>

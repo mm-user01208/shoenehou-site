@@ -64,6 +64,13 @@ const BODY_HTML = `
         <p>CBP(米国税関・国境警備局)は約6万人の職員を擁する、DHS(米国国土安全保障省)傘下で最大の法執行機関です。対テロ作戦の実施や人身売買・麻薬密輸の取締り、違法または危険な活動からアメリカ国内の安全を守ることを任務としています。また、国境管理と税関業務を担い、空港、港湾、国境検問所など、すべての入国地点に職員が配置されています。</p>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-04" class="fade-up">
         <h2>CBPとESTAの関係</h2>
         <p>CBPは、ESTA申請の審査およびアメリカへの入国可否の判断も担っています。ESTAの申請結果はCBPのシステムと連動しており、申請時に提供される情報は入国審査の判断材料として使用されます。そのため、ESTAの承認を得たとしてもアメリカへの入国が保証されるわけではありません。最終的な入国の可否は、入国審査時にCBP職員が行う判断に委ねられています。</p>

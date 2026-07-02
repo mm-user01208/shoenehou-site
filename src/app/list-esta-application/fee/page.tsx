@@ -65,6 +65,13 @@ const BODY_HTML = `
         <p>なお、ESTAの申請が拒否された場合は、ESTA運用手数料($10.27)のみが請求されます。料金はクレジットカードによる前払いとなり、申込が完了し「申請料お支払いページ」にて「今すぐ支払う」ボタンを押した時点で決済が行われます。お支払い方法の詳細については、「支払い方法解説」をご確認ください。</p>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-03" class="fade-up">
         <h2>領収書の発行方法</h2>
         <p>当サイトでは、ESTA申請料の領収書をPDF形式にて発行しております。ご希望の場合は、お問い合わせフォームより、問い合わせ種別「領収書について」を選択し、氏名などの必要事項をご入力のうえ送信してください。</p>

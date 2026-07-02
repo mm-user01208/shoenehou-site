@@ -135,6 +135,13 @@ const BODY_HTML = `
         </ul>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-04" class="fade-up">
         <h2>ESTAアプリでの申請方法・手順</h2>
         <p>ESTAアプリをダウンロードし必要書類や情報を準備したうえで、ESTA申請を進めてください。ダウンロード完了後は、「セキュリティに関する通告」と「免責事項」に同意し、「操作の継続」をタップすると申請手続きが開始されます。アプリでのESTA申請方法と手順は以下の通りです。</p>

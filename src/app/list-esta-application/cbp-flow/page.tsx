@@ -83,6 +83,13 @@ const BODY_HTML = `
         <p>なお、ESTAの有効期限内であれば、何度でもアメリカへの渡航が可能です。ただし、パスポートを更新した場合や、氏名、性別、国籍などの基本情報に変更があった場合は、新たにESTAを申請する必要があります。</p>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-04" class="fade-up">
         <h2>ESTAの申請方法・手順</h2>
         <p>ESTAは、申請フォームの案内に従って入力を進める必要があります。申請時は入力間違いがないよう、正確に情報を入力することが重要です。以下では、ESTA申請の手順について詳しく解説します。</p>

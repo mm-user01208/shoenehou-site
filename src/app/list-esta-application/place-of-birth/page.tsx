@@ -70,6 +70,13 @@ const BODY_HTML = `
         <p>以下は、主な都市の英語(ローマ字)表記での住所記入例です。</p>
       </section>
 
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+      </section>
+
       <section id="sec-04" class="fade-up">
         <h2>北海道札幌市にお住まいの方の入力例</h2>
         <p>日本語住所：北海道札幌市北区北8条西1丁目1-1　ABCハイツ101号</p>

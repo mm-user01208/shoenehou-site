@@ -640,3 +640,20 @@
 /* CVボタン統一ホバー: 濃くなる(#a9182b)+ふわっと浮く (2026-07-02) */
 .cta-btn,.floating-cta__apply{transition:transform .2s,box-shadow .2s,background-color .2s!important}
 .cta-btn:hover,.floating-cta__apply:hover{background:#a9182b!important;color:#fff!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important;opacity:1!important}
+
+/* 中盤CTA(白カード) 全記事展開 (2026-07-02) */
+.cta-strip.cta-mid{background:#fff!important;background-color:#fff!important;padding:50px 22px!important;margin:44px auto!important;max-width:720px;border:1px solid #e8e4d6!important;border-radius:14px!important}
+.cta-strip.cta-mid h2{color:#0a2540!important;font-size:32px!important;margin-bottom:0!important;padding-bottom:0!important;border-bottom:0!important}
+.cta-strip.cta-mid h2::before{content:none!important}
+.cta-strip.cta-mid p{color:#5a626c!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin:0 auto 14px!important}
+.cta-strip.cta-mid .cta-btn{color:#fff!important;text-decoration:none!important;box-shadow:none!important}
+.cta-strip.cta-mid .cta-btn::after{content:none!important;display:none!important}
+.cta-strip.cta-mid .cta-btn:hover,.cta-strip.cta-mid .cta-btn:focus{color:#fff!important;text-decoration:none!important}
+.cta-strip.cta-mid .cta-btn:hover{background:#a9182b!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important}
+@media(max-width:720px){.cta-strip.cta-mid h2{font-size:29px!important}}
+@media(max-width:720px){.cta-strip.cta-mid .h2l1{position:relative;right:8px}}
+@media(max-width:720px){.cta-strip.cta-mid{padding:50px 12px!important;margin-left:-14px!important;margin-right:-14px!important}}
+
+/* メリット枠 最下行(9・10項目)のぶら下がり破線を削除 (2026-07-02) */
+.merits-panel li:nth-last-child(-n+2){border-bottom:0!important}
