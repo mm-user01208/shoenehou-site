@@ -20,9 +20,9 @@ const PAGE_JSON_LD = pageJsonLd({
 const BODY_HTML = `
 <style>
 /* ===== CTR改善パターン(角丸なし・サイト準拠) ===== */
-.patlab{max-width:700px;margin:40px auto 12px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.1em;color:#8a8f98}
-.patlab b{display:inline-block;background:#0a2540;color:#fff!important;padding:3px 12px;border-radius:0;letter-spacing:.06em}
-.patlab .memo{display:block;margin-top:4px;font-weight:500;color:#a7abb2}
+.patlab{max-width:700px;margin:40px auto 12px!important;text-align:center;font-size:12px;font-weight:700;letter-spacing:.1em;color:#8a8f98}
+.patlab b{display:inline-block;background:#0a2540;color:#fff!important;padding:3px 12px;border-radius:999px;letter-spacing:.06em}
+.patlab .memo{display:block;margin-top:4px!important;font-weight:500;color:#a7abb2}
 .cvbtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:277px;max-width:100%;min-height:69px;margin:14px auto 0;padding:12px 20px;text-decoration:none!important;color:#fff!important;box-sizing:border-box;border-radius:0}
 .cvbtn .main{font-size:18px;font-weight:700;letter-spacing:1.3px;line-height:1.25;display:flex;align-items:center;gap:8px}
 .cvbtn .main svg{flex:none}
@@ -30,7 +30,7 @@ const BODY_HTML = `
 .cvbtn--red{background:#b91c30}
 .cvbtn--navy{background:#0a2540}
 /* A */
-.patA{max-width:700px;margin:0 auto;padding:22px 18px 20px;background:#0a2540;border-radius:0}
+.patA{max-width:700px;margin:0 auto;padding:22px 18px 20px;background:#0a2540;border-radius:14px}
 .patA__trust{display:grid;grid-template-columns:1fr 1fr;gap:12px 8px}
 .patA__trust div{color:#fff;text-align:center;line-height:1.3}
 .patA__trust b{display:block;font-size:15px;font-weight:800;color:#fff}
@@ -38,7 +38,7 @@ const BODY_HTML = `
 @media(min-width:560px){.patA__trust{grid-template-columns:repeat(4,1fr)}}
 .patA .cvbtn .main{font-size:1.7rem;margin-top:8px}
 /* B */
-.patB{max-width:700px;margin:0 auto;border:1px solid #d7dbe0;border-radius:0;overflow:hidden;background:#fff}
+.patB{max-width:700px;margin:0 auto;border:1px solid #d7dbe0;border-radius:14px;overflow:hidden;background:#fff}
 .patB__head{padding:16px 20px;background:#0a2540;color:#fff}
 .patB__eye{font-size:11px;letter-spacing:.14em;color:#c7b273;font-weight:700}
 .patB__head b{display:block;font-size:17px;font-weight:700;margin-top:3px}
@@ -50,21 +50,21 @@ const BODY_HTML = `
 .patB .cvbtn{margin-top:0}
 /* C */
 .patC{max-width:700px;margin:0 auto;text-align:center}
-.patC__note{margin-top:9px;font-size:12px;color:#5a626c}
+.patC__note{margin-top:9px!important;font-size:12px;color:#5a626c;margin-bottom:0!important}
 /* D */
-.patD{max-width:700px;margin:0 auto;padding:20px 18px;background:#f7f5ef;border-radius:0}
+.patD{max-width:700px;margin:0 auto;padding:20px 18px;background:#f7f5ef;border-radius:14px}
 .patD__steps{display:flex;justify-content:center;gap:8px;margin-bottom:6px}
 .patD__steps div{flex:1;max-width:150px;text-align:center;font-size:12px;color:#0a2540;font-weight:600}
-.patD__steps .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:0;background:#0a2540;color:#fff;font-weight:800;margin-bottom:5px}
+.patD__steps .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:#0a2540;color:#fff;font-weight:800;margin-bottom:5px}
 /* E */
 .patE{max-width:700px;margin:0 auto;text-align:center}
-.patE__pay{margin:10px 0 5px;font-size:11.5px;color:#5a626c}
+.patE__pay{margin:10px 0 5px!important;font-size:11.5px;color:#5a626c}
 .patE__cards{display:flex;justify-content:center;gap:6px;margin-top:0;flex-wrap:wrap}
-.patE__cards span{font-size:10px;font-weight:700;color:#0a2540;border:1px solid #cfd5dc;border-radius:0;padding:2px 7px}
+.patE__cards span{font-size:10px;font-weight:700;color:#0a2540;border:1px solid #cfd5dc;border-radius:4px;padding:2px 7px}
 /* F */
 .patF{max-width:700px;margin:0 auto;text-align:center;padding:22px 18px;border-top:2px solid #0a2540;border-bottom:2px solid #0a2540}
-.patF h3{font-size:19px;color:#0a2540;font-weight:800;line-height:1.5;margin:0 0 4px}
-.patF p{font-size:13px;color:#5a626c;margin:0}
+.patF h3{font-size:19px;color:#0a2540;font-weight:800;line-height:1.5;margin:0 0 4px!important}
+.patF p{font-size:13px;color:#5a626c;margin:0!important}
 .icons{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px;align-items:center}
 .icons .cap{font-size:11px;color:#8a8f98;font-weight:600}
 </style>
