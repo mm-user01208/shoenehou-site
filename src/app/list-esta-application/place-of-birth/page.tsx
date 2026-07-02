@@ -32,7 +32,7 @@ const BODY_HTML = `
 .cta-strip.cta-mid .cta-btn::after{content:none!important;display:none!important}
 /* 統一ホバー: 色が濃くなる+ふわっと浮く(デモ再現) */
 .cta-btn,.floating-cta__apply{transition:transform .2s,box-shadow .2s,background-color .2s!important}
-.cta-btn:hover,.floating-cta__apply:hover,.cta-strip.cta-mid .cta-btn:hover{background:var(--red-2)!important;color:#fff!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important;opacity:1!important}
+.cta-btn:hover,.floating-cta__apply:hover,.cta-strip.cta-mid .cta-btn:hover{background:#a9182b!important;color:#fff!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important;opacity:1!important}
 /* フローティング2行(デモ) */
 .floating-cta__apply--2line{flex-direction:column!important;gap:3px!important;line-height:1.25!important}
 .floating-cta__apply--2line .fca-main{display:flex;align-items:center;gap:8px}
