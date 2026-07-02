@@ -36,7 +36,7 @@ const BODY_HTML = `
 /* フローティング2行(デモ) */
 .floating-cta__apply--2line{flex-direction:column!important;gap:3px!important;line-height:1.25!important}
 .floating-cta__apply--2line .fca-main{display:flex;align-items:center;gap:8px}
-.floating-cta__apply--2line .fca-sub{font-size:11px!important;font-weight:400!important;letter-spacing:.02em;opacity:.92}
+.floating-cta__apply--2line .fca-sub{font-size:12px!important;font-weight:400!important;letter-spacing:.02em;opacity:.92}
 </style>
 
 <section class="article-hero">
