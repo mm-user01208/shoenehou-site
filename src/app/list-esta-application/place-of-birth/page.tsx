@@ -19,13 +19,14 @@ const PAGE_JSON_LD = pageJsonLd({
 
 const BODY_HTML = `
 <style>
-/* 既存の下部CTA(cta-strip)を「背景色なし」で中盤に置く版(調整) */
-.cta-strip.cta-mid{background:transparent!important;background-color:transparent!important;padding:8px 16px 26px!important;margin:44px auto!important;max-width:720px;border-bottom:1px solid #e2ddd0!important}
-.cta-strip.cta-mid h2{color:#0a2540!important;font-size:27px!important;margin-bottom:0!important;border-bottom:0!important}
+/* 既存の下部CTA(cta-strip)を「背景色なし」で中盤に置く版(調整v2) */
+.cta-strip.cta-mid{background:transparent!important;background-color:transparent!important;padding:8px 0!important;margin:44px auto!important;max-width:720px;border-bottom:0!important}
+.cta-strip.cta-mid h2{color:#0a2540!important;font-size:32px!important;margin-bottom:0!important;padding-bottom:0!important;border-bottom:0!important}
 .cta-strip.cta-mid h2::before{content:none!important}
+@media(max-width:720px){.cta-strip.cta-mid h2{font-size:29px!important}}
 .cta-strip.cta-mid p{color:#5a626c!important;text-align:center!important}
-.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:1px solid #e2ddd0!important;padding-bottom:16px!important;margin-bottom:18px!important}
-.cta-strip.cta-mid .cta-btn{text-decoration:none!important}
+.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin-bottom:14px!important}
+.cta-strip.cta-mid .cta-btn{text-decoration:none!important;box-shadow:none!important}
 .cta-strip.cta-mid .cta-btn::after{content:none!important;display:none!important}
 </style>
 
