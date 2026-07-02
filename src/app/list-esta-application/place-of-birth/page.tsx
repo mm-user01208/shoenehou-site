@@ -20,7 +20,7 @@ const PAGE_JSON_LD = pageJsonLd({
 const BODY_HTML = `
 <style>
 /* 既存の下部CTA(cta-strip)を「背景色なし」で中盤に置く版(調整v2) */
-.cta-strip.cta-mid{background:#fff!important;background-color:#fff!important;padding:24px 22px!important;margin:44px auto!important;max-width:720px;border:1px solid #e8e4d6!important;border-radius:14px!important}
+.cta-strip.cta-mid{background:#fff!important;background-color:#fff!important;padding:50px 22px!important;margin:44px auto!important;max-width:720px;border:1px solid #e8e4d6!important;border-radius:14px!important}
 .cta-strip.cta-mid h2{color:#0a2540!important;font-size:32px!important;margin-bottom:0!important;padding-bottom:0!important;border-bottom:0!important}
 .cta-strip.cta-mid h2::before{content:none!important}
 @media(max-width:720px){.cta-strip.cta-mid h2{font-size:29px!important}}
