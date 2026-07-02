@@ -25,7 +25,7 @@ const BODY_HTML = `
 .cta-strip.cta-mid h2::before{content:none!important}
 @media(max-width:720px){.cta-strip.cta-mid h2{font-size:29px!important}}
 @media(max-width:720px){.cta-strip.cta-mid .h2l1{position:relative;right:8px}}
-@media(max-width:720px){.cta-strip.cta-mid{padding:20px 12px!important}}
+@media(max-width:720px){.cta-strip.cta-mid{padding:20px 12px!important;margin-left:-14px!important;margin-right:-14px!important}}
 .cta-strip.cta-mid p{color:#5a626c!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important}
 .cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin:0 auto 14px!important}
 .cta-strip.cta-mid .cta-btn{text-decoration:none!important;box-shadow:none!important}
