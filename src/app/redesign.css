@@ -636,3 +636,7 @@
 .floating-cta__apply--2line .fca-main{display:flex;align-items:center;gap:8px}
 .floating-cta__apply--2line .fca-sub{font-size:13px;font-weight:400;color:#fff;letter-spacing:.02em}
 .cta-btn,.floating-cta__apply,.floating-cta__apply .fca-main{letter-spacing:.08em!important}
+
+/* CVボタン統一ホバー: 濃くなる(#a9182b)+ふわっと浮く (2026-07-02) */
+.cta-btn,.floating-cta__apply{transition:transform .2s,box-shadow .2s,background-color .2s!important}
+.cta-btn:hover,.floating-cta__apply:hover{background:#a9182b!important;color:#fff!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important;opacity:1!important}
