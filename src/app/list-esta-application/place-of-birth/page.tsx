@@ -18,6 +18,14 @@ const PAGE_JSON_LD = pageJsonLd({
 });
 
 const BODY_HTML = `
+<style>
+/* 既存の下部CTA(cta-strip)を「背景色なし」で中盤に置く版 */
+.cta-strip.cta-mid{background:transparent!important;background-color:transparent!important;padding:26px 16px!important;margin:44px auto!important;max-width:720px}
+.cta-strip.cta-mid h2{color:#0a2540!important}
+.cta-strip.cta-mid p{color:#5a626c!important}
+.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important}
+</style>
+
 <section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
@@ -68,6 +76,14 @@ const BODY_HTML = `
         <p>住所の入力方法は、日本の住所を英語(ローマ字)に変換したうえで、英語圏の書き方(小さい単位から大きい単位へ)で入力するのが一般的です。また、アパートやマンションにお住まいの場合は、建物名や部屋番号も入力することが推奨されています。その際の順番は、「部屋番号→建物名→番地→町名→市区町村→都道府県」と入力しましょう。</p>
         <p>日本の都道府県を英語で表す場合、通常は"Tokyo Prefecture(東京都)"や"Osaka Prefecture(大阪府)"のように「都道府県名+prefectures(プレフェクチャーズ)」と表記しますが、ESTA申請フォームでは"prefectures"を省略しても問題ありません。</p>
         <p>以下は、主な都市の英語(ローマ字)表記での住所記入例です。</p>
+      </section>
+
+
+      <section class="cta-strip cta-strip--solid cta-mid">
+        <p class="cta-strip__eyebrow">Start your application</p>
+        <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
+        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
       </section>
 
       <section id="sec-04" class="fade-up">
