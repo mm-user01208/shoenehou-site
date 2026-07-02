@@ -30,6 +30,9 @@ const BODY_HTML = `
 .cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin:0 auto 14px!important}
 .cta-strip.cta-mid .cta-btn,.cta-strip.cta-mid .cta-btn:hover,.cta-strip.cta-mid .cta-btn:focus{color:#fff!important;text-decoration:none!important;box-shadow:none!important}
 .cta-strip.cta-mid .cta-btn::after{content:none!important;display:none!important}
+/* 統一ホバー: 色が濃くなる+ふわっと浮く(デモ再現) */
+.cta-btn,.floating-cta__apply{transition:transform .2s,box-shadow .2s,background-color .2s!important}
+.cta-btn:hover,.floating-cta__apply:hover,.cta-strip.cta-mid .cta-btn:hover{background:var(--red-2)!important;color:#fff!important;transform:translateY(-3px)!important;box-shadow:0 16px 30px -10px rgba(185,28,48,.55)!important;opacity:1!important}
 </style>
 
 <section class="article-hero">
