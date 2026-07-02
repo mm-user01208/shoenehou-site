@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 
 export default function ShellFloatingFab() {
-  const HTML = `<div class="floating-cta "><button type="button" class="floating-cta__top " aria-label="ページ上部へ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><a class="floating-cta__apply floating-cta__apply--2line" aria-label="ESTA申請をはじめる" href="/form/step1"><span class="fca-main"><span>✓</span><span>ESTA申請をはじめる</span></span><span class="fca-sub">米国入国に必須・出発の72時間前までに</span></a></div>`;
+  const HTML = `<div class="floating-cta "><button type="button" class="floating-cta__top " aria-label="ページ上部へ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><a class="floating-cta__apply floating-cta__apply--2line" aria-label="ESTA申請をはじめる" href="/form/step1"><span class="fca-main"><span>✓</span><span>ESTA申請をはじめる</span></span><span class="fca-sub">アメリカ入国前に必須の事前手続き</span></a></div>`;
   useEffect(() => {
     const cta = document.querySelector<HTMLDivElement>('.floating-cta');
     if (!cta) return;
