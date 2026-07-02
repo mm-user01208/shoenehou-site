@@ -20,12 +20,13 @@ const PAGE_JSON_LD = pageJsonLd({
 const BODY_HTML = `
 <style>
 /* 既存の下部CTA(cta-strip)を「背景色なし」で中盤に置く版(調整v2) */
-.cta-strip.cta-mid{background:transparent!important;background-color:transparent!important;padding:8px 0!important;margin:44px auto!important;max-width:720px;border-bottom:0!important}
+.cta-strip.cta-mid{background:transparent!important;background-color:transparent!important;padding:24px 22px!important;margin:44px auto!important;max-width:720px;border:1px solid #e8e4d6!important;border-radius:14px!important}
 .cta-strip.cta-mid h2{color:#0a2540!important;font-size:32px!important;margin-bottom:0!important;padding-bottom:0!important;border-bottom:0!important}
 .cta-strip.cta-mid h2::before{content:none!important}
 @media(max-width:720px){.cta-strip.cta-mid h2{font-size:29px!important}}
-.cta-strip.cta-mid p{color:#5a626c!important;text-align:center!important}
-.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin-bottom:14px!important}
+@media(max-width:720px){.cta-strip.cta-mid .h2l1{position:relative;right:8px}}
+.cta-strip.cta-mid p{color:#5a626c!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+.cta-strip.cta-mid .cta-strip__eyebrow{color:#b08d3c!important;text-align:center!important;border-bottom:0!important;padding-bottom:0!important;padding-left:3.5px!important;margin:0 auto 14px!important}
 .cta-strip.cta-mid .cta-btn{text-decoration:none!important;box-shadow:none!important}
 .cta-strip.cta-mid .cta-btn::after{content:none!important;display:none!important}
 </style>
@@ -85,7 +86,7 @@ const BODY_HTML = `
 
       <section class="cta-strip cta-strip--solid cta-mid">
         <p class="cta-strip__eyebrow">Start your application</p>
-        <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
         <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
         <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
       </section>
@@ -167,7 +168,7 @@ const BODY_HTML = `
 
 <section class="cta-strip cta-strip--solid">
   <p class="cta-strip__eyebrow">Start your application</p>
-  <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
+  <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
   <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
 </section>
