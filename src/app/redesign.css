@@ -661,3 +661,10 @@
 
 /* [demo] フローティング2行: 1行目の上余白 と 2行目の下余白 を同じ縦幅に(フォント差2px分を上に足して中央寄せ) */
 .floating-cta__apply--2line .fca-main{margin-top:2px!important}
+
+/* [prod] トップのヒーロー画像: 縦幅を約3/4(780→585px)に・下を切り上部を残す (2026-07-03) */
+.hero{min-height:585px!important}
+.hero__bg img{object-position:top!important}
+/* フローティング2行入替に伴い旧の中央寄せ補正(margin-top)を解除 */
+.floating-cta__apply--2line .fca-main{margin-top:0!important}
+.floating-cta__apply--2line .fca-arrow{font-weight:700}
