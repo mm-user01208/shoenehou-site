@@ -658,7 +658,5 @@
 /* メリット枠 最下行(9・10項目)のぶら下がり破線を削除 (2026-07-02) */
 .merits-panel li:nth-last-child(-n+2){border-bottom:0!important}
 
-/* [demo] フローティング2行: 1行目・2行目・2行目下の余白を同じ縦幅(20px)に */
-.floating-cta__apply--2line .fca-main{line-height:20px!important}
-.floating-cta__apply--2line .fca-sub{line-height:20px!important}
-.floating-cta__apply--2line{gap:0!important;padding-bottom:20px!important}
+/* [demo] フローティング2行: 行間の余白 と 2行目下の余白 を同じサイズ(10px)に */
+.floating-cta__apply--2line{gap:10px!important;padding-bottom:10px!important}
