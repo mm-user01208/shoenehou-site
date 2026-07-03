@@ -117,7 +117,7 @@ const BODY_HTML = `
         <p class="cta-strip__eyebrow">Start your application</p>
         <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
         <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-        <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+        <a href="/form/step1" class="cta-btn">ESTA申請をはじめる →</a>
       </section>
 
       <section id="sec-06" class="fade-up">
@@ -364,7 +364,7 @@ const BODY_HTML = `
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">ESTA申請をはじめる →</a>
 </section>
 
 <!-- ===== Related articles (reused) ===== -->

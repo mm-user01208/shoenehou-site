@@ -29,7 +29,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
       <em>U.S. Electronic System for Travel Authorization</em>
     </h1>
     <p class="hero__lede">申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-    <div class="hero__cta-wrap"><a href="/form/step1" class="hero__cta">✓ ESTA申請をはじめる</a></div>
+    <div class="hero__cta-wrap"><a href="/form/step1" class="hero__cta">ESTA申請をはじめる →</a></div>
   </div>
   </section>
 
@@ -174,7 +174,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2>アメリカ渡航には<br class="sp-br">ESTAの申請が必要です。</h2>
   <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/form/step1" class="cta-btn">✓ ESTA申請をはじめる</a>
+  <a href="/form/step1" class="cta-btn">ESTA申請をはじめる →</a>
 </section>
 
 <!-- ===== FAQ ===== -->
