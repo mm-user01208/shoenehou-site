@@ -634,7 +634,7 @@
 /* フローティングCVボタン2行 + CTA字間調整 (2026-07-02) */
 .floating-cta__apply--2line{flex-direction:column!important;gap:3px!important;line-height:1.25}
 .floating-cta__apply--2line .fca-main{display:flex;align-items:center;gap:8px}
-.floating-cta__apply--2line .fca-sub{font-size:13px;font-weight:400;color:#fff;letter-spacing:.02em}
+.floating-cta__apply--2line .fca-sub{font-size:14px;font-weight:700;color:#fff;letter-spacing:.02em}
 .cta-btn,.floating-cta__apply,.floating-cta__apply .fca-main{letter-spacing:.08em!important}
 
 /* CVボタン統一ホバー: 濃くなる(#a9182b)+ふわっと浮く (2026-07-02) */
@@ -664,7 +664,7 @@
 
 /* [prod] トップのヒーロー画像: 縦幅を約3/4(780→585px)に・下を切り上部を残す (2026-07-03) */
 @media (min-width:901px){.hero{min-height:0!important;height:620px!important;overflow:hidden}}
-.hero__bg img{object-position:top!important}
+.hero__bg img{object-position:center 28%!important}
 /* フローティング2行入替に伴い旧の中央寄せ補正(margin-top)を解除 */
 .floating-cta__apply--2line .fca-main{margin-top:0!important}
 .floating-cta__apply--2line .fca-arrow{font-weight:700}
@@ -672,7 +672,7 @@
 /* [demo] 全CVボタンを2行化＋矢印重複解消 (2026-07-03) */
 .cta-btn,.hero__cta{display:inline-flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important;line-height:1!important;padding:22px 38px!important;font-size:17px!important;letter-spacing:.08em!important}
 .cta-btn::after,.cta-btn:after,.hero__cta::after,.hero__cta:after{content:none!important;display:none!important}
-.cta-btn .cta-sub,.hero__cta .cta-sub{font-size:13px;font-weight:400;letter-spacing:.02em;line-height:1;text-transform:none;opacity:.95}
+.cta-btn .cta-sub,.hero__cta .cta-sub{font-size:14px;font-weight:700;letter-spacing:.02em;line-height:1;text-transform:none;opacity:.95}
 .cta-btn .cta-main,.hero__cta .cta-main{display:flex;align-items:center;gap:8px;font-size:17px;line-height:1;letter-spacing:.08em}
 .cta-btn .cta-arrow,.hero__cta .cta-arrow{font-weight:700}
 /* フローティング: 1行目の上余白と2行目の下余白を同じ22pxに(leading除去で見た目を均等化) */
