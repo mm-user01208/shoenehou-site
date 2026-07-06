@@ -664,7 +664,7 @@
 
 /* [prod] トップのヒーロー画像: 縦幅を約3/4(780→585px)に・下を切り上部を残す (2026-07-03) */
 @media (min-width:901px){.hero{min-height:0!important;height:620px!important;overflow:hidden}}
-.hero__bg img{object-position:center!important}
+@media (min-width:901px){.hero__bg img{object-position:center 20%!important}}
 /* フローティング2行入替に伴い旧の中央寄せ補正(margin-top)を解除 */
 .floating-cta__apply--2line .fca-main{margin-top:0!important}
 .floating-cta__apply--2line .fca-arrow{font-weight:700}
