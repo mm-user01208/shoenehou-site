@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shoenehou-online.jp/sitemap.xml

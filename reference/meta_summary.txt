@@ -1,0 +1,100 @@
+PAGE: index
+URL: https://www.shoenehou-online.jp/
+TITLE: ESTA(エスタ)申請サイト【アメリカ電子渡航認証システム】
+DESC: ESTA(エスタ)は、アメリカへ短期滞在する際に必要となる電子渡航認証です。ビザを取得せずに渡米する場合は、出発の72時間前までにオンラインでの事前申請を完了してください。
+---
+PAGE: list-esta-application
+URL: https://www.shoenehou-online.jp/list-esta-application
+TITLE: ESTA申請関連情報一覧 | US ESTA Apply Website
+DESC: ESTA申請に関する要件や最新情報、注意点、申請手順、よくある質問を各ページでまとめています。渡航前に確認しておきたい重要なポイントを分かりやすく解説します。
+---
+PAGE: list-esta-application__application
+URL: https://www.shoenehou-online.jp/list-esta-application/application
+TITLE: アプリを使ったESTA(エスタ)申請方法を解説 | US ESTA Apply Website
+DESC: CBP(アメリカ合衆国税関・国境警備局)は、電子渡航認証システムESTA(エスタ)の公式アプリを提供しています。アプリでの申請方法や必要書類、注意点などを詳しく解説します。
+---
+PAGE: list-esta-application__cbp-flow
+URL: https://www.shoenehou-online.jp/list-esta-application/cbp-flow
+TITLE: 【2026年最新】ESTA申請方法と取得手順を徹底解説　必須書類と注意点も紹介 | ESTA USA Entry
+DESC: ESTA申請は、出発の72時間前までに行うことが推奨されています。本記事では、申請に必要な書類や申請方法・手順、さらに審査結果の確認方法までを分かりやすく解説します。
+---
+PAGE: list-esta-application__esta-flow
+URL: https://www.shoenehou-online.jp/list-esta-application/esta-flow
+TITLE: 【記入例付き】ESTA(エスタ)の申請方法を解説 | US ESTA Apply Website
+DESC: ESTA(エスタ)の申請では、氏名や生年月日など個人情報の入力が求められます。本記事では、申請をスムーズに進められるよう、記入例を交えて申請方法を紹介します。
+---
+PAGE: list-esta-application__fee
+URL: https://www.shoenehou-online.jp/list-esta-application/fee
+TITLE: ESTA(エスタ)の申請料金 | ESTA USA Entry
+DESC: 当サイトではESTAの申請手続きの代行サービスを行います。当サイトにおける申請サービスの料金やお支払い方法、領収書の発行、キャンセルポリシーについて解説します。
+---
+PAGE: list-esta-application__expiration-date
+URL: https://www.shoenehou-online.jp/list-esta-application/expiration-date
+TITLE: ESTA(エスタ)の有効期限と再申請・確認の方法 | US ESTA Apply Website
+DESC: ESTAの有効期限は2年間です。渡米前に期限が切れている場合は、ESTAの再申請が必要となります。本記事では、ESTAの有効期限の確認手順や、申請情報の修正方法について解説します。
+---
+PAGE: list-esta-application__guam
+URL: https://www.shoenehou-online.jp/list-esta-application/guam
+TITLE: グアム入国にESTA(エスタ)は必要？入国審査についても紹介 | US ESTA Apply Website
+DESC: グアムまたは北マリアナ諸島への入国では、渡航目的や滞在日数によってESTA(エスタ)の取得が求められます。本記事では、ESTAの申請方法をはじめ、グアム入国時の手続きについて解説します。
+---
+PAGE: list-esta-application__place-of-birth
+URL: https://www.shoenehou-online.jp/list-esta-application/place-of-birth
+TITLE: ESTA(エスタ)申請時の出生地や住所の書き方を解説 | ESTA USA Entry
+DESC: ESTA(エスタ)の審査はアメリカCBPによって行われるため、申請フォームはすべて英語(ローマ字)での入力が必須です。出生地と現住所の入力方法を、記入例付きで解説します。
+---
+PAGE: list-esta-application__esta
+URL: https://www.shoenehou-online.jp/list-esta-application/esta
+TITLE: ESTA(エスタ)とは？事前入国審査制度を解説【アメリカ渡航】 | US ESTA Apply Website
+DESC: ESTA(エスタ)は、アメリカへ短期滞在する際に必要な電子渡航認証です。ビザを取得せずに渡米する場合は、出発の72時間前までにオンラインで事前申請を完了させてください。
+---
+PAGE: list-esta-application__status-check
+URL: https://www.shoenehou-online.jp/list-esta-application/status-check
+TITLE: ESTA(エスタ)申請状況 | US ESTA Apply Website
+DESC: ESTAの申請状況と審査結果、登録情報を確認する方法を解説します。ESTA申請の認証可否を確認する際は、ローマ字表記の姓名・生年月日・申請IDの入力が必要です。
+---
+PAGE: list-esta-application__official-cbp
+URL: https://www.shoenehou-online.jp/list-esta-application/official-cbp
+TITLE: ESTA公式ウェブサイト(https://esta.cbp.dhs.gov)について解説 | ESTA USA Entry
+DESC: ESTA申請を行う公式ウェブサイトは、 DHS(米国国土安全保障省)の一部門であるCBP(米国税関・国境警備局)が運営しています。本記事では申請方法からお問い合わせ方法まで詳しく解説します。
+---
+PAGE: list-site-information
+URL: https://www.shoenehou-online.jp/list-site-information
+TITLE: サイト情報一覧 | US ESTA Apply Website
+DESC: 当サイトの利用に関する各種フォームや規約、運営情報を一覧でご案内しています。ご利用前に確認しておきたい重要な内容を分かりやすくまとめています。
+---
+PAGE: list-site-information__privacy-policy
+URL: https://www.shoenehou-online.jp/list-site-information/privacy-policy
+TITLE: 個人情報保護に関する基本方針 | US ESTA Apply Website
+DESC: US ESTA Apply Websiteでは、個人情報を適切に取り扱うため個人情報保護方針を定め、管理体制の徹底に努めています。お客様が安心してESTAの申請手続きをご利用いただける環境づくりを行っています。
+---
+PAGE: list-site-information__browser
+URL: https://www.shoenehou-online.jp/list-site-information/browser
+TITLE: 推奨ブラウザについて | US ESTA Apply Website
+DESC: 本サイトを快適にご利用いただくため、推奨ブラウザをご案内しております。推奨環境以外では、一部機能が正しく動作しない場合があります。
+---
+PAGE: list-site-information__aboutus
+URL: https://www.shoenehou-online.jp/list-site-information/aboutus
+TITLE: 特定商取引法に基づく表記・運営者情報 | US ESTA Apply Website
+DESC: ESTA USA Entryでは、お問い合わせは原則としてお問い合わせフォームからのみ受け付けております。ESTA申請に関する内容は正確性が求められるため、記録を残したうえで誤りのない対応を行うことを目的としています。
+---
+PAGE: list-site-information__status
+URL: https://www.shoenehou-online.jp/list-site-information/status
+TITLE: 申請状況確認 | US ESTA Apply Website
+DESC: 
+---
+PAGE: list-site-information__contents-policy
+URL: https://www.shoenehou-online.jp/list-site-information/contents-policy
+TITLE: コンテンツポリシー | US ESTA Apply Website
+DESC: US ESTA Apply Websiteは、アメリカ渡航に必要な電子渡航認証システム“EATA(エスタ)”の申請代行サイトです。本記事では、サイト概要や運営者情報、記事制作の流れについて紹介します。
+---
+PAGE: list-site-information__contact
+URL: https://www.shoenehou-online.jp/list-site-information/contact
+TITLE: お問い合わせ | US ESTA Apply Website
+DESC: 
+---
+PAGE: list-site-information__agreement
+URL: https://www.shoenehou-online.jp/list-site-information/agreement
+TITLE: 利用規約 | US ESTA Apply Website
+DESC: US ESTA Apply Websiteでは、お客様に安心してESTA申請をご利用いただくため、第三者による不正利用や各種トラブルの発生を防止し、万一の際にも迅速に対応できるよう一定のルールを定めたうえでサイトを運営しています。
+---
