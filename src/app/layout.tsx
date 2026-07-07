@@ -22,8 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Noto+Sans+JP:wght@400;500;700;800&family=Noto+Serif+JP:wght@500;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/img/logo-shield.png" />
-        <link rel="apple-touch-icon" href="/img/logo-shield.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/img/favicon-192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#ffffff" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TKC650FZB3"
