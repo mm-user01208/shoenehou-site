@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-application/expiration-date/';
-const PAGE_TITLE = 'ESTA(エスタ)の有効期限と再申請・確認の方法 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTAの有効期限は2年間です。渡米前に期限が切れている場合は、ESTAの再申請が必要となります。本記事では、ESTAの有効期限の確認手順や、申請情報の修正方法について解説します。';
+const PAGE_TITLE = '【いつまで有効？】ESTAの有効期限は何年？確認方法・期限切れ・再申請【2026年版】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTAの有効期限は原則2年（申請時のパスポート有効期限が先に切れる場合はそこまで）。公式サイトでの残り期限の確認手順、期限切れ時の再申請、パスポート更新時の注意点を2026年最新情報で解説します。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -11,11 +11,26 @@ export const metadata: Metadata = seoMetadata({
   description: PAGE_DESCRIPTION,
 });
 
-const PAGE_JSON_LD = pageJsonLd({
-  path: PAGE_PATH,
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-});
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'ESTAの有効期限は何年ですか？', acceptedAnswer: { '@type': 'Answer', text: '承認日から原則2年です。ただし申請時に使用したパスポートの有効期限が2年未満の場合は、パスポートの有効期限までとなります。' } },
+    { '@type': 'Question', name: 'ESTAの有効期限を確認する方法は？', acceptedAnswer: { '@type': 'Answer', text: '公式サイトの申請状況確認ページで、パスポート番号・生年月日等を入力すると残り期限を確認できます（本文の手順参照）。' } },
+    { '@type': 'Question', name: '有効期限が切れたらどうすればいいですか？', acceptedAnswer: { '@type': 'Answer', text: 'ESTAに更新手続きはありません。新規に再申請してください。再申請の手順は本文で解説しています。' } },
+    { '@type': 'Question', name: 'パスポートを更新したらESTAはどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'ESTAはパスポート番号に紐づくため、パスポートを更新した場合は有効期限内でもESTAの再申請が必要です。' } },
+    { '@type': 'Question', name: '渡航中にESTAの期限が切れても大丈夫ですか？', acceptedAnswer: { '@type': 'Answer', text: '入国時にESTAが有効であれば、滞在中に期限が切れても許可された滞在期間内は問題ありません（出国まで有効である必要はありません）。' } },
+  ],
+};
+
+const PAGE_JSON_LD = [
+  ...pageJsonLd({
+    path: PAGE_PATH,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  }),
+  FAQ_SCHEMA,
+];
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -28,6 +43,11 @@ const BODY_HTML = `
     <p class="article__eyebrow">Validity Period</p>
     <h1 class="article__title">ESTA(エスタ)の有効期限と再申請・確認の方法</h1>
     <p class="article__lede">ESTA(エスタ)の有効期限は2年間で、この期間内であれば何度でも渡米することが可能です。本記事では、ESTAの有効期限の確認方法、再申請の手順、および登録情報の修正方法について詳しく解説します。</p>
+    <div style="margin-top:24px;padding:20px 22px;background:#fbf7ee;border:1px solid #e3d6b8;border-left:4px solid #b8974a;border-radius:8px">
+      <p style="margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.08em;color:#b8974a">結論</p>
+      <p style="margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.7;color:#1c2733">ESTAの有効期限は承認日から原則2年。ただし申請時のパスポートの有効期限が2年より先に切れる場合は、その時点まで。</p>
+      <p style="margin:0;font-size:14.5px;line-height:1.9;color:#3a4753">期限内は何度でも渡米できます。期限切れ後は「更新」ではなく新規の再申請が必要です。残り期限は公式サイトで今すぐ確認できます（下の手順へ）。</p>
+    </div>
   </div>
 </section>
 
@@ -42,6 +62,7 @@ const BODY_HTML = `
         <li><a href="#sec-04">ESTAの有効期限と再申請</a></li>
         <li><a href="#sec-05">ESTA有効期限のまとめ</a></li>
         <li><a href="#sec-06">ESTAなしでもグアムおよびサイパンへの渡航は可能</a></li>
+        <li><a href="#sec-faq">ESTAの有効期限に関するよくある質問</a></li>
       </ol>
     </aside>
 
@@ -135,6 +156,32 @@ const BODY_HTML = `
         <h3>グアムおよびサイパン渡航時の注意点</h3>
         <p>日本国籍者が45日以内の観光または短期商用を目的として、グアムおよびサイパン(北マリアナ諸島)へ渡航する場合、「グアム‐北マリアナ諸島ビザ免除プログラム(Guam-CNMI)」を利用することができます。本プログラムの利用条件を満たした場合に限り、ビザやESTA(エスタ)を取得せずに渡航が認められます。Guam-CNMIを利用する際は、事前に電子渡航認証G-CNMI ETAを申請し、渡航認証許可を取得してください。審査には一定の期間を要するため、グアム政府観光局では出発日の7日前までにG-CNMI ETAを申請することを推奨しています。</p>
         <p>なお、45日を超えてのグアムまたはサイパン(北マリアナ諸島)に滞在する場合は、ESTA(エスタ)または渡航目的に応じたビザの取得が必要です。また、電子渡航認証G-CNMI ETAおよびESTAはいずれも、観光や短期商用を目的とした渡航に限って利用可能であり、就労や留学は認められていません。</p>
+      </section>
+
+      <section id="sec-faq" class="fade-up">
+        <h2>ESTAの有効期限に関するよくある質問</h2>
+        <div class="faq" style="margin-top:32px">
+          <details open>
+            <summary>ESTAの有効期限は何年ですか？</summary>
+            <div class="answer"><p>承認日から原則2年です。ただし申請時に使用したパスポートの有効期限が2年未満の場合は、パスポートの有効期限までとなります。</p></div>
+          </details>
+          <details>
+            <summary>ESTAの有効期限を確認する方法は？</summary>
+            <div class="answer"><p>公式サイトの申請状況確認ページで、パスポート番号・生年月日等を入力すると残り期限を確認できます（本文の手順参照）。</p></div>
+          </details>
+          <details>
+            <summary>有効期限が切れたらどうすればいいですか？</summary>
+            <div class="answer"><p>ESTAに更新手続きはありません。新規に再申請してください。再申請の手順は本文で解説しています。</p></div>
+          </details>
+          <details>
+            <summary>パスポートを更新したらESTAはどうなりますか？</summary>
+            <div class="answer"><p>ESTAはパスポート番号に紐づくため、パスポートを更新した場合は有効期限内でもESTAの再申請が必要です。</p></div>
+          </details>
+          <details>
+            <summary>渡航中にESTAの期限が切れても大丈夫ですか？</summary>
+            <div class="answer"><p>入国時にESTAが有効であれば、滞在中に期限が切れても許可された滞在期間内は問題ありません（出国まで有効である必要はありません）。</p></div>
+          </details>
+        </div>
       </section>
 
     </article>

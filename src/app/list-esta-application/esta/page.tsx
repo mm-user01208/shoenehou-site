@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-application/esta/';
-const PAGE_TITLE = 'ESTA(エスタ)とは？事前入国審査制度を解説【アメリカ渡航】 | US ESTA Apply Website';
+const PAGE_TITLE = 'ESTA(エスタ)とは？申請方法・有効期限・料金まで総合ガイド【2026年】 | US ESTA Apply Website';
 const PAGE_DESCRIPTION = 'ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。申請対象者・要件・必要書類・有効期限・申請タイミングまで完全解説。';
 
 export const metadata: Metadata = seoMetadata({
@@ -26,6 +26,20 @@ const BODY_HTML = `<section class="article-hero">
     </nav>
     <p class="article__eyebrow">ESTA Application Article</p>
     <h1 class="article__title">ESTA(エスタ)とは？ 事前入国審査制度を解説【アメリカ渡航】</h1>
+    <p class="article__lede">ESTA(エスタ)は、ビザなしでアメリカへ短期渡航する際に事前取得が必要な電子渡航認証です。このページでは対象者・申請要件・必要書類と手順・料金・有効期限・注意点までをまとめ、目的のページへすぐ移動できるようにしています。</p>
+    <div style="margin-top:28px;background:var(--paper);border:1px solid var(--line);padding:24px 26px">
+      <p style="margin:0 0 16px;font-family:var(--sans);color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:700">目的別に読む</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px">
+        <a href="/list-esta-application/cbp-flow/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>申請方法・手順を見る</a>
+        <a href="/list-esta-application/esta-flow/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>記入例つきで申請したい</a>
+        <a href="/list-esta-application/expiration-date/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>有効期限を確認したい</a>
+        <a href="/list-esta-guide/cost/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>料金を知りたい</a>
+        <a href="/list-esta-application/status-check/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>申請状況を確認したい</a>
+        <a href="/list-esta-guide/group-family/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>家族分をまとめて申請したい</a>
+        <a href="/list-esta-guide/hawaii/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>ハワイに行く</a>
+        <a href="/list-esta-guide/guam/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>グアムに行く</a>
+      </div>
+    </div>
   </div>
 </section>
 

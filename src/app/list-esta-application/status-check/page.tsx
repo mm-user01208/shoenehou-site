@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-application/status-check/';
-const PAGE_TITLE = 'ESTA(エスタ)申請状況 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTAの申請状況と審査結果、登録情報を確認する方法を解説します。ESTA申請の認証可否を確認する際は、ローマ字表記の姓名・生年月日・申請IDの入力が必要です。';
+const PAGE_TITLE = 'ESTA申請状況の確認方法｜承認までの時間・保留中の対処【2026年】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTAの審査は最大72時間（3日間）。申請状況の確認手順と、「渡航認証保留」と表示されたときの対処、承認までの時間の目安を解説します。確認には姓名・生年月日・申請IDが必要です。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -11,11 +11,23 @@ export const metadata: Metadata = seoMetadata({
   description: PAGE_DESCRIPTION,
 });
 
-const PAGE_JSON_LD = pageJsonLd({
-  path: PAGE_PATH,
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-});
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'ESTAの承認までどのくらい時間がかかりますか？', acceptedAnswer: { '@type': 'Answer', text: '審査には最大72時間（3日間）かかる場合があります。多くの場合はそれより早く結果が表示されますが、渡航直前の申請は避け、余裕を持って申請してください。' } },
+    { '@type': 'Question', name: '「渡航認証保留中」と表示されたらどうすればいいですか？', acceptedAnswer: { '@type': 'Answer', text: '審査に時間を要している状態です。最大72時間（3日間）待ってから再度確認してください。多くの場合、時間をおくと「渡航認証許可」または「渡航認証拒否」の最終結果が表示されます。' } },
+  ],
+};
+
+const PAGE_JSON_LD = [
+  ...pageJsonLd({
+    path: PAGE_PATH,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  }),
+  FAQ_SCHEMA,
+];
 
 const BODY_HTML = `
 <section class="article-hero">
@@ -41,6 +53,7 @@ const BODY_HTML = `
         <li><a href="#sec-03">申請状況確認時のステータス</a></li>
         <li><a href="#sec-04">申請フォーム入力時の注意点</a></li>
         <li><a href="#sec-05">申請状況確認ページで知ることができる情報</a></li>
+        <li><a href="#sec-faq">ESTA申請状況の確認に関するよくある質問</a></li>
       </ol>
     </aside>
 
@@ -178,6 +191,20 @@ const BODY_HTML = `
           <li>質問事項</li>
           <li>質問事項への回答</li>
         </ul>
+      </section>
+
+      <section id="sec-faq" class="fade-up">
+        <h2>ESTA申請状況の確認に関するよくある質問</h2>
+        <div class="faq" style="margin-top:32px">
+          <details open>
+            <summary>ESTAの承認までどのくらい時間がかかりますか？</summary>
+            <div class="answer"><p>審査には最大72時間（3日間）かかる場合があります。多くの場合はそれより早く結果が表示されますが、渡航直前の申請は避け、余裕を持って申請してください。</p></div>
+          </details>
+          <details>
+            <summary>「渡航認証保留中」と表示されたらどうすればいいですか？</summary>
+            <div class="answer"><p>審査に時間を要している状態です。最大72時間（3日間）待ってから再度確認してください。多くの場合、時間をおくと「渡航認証許可」または「渡航認証拒否」の最終結果が表示されます。</p></div>
+          </details>
+        </div>
       </section>
 
     </article>

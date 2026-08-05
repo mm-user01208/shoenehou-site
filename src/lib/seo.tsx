@@ -137,6 +137,11 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     lastmod: '2026-06-09',
     image: '/img/related/hawaii.jpg',
   },
+  '/list-esta-guide/immigration/': {
+    label: 'アメリカ入国審査の流れと質問例',
+    lastmod: '2026-08-05',
+    image: '/img/related/entry.jpg',
+  },
   '/list-esta-guide/guam/': {
     label: 'グアム入国にESTA(エスタ)は必要？',
     lastmod: '2026-06-09',
@@ -204,6 +209,7 @@ const GUIDE_ITEMS = [
   '/list-esta-guide/official-vs-fake/',
   '/list-esta-guide/hawaii/',
   '/list-esta-guide/guam/',
+  '/list-esta-guide/immigration/',
 ];
 
 const SITE_INFORMATION_ITEMS = [

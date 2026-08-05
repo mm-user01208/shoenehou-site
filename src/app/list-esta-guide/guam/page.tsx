@@ -3,7 +3,7 @@ import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-guide/guam/';
 const PAGE_TITLE = 'グアム入国にESTA(エスタ)は必要？入国審査についても紹介 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'グアムまたは北マリアナ諸島への入国では、渡航目的や滞在日数によってESTA(エスタ)の取得が求められます。本記事では、ESTAの申請方法をはじめ、グアム入国時の手続きについて解説します。';
+const PAGE_DESCRIPTION = 'グアムは45日超〜90日はESTAが必要、45日以内の滞在ならESTA不要（ビザ免除プログラム利用・G-CNMI ETA要取得）です。どちらを選ぶべきかの判断基準、申請方法、入国審査の流れを解説します。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -52,6 +52,20 @@ const BODY_HTML = `
         <h2>グアム渡航におけるESTAの必要性</h2>
         <p>日本国籍者が、グアムまたは北マリアナ諸島で46日以上の滞在を希望する場合は、事前にESTA(エスタ)を申請する必要があります。ESTAは短期間の観光、商用、または乗り継ぎを目的としてグアムへ渡航する際に必要となる電子渡航認証制度で、渡航認証が承認された場合は最大90日間の滞在が可能です。</p>
         <p>一方、45日以内のグアムまたは北マリアナ諸島への滞在を希望する場合は、一定の条件を満たすことで「グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)」を利用でき、ESTAの申請は不要となります。ただし、Guam-CNMI VWPの利用には、電子渡航認証システム"G-CNMI ETA"の事前取得が義務付けられています。短期間のグアム滞在においてESTAの申請は不要ですが、<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer">CBP(アメリカ合衆国税関・国境警備局)</a>では、入国審査の簡易化を目的として渡航認証の取得を推奨しています。</p>
+
+        <h3>ESTAが必要／不要の早見表</h3>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>滞在日数・条件</th><th>必要な手続き</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>45日以内の滞在（グアム・北マリアナ諸島のみ）</td><td>ESTA不要（G-CNMI ETAの取得が必要）</td></tr>
+              <tr><td>45日超〜90日の滞在</td><td>ESTA必要</td></tr>
+              <tr><td>ハワイ・米本土にも立ち寄る</td><td>ESTA必要</td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h3>グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)参加国一覧</h3>
         <ul>
