@@ -55,7 +55,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   '/list-esta-application/when-to-apply/': {
     label: 'ESTAの申請タイミング（いつまでに・いつから）',
     lastmod: '2026-08-18',
-    image: '/img/related/status-check.jpg',
+    image: '/img/related/when-to-apply.jpg',
   },
   '/list-esta-application/official-cbp/': {
     label: 'ESTA公式ウェブサイトについて解説',
