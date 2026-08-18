@@ -183,36 +183,60 @@ const BODY_HTML = `
 
       <section id="sec-07" class="fade-up">
         <h2>ESTAアプリに関するFAQ</h2>
-        <h3>今後のESTA申請は、アプリに限定される予定ですか？</h3>
-        <p>いいえ。現時点では、ESTA申請がアプリに限定される予定はありません。従来通り、パソコンから公式ウェブサイトを通じて申請することも可能です。ご自身が利用しやすい方法を選んで、申請してください。</p>
-        <h3>アプリはどこからダウンロードできますか？</h3>
-        <p>iOSデバイス(iPhone、iPad)の場合はApp Store、Androidデバイス(Xperia、Galaxy、AQUOS)の場合はGoogle Playストアからダウンロードできます。検索バーに「ESTA」や「ESTA申請」と入力して検索してください。</p>
-        <h3>アプリ申請時に必要なものとは？</h3>
-        <p>有効期限内のパスポート、Eメールアドレス、クレジットカードまたはデビットカードをご用意ください。その他にも、アメリカでの滞在先、現在の職業や勤務先、緊急連絡先などの個人情報や渡航先情報をあらかじめ準備しておくと、手続きがスムーズに進みます。</p>
-        <h3>アプリ申請時もメールアドレスの入力は必要ですか？結果はアプリに通知されますか？</h3>
-        <p>はい。アプリでの申請時もメールアドレスの入力は必須です。公式ウェブサイトからESTA申請を行った場合と同様に、申請結果は登録したメールアドレスに通知されます。なお、審査の進捗状況や審査結果はアプリ内で確認することも可能です。アプリ内で送受信が可能なEメールアドレスをご用意ください。</p>
-        <h3>アプリはどのデバイスからも利用可能ですか？</h3>
-        <p>ESTAの公式アプリ「ESTA Mobile」は、iOS 14.0以降のiOSデバイス、またはAndroid 8.0以降のAndroidデバイスで利用できます。古いバージョンのOSを使用している場合は、アプリのアップデート、または公式ウェブサイトからの申請をご検討ください。</p>
-        <h3>ウェブサイトとアプリでは申請方法や手順に違いがありますか？</h3>
-        <p>基本的な手続きに大きな違いはなく、入力内容や申請料金も同じです。いずれの場合も、最終的には米国国土安全保障省の同じシステムで処理されるため、審査基準や結果に違いはありません。</p>
-        <p>ただし、操作性には大きな違いがあります。アプリでは、パスポート情報や顔写真の自動読み取りが可能なため、入力ミスが起こりにくいという利点があります。スマートフォンの操作に慣れている方や、短時間で申請を終えたい方にはアプリ申請がおすすめです。一方、自宅などで大きな画面を見ながら慎重に入力したい方には、パソコンからの申請が適しています。</p>
-        <h3>アプリ申請の途中で終了した場合、前回の続きから申請を再開できますか？</h3>
-        <p>はい。ESTAアプリでは申請途中でも入力情報を保存し、続きから申請を再開することが可能です。申請中に、申請フォーム下部の「保存して終了」をタップすると、ESTA申請番号が画面に表示されます。その際に、申請番号を「スクリーンショットを撮って保存する」またはメモをとり保管してください。</p>
-        <p>前回の続きから申請を再開する場合は、「ESTAを取得済みの場合」の「見つける」をタップし、パスポート番号・生年月日・ESTA申請番号を入力します。検索の完了後、引き続き申請を進めることが可能です。</p>
-        <h3>ESTA認証情報はアプリに保存されますか？確認する方法はありますか？</h3>
-        <p>ESTAアプリには、認証情報を保存する機能はありません。認証情報を確認したい場合は、アプリを開き「ESTAを取得済みの場合」の「見つける」をタップし、パスポート番号・生年月日・ESTA申請番号を入力してください。なお、アプリをアンインストールした場合や、スマートフォンを機種変した場合でも、申請番号があれば公式ウェブサイトから認証情報を確認することが可能です。</p>
-        <h3>アプリで申請する場合はどのくらい時間がかかりますか？</h3>
-        <p>アプリ、公式ウェブサイトのいずれを利用する場合も、申請にかかる所要時間はおよそ15～30分程度です。初めての申請する方や、英語(ローマ字)表記になれていない方は、時間に余裕を持って進めることをおすすめします。</p>
-        <h3>ESTA申請が承認されない場合、申請料金は払い戻しされますか？</h3>
-        <p>ESTA申請では、承認・不承認にかかわらず、申請情報が処理された時点で費用が発生します。不承認の場合は、ESTA運用手数料の10.27ドルは返金対象となりますが、残りの30ドルは処理費用として差し引かれる仕組みになっています。なお、ESTAを改めて申請する場合は、再度40.27ドルの支払いが必要です。</p>
+        <div class="faq" style="margin-top:32px">
+          <details open>
+            <summary>今後のESTA申請は、アプリに限定される予定ですか？</summary>
+            <div class="answer"><p>いいえ。現時点では、ESTA申請がアプリに限定される予定はありません。従来通り、パソコンから公式ウェブサイトを通じて申請することも可能です。ご自身が利用しやすい方法を選んで、申請してください。</p></div>
+          </details>
+          <details>
+            <summary>アプリはどこからダウンロードできますか？</summary>
+            <div class="answer"><p>iOSデバイス(iPhone、iPad)の場合はApp Store、Androidデバイス(Xperia、Galaxy、AQUOS)の場合はGoogle Playストアからダウンロードできます。検索バーに「ESTA」や「ESTA申請」と入力して検索してください。</p></div>
+          </details>
+          <details>
+            <summary>アプリ申請時に必要なものとは？</summary>
+            <div class="answer"><p>有効期限内のパスポート、Eメールアドレス、クレジットカードまたはデビットカードをご用意ください。その他にも、アメリカでの滞在先、現在の職業や勤務先、緊急連絡先などの個人情報や渡航先情報をあらかじめ準備しておくと、手続きがスムーズに進みます。</p></div>
+          </details>
+          <details>
+            <summary>アプリ申請時もメールアドレスの入力は必要ですか？結果はアプリに通知されますか？</summary>
+            <div class="answer"><p>はい。アプリでの申請時もメールアドレスの入力は必須です。公式ウェブサイトからESTA申請を行った場合と同様に、申請結果は登録したメールアドレスに通知されます。なお、審査の進捗状況や審査結果はアプリ内で確認することも可能です。アプリ内で送受信が可能なEメールアドレスをご用意ください。</p></div>
+          </details>
+          <details>
+            <summary>アプリはどのデバイスからも利用可能ですか？</summary>
+            <div class="answer"><p>ESTAの公式アプリ「ESTA Mobile」は、iOS 14.0以降のiOSデバイス、またはAndroid 8.0以降のAndroidデバイスで利用できます。古いバージョンのOSを使用している場合は、アプリのアップデート、または公式ウェブサイトからの申請をご検討ください。</p></div>
+          </details>
+          <details>
+            <summary>ウェブサイトとアプリでは申請方法や手順に違いがありますか？</summary>
+            <div class="answer"><p>基本的な手続きに大きな違いはなく、入力内容や申請料金も同じです。いずれの場合も、最終的には米国国土安全保障省の同じシステムで処理されるため、審査基準や結果に違いはありません。</p>
+        <p>ただし、操作性には大きな違いがあります。アプリでは、パスポート情報や顔写真の自動読み取りが可能なため、入力ミスが起こりにくいという利点があります。スマートフォンの操作に慣れている方や、短時間で申請を終えたい方にはアプリ申請がおすすめです。一方、自宅などで大きな画面を見ながら慎重に入力したい方には、パソコンからの申請が適しています。</p></div>
+          </details>
+          <details>
+            <summary>アプリ申請の途中で終了した場合、前回の続きから申請を再開できますか？</summary>
+            <div class="answer"><p>はい。ESTAアプリでは申請途中でも入力情報を保存し、続きから申請を再開することが可能です。申請中に、申請フォーム下部の「保存して終了」をタップすると、ESTA申請番号が画面に表示されます。その際に、申請番号を「スクリーンショットを撮って保存する」またはメモをとり保管してください。</p>
+        <p>前回の続きから申請を再開する場合は、「ESTAを取得済みの場合」の「見つける」をタップし、パスポート番号・生年月日・ESTA申請番号を入力します。検索の完了後、引き続き申請を進めることが可能です。</p></div>
+          </details>
+          <details>
+            <summary>ESTA認証情報はアプリに保存されますか？確認する方法はありますか？</summary>
+            <div class="answer"><p>ESTAアプリには、認証情報を保存する機能はありません。認証情報を確認したい場合は、アプリを開き「ESTAを取得済みの場合」の「見つける」をタップし、パスポート番号・生年月日・ESTA申請番号を入力してください。なお、アプリをアンインストールした場合や、スマートフォンを機種変した場合でも、申請番号があれば公式ウェブサイトから認証情報を確認することが可能です。</p></div>
+          </details>
+          <details>
+            <summary>アプリで申請する場合はどのくらい時間がかかりますか？</summary>
+            <div class="answer"><p>アプリ、公式ウェブサイトのいずれを利用する場合も、申請にかかる所要時間はおよそ15～30分程度です。初めての申請する方や、英語(ローマ字)表記になれていない方は、時間に余裕を持って進めることをおすすめします。</p></div>
+          </details>
+          <details>
+            <summary>ESTA申請が承認されない場合、申請料金は払い戻しされますか？</summary>
+            <div class="answer"><p>ESTA申請では、承認・不承認にかかわらず、申請情報が処理された時点で費用が発生します。不承認の場合は、ESTA運用手数料の10.27ドルは返金対象となりますが、残りの30ドルは処理費用として差し引かれる仕組みになっています。なお、ESTAを改めて申請する場合は、再度40.27ドルの支払いが必要です。</p>
         <p>米国国土安全保障省申請料($40.27)の内訳：</p>
         <ul>
           <li>Processing Fee / ESTA運用手数料($10.27)：電子渡航認証システムESTAの申請手続き、システム管理にかかる費用</li>
           <li>Travel Promotion Fee / 旅行促進手数料($17)：電子渡航認証システムESTAを利用して渡米する観光客の誘致にかかる費用</li>
           <li>General fund of the Treasury / 米国財務省一般基金への拠出分($13)：電子渡航認証システムESTAの運営に関係し、アメリカ財務省の一般基金へ充当される費用</li>
-        </ul>
-        <h3>ESTAを取得すれば必ずアメリカへ入国できますか？</h3>
-        <p>ESTAは、あくまでアメリカ渡航前の事前認証制度であり、必ずしも入国を保証するものではありません。アメリカ入国の最終判断は、到着した空港におけるCBP(アメリカ合衆国税関・国境警備局)の入国審査官に委ねられます。入国審査では、滞在目的、滞在期間、帰国予定などについて確認されることがあります。不審な点がある場合は、入国を拒否される可能性があるためご注意ください。なお、ESTAの渡航申請番号を提示する必要はありませんが、念のため手帳などに控えておくことをおすすめします。</p>
+        </ul></div>
+          </details>
+          <details>
+            <summary>ESTAを取得すれば必ずアメリカへ入国できますか？</summary>
+            <div class="answer"><p>ESTAは、あくまでアメリカ渡航前の事前認証制度であり、必ずしも入国を保証するものではありません。アメリカ入国の最終判断は、到着した空港におけるCBP(アメリカ合衆国税関・国境警備局)の入国審査官に委ねられます。入国審査では、滞在目的、滞在期間、帰国予定などについて確認されることがあります。不審な点がある場合は、入国を拒否される可能性があるためご注意ください。なお、ESTAの渡航申請番号を提示する必要はありませんが、念のため手帳などに控えておくことをおすすめします。</p></div>
+          </details>
+        </div>
       </section>
 
     </article>
@@ -235,9 +259,9 @@ const BODY_HTML = `
     <div class="ornament"><span></span><em></em><span></span></div>
   </div>
   <div class="related fade-up" style="margin-top:56px">
-    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/when-to-apply/"><span class="related__media"><img src="/img/related/status-check.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTAの申請タイミング（いつまでに・いつから）</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>

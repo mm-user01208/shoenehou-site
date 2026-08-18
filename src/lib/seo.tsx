@@ -52,6 +52,11 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     lastmod: '2026-06-04',
     image: '/img/related/expiration-date.jpg',
   },
+  '/list-esta-application/when-to-apply/': {
+    label: 'ESTAの申請タイミング（いつまでに・いつから）',
+    lastmod: '2026-08-18',
+    image: '/img/related/status-check.jpg',
+  },
   '/list-esta-application/official-cbp/': {
     label: 'ESTA公式ウェブサイトについて解説',
     lastmod: '2026-06-04',
@@ -194,6 +199,7 @@ const APPLICATION_ITEMS = [
   '/list-esta-application/official-cbp/',
   '/list-esta-application/cbp-flow/',
   '/list-esta-application/application/',
+  '/list-esta-application/when-to-apply/',
   '/list-esta-application/status-check/',
 ];
 

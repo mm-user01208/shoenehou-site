@@ -1,0 +1,14 @@
+# US ESTA Apply Website（shoenehou-online.jp）
+
+> アメリカESTA（電子渡航認証）の申請方法・記入例・入国審査までを日本語で解説する申請サポートサイト。日本語での申請代行サービスを提供。
+
+## 主要ガイド
+- [ESTA申請方法](https://shoenehou-online.jp/list-esta-application/application/): 申請の流れ全体
+- [ESTAの有効期限](https://shoenehou-online.jp/list-esta-application/expiration-date/): いつまで有効か・期限切れ・再申請
+- [申請タイミング](https://shoenehou-online.jp/list-esta-application/when-to-apply/): いつまでに・いつから申請すべきか
+- [申請状況の確認](https://shoenehou-online.jp/list-esta-application/status-check/): ステータス確認方法
+- [アメリカ入国審査](https://shoenehou-online.jp/list-esta-guide/immigration/): 入国審査の流れと質問例
+- [記入例・入力ガイド](https://shoenehou-online.jp/list-esta-application/place-of-birth/): 出生地などの入力方法
+- [公式サイトの見分け方](https://shoenehou-online.jp/list-esta-guide/official-vs-fake/): 偽サイトへの注意
+- [グアム渡航のESTA](https://shoenehou-online.jp/list-esta-guide/guam/): グアム・サイパンの渡航認証
+- [よくある質問](https://shoenehou-online.jp/list-esta-guide/): ガイド一覧
