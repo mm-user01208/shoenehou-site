@@ -680,4 +680,4 @@
 .floating-cta__apply--2line .fca-sub,.floating-cta__apply--2line .fca-main{line-height:1!important}
 .floating-cta__apply--2line .fca-main{margin-top:0!important}
 
-@media (min-width:701px){.floating-cta{left:0;right:0;align-items:center}.floating-cta__top{position:fixed;right:22px;bottom:22px;margin:0}.floating-cta__apply{padding:16px 54px}}
+@media (min-width:701px){.floating-cta{left:0;right:0;align-items:center}.floating-cta__top{position:fixed;right:22px;bottom:22px;margin:0}.floating-cta__apply{padding:20px 75px 17px}}
