@@ -353,7 +353,7 @@ const BODY_HTML = `
           <tr><th>滞在先 部屋番号</th><td>未記入</td></tr>
           <tr><th>滞在先 電話番号</th><td>808-674-6200 ※未記入でも可</td></tr>
         </tbody></table>
-      </section>      </section>
+      </section>
 
       <!-- SEO施策1(2026-09-09指示書): 記入例ガイド相互ナビ -->
       <div class="kinyurei-nav">
