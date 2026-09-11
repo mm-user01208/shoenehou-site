@@ -681,3 +681,15 @@
 .floating-cta__apply--2line .fca-main{margin-top:0!important}
 
 @media (min-width:701px){.floating-cta{left:0;right:0;align-items:center}.floating-cta__top{position:fixed;right:22px;bottom:22px;margin:0}.floating-cta__apply{padding:20px 75px 17px}}
+
+/* SEO施策1: 記入例ガイド相互ナビ(kinyurei-nav) 2026-09-11 */
+.article-body .kinyurei-nav{margin:48px 0 0;padding:26px 30px;border:1px solid var(--line);background:var(--paper)}
+.article-body .kinyurei-nav-title{font-family:var(--serif);color:var(--navy);font-weight:700;font-size:18px;line-height:1.5;margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.article-body .kinyurei-nav ul{margin:0;padding:0;list-style:none}
+.article-body .kinyurei-nav ul li{margin:0;padding:9px 0 9px 22px;border-bottom:1px dashed var(--line-soft);font-size:15.5px;line-height:1.8;list-style:none;position:relative}
+.article-body .kinyurei-nav ul li:last-child{border-bottom:0}
+.article-body .kinyurei-nav ul li:before{content:"";display:block!important;position:absolute;left:4px;top:19px;width:8px;height:8px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.article-body .kinyurei-nav a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.article-body .kinyurei-nav a:hover{color:var(--gold);opacity:1}
+.article-body .kinyurei-nav strong{color:var(--navy);font-weight:700}
+@media (max-width:520px){.article-body .kinyurei-nav{margin-top:36px;padding:20px 18px}.article-body .kinyurei-nav-title{font-size:16.5px}.article-body .kinyurei-nav ul li{font-size:14.5px}}

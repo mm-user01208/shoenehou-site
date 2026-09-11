@@ -64,6 +64,7 @@ const BODY_HTML = `
         <p>海外で生まれた場合は、City of Birthに出生した都市名を英語で入力し、Country of Birthに出生した国を選択します。例えば、アメリカのロサンゼルスで生まれた場合は、City of Birthに「Los Angeles」、Country of Birthに「United States」を選択します。海外で生まれた日本国籍者がESTA申請を行う場合でも、パスポートが日本のものであれば申請に問題はありません。</p>
         <p>出生地の入力でよくある間違いとして、「本籍地」を出生地として入力してしまうケースがあります。本籍地は戸籍上の住所であり、出生地とは異なる場合があります。例えば、本籍地が東京都であっても、実際に生まれたのが神奈川県横浜市であれば、出生地は「Yokohama, Kanagawa」と入力します。出生地が不明な場合は、パスポートや戸籍謄本を確認するか、両親に確認するとよいでしょう。</p>
         <p>なお、ESTA申請フォームでは出生地の入力は必須項目となっています。出生地が不明のまま申請を行うことはできませんので、事前に確認しておくことをおすすめします。また、出生地の表記に多少の揺れがあっても(例：「Shinjuku」と「Shinjuku-ku」)、申請が却下されることは通常ありませんが、パスポートに記載されている情報と矛盾しないよう注意してください。</p>
+        <p>出生地の書き方の詳細は<a href="/list-esta-application/place-of-birth/">出生地ガイド</a>をご覧ください。</p>
       </section>
 
       <section id="sec-03" class="fade-up">
@@ -226,6 +227,17 @@ const BODY_HTML = `
           </details>
         </div>
       </section>
+
+      <!-- SEO施策1(2026-09-09指示書): 記入例ガイド相互ナビ -->
+      <div class="kinyurei-nav">
+        <p class="kinyurei-nav-title">ESTA記入例ガイド（項目別）</p>
+        <ul>
+          <li><a href="/list-esta-application/place-of-birth/">出生地（Place of Birth）の書き方</a></li>
+          <li><a href="/list-esta-application/us-contact-details/">米国内連絡先の書き方</a></li>
+          <li><strong>住所・勤務先のローマ字表記</strong></li>
+          <li><a href="/list-esta-guide/upload/">パスポート画像・顔写真のアップロード</a></li>
+        </ul>
+      </div>
 
     </article>
   </div>

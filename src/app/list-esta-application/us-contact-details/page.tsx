@@ -355,6 +355,17 @@ const BODY_HTML = `
         </tbody></table>
       </section>      </section>
 
+      <!-- SEO施策1(2026-09-09指示書): 記入例ガイド相互ナビ -->
+      <div class="kinyurei-nav">
+        <p class="kinyurei-nav-title">ESTA記入例ガイド（項目別）</p>
+        <ul>
+          <li><a href="/list-esta-application/place-of-birth/">出生地（Place of Birth）の書き方</a></li>
+          <li><strong>米国内連絡先の書き方</strong></li>
+          <li><a href="/list-esta-guide/address-guide/">住所・勤務先のローマ字表記</a></li>
+          <li><a href="/list-esta-guide/upload/">パスポート画像・顔写真のアップロード</a></li>
+        </ul>
+      </div>
+
     </article>
   </div>
 </section>
@@ -378,7 +389,7 @@ const BODY_HTML = `
     <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-guide/immigration/"><span class="related__media"><img src="/img/related/entry.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">アメリカ入国審査の流れと質問例</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>
 `;
