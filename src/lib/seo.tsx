@@ -68,24 +68,19 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     image: '/img/related/status-check.jpg',
   },
   '/list-esta-application/esta-flow/': {
-    label: 'ESTA(エスタ)の申請方法を解説',
-    lastmod: '2026-06-04',
+    label: 'ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説',
+    lastmod: '2026-10-05',
     image: '/img/related/04-apply-method.jpg',
   },
   '/list-esta-application/esta/': {
-    label: 'ESTA(エスタ)とは？事前入国審査制度を解説',
-    lastmod: '2026-06-04',
+    label: 'ESTA（エスタ）の対象者・申請要件｜VWP参加国一覧と対象外になるケース',
+    lastmod: '2026-10-05',
     image: '/img/related/01-esta-toha.jpg',
   },
   '/list-esta-application/application/': {
     label: 'アプリを使ったESTA申請方法を解説',
     lastmod: '2026-06-04',
     image: '/img/related/application.jpg',
-  },
-  '/list-esta-application/cbp-flow/': {
-    label: 'ESTA申請方法と取得手順を徹底解説',
-    lastmod: '2026-06-04',
-    image: '/img/related/cbp-flow.jpg',
   },
   '/list-esta-guide/': {
     label: 'ESTA申請ガイド一覧',
@@ -197,7 +192,6 @@ const APPLICATION_ITEMS = [
   '/list-esta-application/fee/',
   '/list-esta-application/expiration-date/',
   '/list-esta-application/official-cbp/',
-  '/list-esta-application/cbp-flow/',
   '/list-esta-application/application/',
   '/list-esta-application/when-to-apply/',
   '/list-esta-application/status-check/',
@@ -228,22 +222,19 @@ const SITE_INFORMATION_ITEMS = [
 
 const HOW_TO_STEPS: Record<string, string[]> = {
   '/list-esta-application/esta-flow/': [
-    '申請フォームで氏名、生年月日、パスポート情報、連絡先などの必要事項を入力します。',
-    '入力内容に誤りがないか確認し、申請内容を送信します。',
-    '申請料の支払い手続きを行います。',
-    '審査結果の通知を確認し、渡航前まで認証情報を保管します。',
+    'ESTA公式サイト（esta.cbp.dhs.gov）にアクセスし、日本語表示に切り替えて「新規に申請を作成する」→「個人による申請」を選び、免責事項に同意します。',
+    'パスポート情報を入力（手入力またはパスポート画像のアップロード）し、顔写真をアップロード。メールアドレスに届く4桁の確認コードを入力します。',
+    '個人情報（別名・他国の身分証・住所・電話・SNS・両親の氏名・勤務先）を入力します。',
+    '渡航情報（乗り継ぎの有無・米国内の連絡先・滞在先・緊急連絡先）を入力します。',
+    '適格性に関する9項目の質問に回答し、権利放棄と申請内容の証明にチェックを入れます。',
+    '申請内容を確認し、申請料 $40.27 をクレジットカードまたはPayPalで支払います。',
+    '審査結果（最大72時間）を待ち、「ESTAのステータス確認」で結果を確認します。',
   ],
   '/list-esta-application/application/': [
     'ESTA Mobileアプリを準備し、申請を開始します。',
     'パスポート情報を読み取り、申請フォームへ反映します。',
     '申請者情報、連絡先、渡航関連情報を入力します。',
     '内容を確認して送信し、申請料の支払いを行います。',
-  ],
-  '/list-esta-application/cbp-flow/': [
-    'CBPのESTA公式サイトへアクセスし、申請種別を選択します。',
-    'パスポート情報、申請者情報、渡航情報を画面の案内に沿って入力します。',
-    '申請内容を確認し、必要に応じて修正します。',
-    '申請料を支払い、審査結果を確認します。',
   ],
 };
 
@@ -318,6 +309,23 @@ export function pageJsonLd({ path, title, description }: PageJsonLdOptions) {
 
   schemas.unshift(articleSchema(canonical, title, description));
   return schemas;
+}
+
+export function faqPageSchema(path: string, items: Array<{ q: string; a: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${absoluteUrl(path)}#faq`,
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.q,
+      acceptedAnswer: { '@type': 'Answer', text: it.a },
+    })),
+  };
+}
+
+export function articleJsonLd(path: string, title: string, description: string) {
+  return articleSchema(path, title, description);
 }
 
 export function JsonLd({ data }: { data: JsonLdData }) {

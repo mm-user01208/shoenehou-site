@@ -4,3 +4,5 @@
 /list-site-information/entry/* /form/step1 301
 /list-site-information/status/* /status/:splat 301
 /list-site-information/contact/* /contact/:splat 301
+/list-esta-application/cbp-flow/* /list-esta-application/esta-flow/ 301
+/list-esta-application/cbp-flow /list-esta-application/esta-flow/ 301

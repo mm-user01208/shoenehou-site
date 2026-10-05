@@ -2,35 +2,30 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-application/esta/';
-const PAGE_TITLE = 'ESTA(エスタ)とは？申請方法・有効期限・料金まで総合ガイド【2026年】 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。申請対象者・要件・必要書類・有効期限・申請タイミングまで完全解説。';
+const PAGE_TITLE = 'ESTA（エスタ）の対象者・申請要件｜ビザ免除プログラム（VWP）参加国一覧と対象外になるケース【2026年】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTAを申請できるのはビザ免除プログラム（VWP）参加国の市民で、90日以内の観光・商用・乗り継ぎが目的の方です。参加国一覧、申請要件、留学・就労や渡航歴など対象外になるケース、パスポートの条件を解説。申請手順は別記事で画面付きで案内。';
 
-export const metadata: Metadata = seoMetadata({
-  path: PAGE_PATH,
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-});
+export const metadata: Metadata = {
+  ...seoMetadata({ path: PAGE_PATH, title: PAGE_TITLE, description: PAGE_DESCRIPTION }),
+};
 
-const PAGE_JSON_LD = pageJsonLd({
-  path: PAGE_PATH,
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-});
+const PAGE_JSON_LD = pageJsonLd({ path: PAGE_PATH, title: PAGE_TITLE, description: PAGE_DESCRIPTION });
 
-const BODY_HTML = `<section class="article-hero">
+const BODY_HTML = `<style>.article__title{white-space:normal!important;line-height:1.35}.kv{width:100%;border-collapse:collapse;margin:14px 0 22px}.kv th,.kv td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;font-size:14.5px;line-height:1.7}.kv th{background:#f4f5f8;font-weight:700}</style>
+<section class="article-hero">
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
       <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
-      <em>ESTA(エスタ)とは？事前入国審査制度を解説【アメリカ渡航】</em>
+      <em>ESTA（エスタ）の対象者・申請要件｜VWP参加国一覧と対象外になるケース</em>
     </nav>
-    <p class="article__eyebrow">ESTA Application Article</p>
-    <h1 class="article__title">ESTA(エスタ)とは？ 事前入国審査制度を解説【アメリカ渡航】</h1>
-    <p class="article__lede">ESTA(エスタ)は、ビザなしでアメリカへ短期渡航する際に事前取得が必要な電子渡航認証です。このページでは対象者・申請要件・必要書類と手順・料金・有効期限・注意点までをまとめ、目的のページへすぐ移動できるようにしています。</p>
+    <p class="article__eyebrow">ESTA Eligibility</p>
+    <h1 class="article__title">ESTA（エスタ）の対象者・申請要件｜VWP参加国一覧と対象外になるケース</h1>
+    <p class="article__lede">このページはESTAの<strong>対象者と要件</strong>をまとめた参照ページです。制度の概要と申請手順は <a href="/list-esta-application/esta-flow/">ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説</a> をご覧ください。公式の申請先は <a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer">esta.cbp.dhs.gov</a>（申請料$40.27）です。</p>
     <div style="margin-top:28px;background:var(--paper);border:1px solid var(--line);padding:24px 26px">
       <p style="margin:0 0 16px;font-family:var(--sans);color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:700">目的別に読む</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px">
-        <a href="/list-esta-application/cbp-flow/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>申請方法・手順を見る</a>
+        <a href="/list-esta-application/esta-flow/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>申請方法・手順を見る</a>
         <a href="/list-esta-application/esta-flow/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>記入例つきで申請したい</a>
         <a href="/list-esta-application/expiration-date/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>有効期限を確認したい</a>
         <a href="/list-esta-guide/cost/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>料金を知りたい</a>
@@ -38,76 +33,46 @@ const BODY_HTML = `<section class="article-hero">
         <a href="/list-esta-guide/group-family/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>家族分をまとめて申請したい</a>
         <a href="/list-esta-guide/hawaii/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>ハワイに行く</a>
         <a href="/list-esta-guide/guam/" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>グアムに行く</a>
+              <a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;text-decoration:none"><span style="color:var(--gold);flex-shrink:0">→</span>公式サイトで自分で申請する（esta.cbp.dhs.gov）</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Article main ===== -->
 <section class="article-main">
   <div class="article-main__inner">
-    <!-- TOC -->
-    <aside class="toc">
-      <p class="toc__head">目次</p>
-      <ol>
-        <li><a href="#sec-01">アメリカの電子渡航認証“ESTA”の概要を解説</a></li>
-        <li><a href="#sec-02">ESTAの申請対象者</a></li>
-        <li><a href="#sec-03">ESTAの申請要件</a></li>
-        <li><a href="#sec-04">ESTA申請に必要な書類と申請手順</a></li>
-        <li><a href="#sec-05">ESTAの有効期限と申請タイミング</a></li>
-        <li><a href="#sec-06">ESTA申請時に注意すべき点</a></li>
-        <li><a href="#sec-07">ESTA申請サポートのメリット</a></li>
-      </ol>
-    </aside>
-
-    <!-- Article body -->
+    <aside class="toc"><p class="toc__head">目次</p><ol><li><a href="#sec-01">ESTAの申請対象者</a></li><li><a href="#sec-02">ビザ免除プログラム（VWP）参加国一覧</a></li><li><a href="#sec-03">ESTAの申請要件</a></li><li><a href="#sec-04">対象外になるケースとビザが必要な場合</a></li><li><a href="#sec-05">必要な書類（要約）</a></li><li><a href="#sec-06">よくある質問</a></li></ol></aside>
     <article class="article-body">
+      <section id="sec-01" class="fade-up"><h2>ESTAの申請対象者</h2><p>ESTAは、日本を含む「ビザ免除プログラム(VWP)」参加国の市民が申請対象となり、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する場合に限り利用できます。ただし、アメリカでの留学、就労、永住を目的とした渡航はESTAの利用対象外となるため、在日米国大使館および総領事館にて、渡航目的に応じたビザの取得をご検討ください。ビザの申請には、必要書類の準備や大使館・総領事館での面接が必要となり、申請から発給までに1か月以上かかる場合があるため、早めの手続きをお勧めします。なお、ESTAを取得できないまま渡航日を迎えた場合は、アメリカへの入国や飛行機への搭乗を拒否されるため注意が必要です。</p>
 
-      <section id="sec-01" class="fade-up">
-        <h2>アメリカの電子渡航認証“ESTA”の概要を解説</h2>
-        <p>ESTA(エスタ)とは、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する際に必要となる電子渡航認証です。ESTAは「ビザ免除プログラム(VWP)」の一環として運用されており、日本を含むVWP参加国の市民はビザを取得せずに渡米する場合、事前にESTAを申請・取得することが義務付けられています。ESTA申請の審査には一定の時間を要するため、<a href="https://www.dhs.gov/" target="_blank" rel="noopener noreferrer">DHS(アメリカ国土安全保障省)</a>では出発日の3日前までにESTAを申請し、「渡航認証許可」を取得することを推奨しています。出発日にESTAを申請することも可能ですが、当日中に渡航認証が許可されない可能性があるため注意が必要です。</p>
-        <p>なお、ESTAはDHSおよび<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer">CBP(アメリカ合衆国税関・国境警備局)</a>の管轄となっており、日本の外務省や在日米国大使館・総領事館では問い合わせに一切対応していません。</p>
-      </section>
+        
 
-      <section id="sec-02" class="fade-up">
-        <h2>ESTAの申請対象者</h2>
-        <p>ESTAは、日本を含む「ビザ免除プログラム(VWP)」参加国の市民が申請対象となり、90日以内の観光、短期商用、または乗り継ぎを目的としてアメリカへ渡航する場合に限り利用できます。ただし、アメリカでの留学、就労、永住を目的とした渡航はESTAの利用対象外となるため、在日米国大使館および総領事館にて、渡航目的に応じたビザの取得をご検討ください。ビザの申請には、必要書類の準備や大使館・総領事館での面接が必要となり、申請から発給までに1か月以上かかる場合があるため、早めの手続きをお勧めします。なお、ESTAを取得できないまま渡航日を迎えた場合は、アメリカへの入国や飛行機への搭乗を拒否されるため注意が必要です。</p>
-
-        <div class="country-list">
-          <p class="country-list__title">ビザ免除プログラム(VWP)参加国一覧</p>
-          <p class="country-list__body">日本、アイスランド、アイルランド、アンドラ、イギリス、イスラエル、イタリア、エストニア、オーストラリア、オーストリア、オランダ、カタール、韓国、ギリシャ、クロアチア、サンマリノ、シンガポール、スイス、スウェーデン、スペイン、スロバキア、スロベニア、台湾、チリ、チェコ、デンマーク、ドイツ、ニュージーランド、ノルウェー、ハンガリー、フィンランド、フランス、ブルネイ、ベルギー、ポーランド、ポルトガル、マルタ、モナコ、ラトビア、リトアニア、リヒテンシュタイン、ルクセンブルク</p>
-        </div>
-
-        <p>なお、VWP参加国の市民であっても、アメリカが指定する伝染病に罹患している方や、過去に重大な犯罪歴がある方は、ESTAの申請対象外となります。</p>
-      </section>
-
-      <section id="sec-03" class="fade-up">
-        <h2>ESTAの申請要件</h2>
-        <ul class="bullets">
+        <p>なお、VWP参加国の市民であっても、アメリカが指定する伝染病に罹患している方や、過去に重大な犯罪歴がある方は、ESTAの申請対象外となります。</p></section>
+      <section id="sec-02" class="fade-up"><h2>ビザ免除プログラム（VWP）参加国一覧</h2><table class="kv"><thead><tr><th>国名（五十音順）</th><th>英語名</th></tr></thead><tbody><tr><td>アイスランド</td><td>Iceland</td></tr><tr><td>アイルランド</td><td>Ireland</td></tr><tr><td>アンドラ</td><td>Andorra</td></tr><tr><td>イギリス</td><td>United Kingdom</td></tr><tr><td>イスラエル</td><td>Israel</td></tr><tr><td>イタリア</td><td>Italy</td></tr><tr><td>エストニア</td><td>Estonia</td></tr><tr><td>オランダ</td><td>Netherlands</td></tr><tr><td>オーストラリア</td><td>Australia</td></tr><tr><td>オーストリア</td><td>Austria</td></tr><tr><td>カタール</td><td>Qatar</td></tr><tr><td>韓国</td><td>South Korea</td></tr><tr><td>ギリシャ</td><td>Greece</td></tr><tr><td>クロアチア</td><td>Croatia</td></tr><tr><td>サンマリノ</td><td>San Marino</td></tr><tr><td>シンガポール</td><td>Singapore</td></tr><tr><td>スイス</td><td>Switzerland</td></tr><tr><td>スウェーデン</td><td>Sweden</td></tr><tr><td>スペイン</td><td>Spain</td></tr><tr><td>スロバキア</td><td>Slovakia</td></tr><tr><td>スロベニア</td><td>Slovenia</td></tr><tr><td>台湾</td><td>Taiwan</td></tr><tr><td>チェコ</td><td>Czech Republic</td></tr><tr><td>チリ</td><td>Chile</td></tr><tr><td>デンマーク</td><td>Denmark</td></tr><tr><td>ドイツ</td><td>Germany</td></tr><tr><td>日本</td><td>Japan</td></tr><tr><td>ニュージーランド</td><td>New Zealand</td></tr><tr><td>ノルウェー</td><td>Norway</td></tr><tr><td>ハンガリー</td><td>Hungary</td></tr><tr><td>フィンランド</td><td>Finland</td></tr><tr><td>フランス</td><td>France</td></tr><tr><td>ブルネイ</td><td>Brunei</td></tr><tr><td>ベルギー</td><td>Belgium</td></tr><tr><td>ポルトガル</td><td>Portugal</td></tr><tr><td>ポーランド</td><td>Poland</td></tr><tr><td>マルタ</td><td>Malta</td></tr><tr><td>モナコ</td><td>Monaco</td></tr><tr><td>ラトビア</td><td>Latvia</td></tr><tr><td>リトアニア</td><td>Lithuania</td></tr><tr><td>リヒテンシュタイン</td><td>Liechtenstein</td></tr><tr><td>ルクセンブルク</td><td>Luxembourg</td></tr></tbody></table><p>※ 2026年10月5日 在日米国大使館／CBPの公開情報をもとに確認（全42か国）。</p></section>
+      <section id="sec-03" class="fade-up"><h2>ESTAの申請要件</h2><ul class="bullets">
           <li>上記の“ビザ免除プログラム(VWP)”参加国の市民であること</li>
-          <li>残存有効期間が90日以上あるパスポートを所持していること</li>
+          <li>アメリカ滞在期間をカバーする有効期限のあるICチップ付きパスポートを所持していること（日本は6か月クラブ参加国のため6か月ルール免除。→<a href="/list-esta-guide/passport/">パスポートの条件</a>）</li>
           <li>渡航目的が、短期観光、短期商用、乗り継ぎのいずれかに該当すること</li>
           <li>アメリカでの滞在期間が90日以内であること</li>
           <li>過去に重大な犯罪歴やアメリカでのオーバーステイ歴がないこと</li>
           <li>精神疾患や、アメリカが指定する伝染病に罹患していないこと</li>
           <li>2011年3月1日以降にイラク、北朝鮮、イラン、シリア、スーダン、ソマリア、キューバ、イエメンへの渡航または滞在歴がないこと</li>
+        </ul></section>
+      <section id="sec-04" class="fade-up"><h2>対象外になるケースとビザが必要な場合</h2>
+        <ul class="bullets">
+          <li>留学、就労、永住などを目的とした渡航（渡航目的に応じたビザの取得が必要です）</li>
+          <li>アメリカが指定する伝染病に罹患している方や、過去に重大な犯罪歴がある方</li>
+          <li>2011年3月1日以降にイラク、北朝鮮、イラン、シリア、スーダン、ソマリア、キューバ、イエメンへの渡航または滞在歴がある方</li>
+          <li>ESTAの審査結果が「渡航認証拒否」となった方（在日米大使館および総領事館にて渡航目的に応じたビザの取得をご検討ください）</li>
         </ul>
+        <p>ビザの申請には、必要書類の準備や大使館・総領事館での面接が必要となり、申請から発給までに1か月以上かかる場合があるため、早めの手続きをお勧めします。なお、ESTAを取得できないまま渡航日を迎えた場合は、アメリカへの入国や飛行機への搭乗を拒否されるため注意が必要です。</p>
+        <p>婚姻などで改姓し新たなパスポートを取得した際は、新しいパスポート番号でESTAを再申請する必要があります。その場合、既存のESTA認証情報は無効となりますのでご注意ください。</p>
       </section>
-
-      <section class="cta-strip cta-strip--solid cta-mid">
-        <p class="cta-strip__eyebrow">Start your application</p>
-        <h2><span class="h2l1">アメリカ渡航には</span><br class="sp-br">ESTAの申請が必要です。</h2>
-        <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-        <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">ESTA申請をはじめる</span><span class="cta-arrow">→</span></span></a>
-      </section>
-
-      <section id="sec-04" class="fade-up">
-        <h2>ESTA申請に必要な書類と申請手順</h2>
+      <section id="sec-05" class="fade-up"><h2>必要な書類（要約）</h2>
         <p>ESTAの申請には、以下の書類が必要です。</p>
         <div class="doc-list">
           <div class="doc-list__item">
             <div class="doc-list__icon">01</div>
-            <p>ICチップが搭載された有効なパスポート(残存有効期間が6か月以上あるもの)</p>
+            <p>ICチップが搭載された有効なパスポート(アメリカ滞在期間をカバーする有効期限のあるもの。日本は6か月クラブ参加国のため6か月ルール免除)</p>
           </div>
           <div class="doc-list__item">
             <div class="doc-list__icon">02</div>
@@ -115,58 +80,26 @@ const BODY_HTML = `<section class="article-hero">
           </div>
           <div class="doc-list__item">
             <div class="doc-list__icon">03</div>
-            <p>メールアドレス・通知を受け取るための</p>
+            <p>通知を受け取るためのメールアドレス</p>
           </div>
         </div>
-        <p>ESTA申請時には、別途手数料の支払いが必要です。支払いには各種クレジットカード(Visa、MasterCard、JCB、American Express、Diners Club)が利用可能で、カードは申請者ご本人名義でなくても審査に影響ありません。ESTAの申請は、パソコンまたはスマートフォンから約10分で完了します。申請フォームでは、氏名・生年月日・性別・パスポート情報などの基本情報に加え、犯罪歴や健康状態に関する質問への回答が求められます。なお、氏名や住所はすべてローマ字(英語)で入力する必要があるため、入力の際はスペルミスにご注意ください。</p>
+        <p>申請の手順（公式サイトの全画面・記入例付き）は <a href="/list-esta-application/esta-flow/">こちら</a> をご覧ください。有効期限と申請タイミングについても同ページで解説しています（<a href="/list-esta-application/expiration-date/">有効期限の詳細</a>）。</p>
       </section>
-
-      <section id="sec-05" class="fade-up">
-        <h2>ESTAの有効期限と申請タイミング</h2>
-        <p>ESTAの有効期限は2年間で、この期間内であれば複数回の渡米が認められます。ただし、パスポートの有効期限が2年未満の場合は、ESTAもパスポートと同日に失効するためご注意ください。そのため、渡航前には必ずパスポートの有効期限を確認し、6か月未満の場合は更新後にESTAを申請することをお勧めします。有効期限が切れる前に再申請を行うことは可能ですが、新たにESTAが承認されると、既存の認証情報は無効となるため注意が必要です。</p>
-        <p>また、ESTAの審査には最大で72時間かかることがあります。<a href="https://www.cbp.gov/" target="_blank" rel="noopener noreferrer">CBP(アメリカ合衆国税関・国境警備局)</a>では出発日の3日前までに申請を完了することを推奨しています。万が一、ESTAを取得しないまま出発日を迎えた場合は、アメリカへの入国および飛行機への搭乗が認められません。渡航が決まり次第、早めに申請手続きを行ってください。</p>
-      </section>
-
-      <section id="sec-06" class="fade-up">
-        <h2>ESTA申請時に注意すべき点</h2>
-        <p>ESTAの申請はオンラインのみで受け付けています。パソコン、スマートフォン、タブレット端末などを使用してESTAの申請サイトから手続きを行ってください。申請後は<a href="https://www.dhs.gov/" target="_blank" rel="noopener noreferrer">DHS(米国国土安全保障省)</a>にて審査が行われ、申請日から3日以内を目安に審査結果が通知されます。審査中はステータスが「渡航認証保留」と表示され、必ずしも即時に承認されるとは限りませんのでご注意ください。</p>
-        <p>ESTAの有効期限は2年間です。ただし、パスポートの有効期限が2年未満の場合は、ESTAもパスポートと同日に失効します。渡航前に必ずパスポートを確認し、有効期限が短い場合は更新後にESTAを申請してください。</p>
-        <p>婚姻などで改姓し新たなパスポートを取得した際は、新しいパスポート番号でESTAを再申請する必要があります。その場合、既存のESTA認証情報は無効となりますのでご注意ください。</p>
-        <p>ESTAの審査結果が「渡航認証拒否」となった場合、在日米大使館および総領事館にて渡航目的に応じたビザの取得をご検討ください。</p>
-      </section>
-
-      <section id="sec-07" class="fade-up">
-        <h2>ESTA申請サポートのメリット</h2>
-        <p>US ESTA Apply Websiteでは、お客様に代わりESTAの複雑な申請手続きを行います。専門スタッフが年中無休・24時間体制でサポートいたしますので、ESTAの申請に不安がある方や、初めて渡米される方は当サイトの申請代行サービスをご利用ください。</p>
-        <div class="merits-panel">
-          <p class="merits-panel__title">US ESTA Apply Website を利用するメリット</p>
-          <ol>
-            <li>24時間・年中無休のサポート体制</li>
-            <li>パソコン・スマートフォン・タブレットなど各種端末に対応</li>
-            <li>申請時のエラーやイレギュラー発生時のサポート対応</li>
-            <li>米国CBP公式サイトのメンテナンス時にも対応</li>
-            <li>申請ステータスおよび認証状況の照会が可能</li>
-            <li>申請結果を日本語のメールでご案内</li>
-            <li>お問い合わせは日本語で対応</li>
-            <li>ESTA認証情報の紛失時や再通知など、アフターサービスにも対応</li>
-            <li>登録内容の修正を1回まで無料対応</li>
-            <li>日本語表記の申請フォームで簡単に手続きが可能</li>
-          </ol>
-        </div>
-
+      <section id="sec-06" class="fade-up"><h2>よくある質問</h2>
+        <h3>日本以外のVWP参加国の家族も同じ手続きですか？</h3>
+        <p>はい。日本を含むVWP参加国の市民であれば、同じ手続きでESTAを申請します。年齢を問わず全員分の申請が必要で、家族やグループで渡米する場合は、忘れずに全員分の申請を行ってください（<a href="/list-esta-guide/group-family/">家族・グループでの申請</a>）。</p>
+        <h3>ビザとESTAのどちらを選べばよいですか？</h3>
+        <p>90日以内の観光・商用・乗り継ぎであればESTA、留学・就労・永住や90日を超える滞在であればビザが必要です。両者の違いは <a href="/list-esta-application/esta-flow/#sec-04">ESTAとビザの違い</a> で比較しています。</p>
       </section>
     </article>
   </div>
 </section>
-
-<!-- ===== Big CTA ===== -->
-<section class="cta-strip" id="apply">
+<section class="cta-strip cta-strip--solid" id="apply">
   <p class="cta-strip__eyebrow">Start your application</p>
-  <h2>アメリカ渡航にはESTAの申請が必要です。</h2>
-  <p>申請完了まで最大3日ほどかかるため、<br class="sp-br">余裕をもってお手続きください。</p>
-  <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">ESTA申請をはじめる</span><span class="cta-arrow">→</span></span></a>
+  <h2 style="font-size:30px;line-height:1.4">日本語サポート付きで<br>申請代行を依頼する（当サイト）</h2>
+  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.27を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。</p>
+  <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">日本語サポート付きで申請を依頼する</span><span class="cta-arrow">→</span></span></a>
 </section>
-
 <!-- ===== Related articles (reused) ===== -->
 <section class="section section--cream">
   <div class="section__inner fade-up">
@@ -175,14 +108,13 @@ const BODY_HTML = `<section class="article-hero">
     <div class="ornament"><span></span><em></em><span></span></div>
   </div>
   <div class="related fade-up" style="margin-top:56px">
-    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTA(エスタ)とは？</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTAの申請方法を解説</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTAの対象者・申請要件（VWP参加国一覧）</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-application/esta-flow/"><span class="related__media"><img src="/img/related/04-apply-method.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">02.</span><span class="related__title">ESTA（エスタ）とは？申請方法を公式画面・記入例付きで解説</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/place-of-birth/"><span class="related__media"><img src="/img/related/03-address-writing.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">03.</span><span class="related__title">出生地や住所の書き方</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">04.</span><span class="related__title">米国内の連絡先の記入方法</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>
-
-<!-- ===== Footer (reused) ===== -->`;
+`;
 
 export default function Page() {
   return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /></>);
