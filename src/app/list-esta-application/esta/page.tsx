@@ -21,7 +21,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
     </nav>
     <p class="article__eyebrow">ESTA Eligibility</p>
     <h1 class="article__title">ESTA（エスタ）の対象者・申請要件｜VWP参加国一覧と対象外になるケース</h1>
-    <p class="article__lede">このページはESTAの<strong>対象者と要件</strong>をまとめた参照ページです。制度の概要と申請手順は <a href="/list-esta-application/esta-flow/">ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説</a> をご覧ください。公式の申請先は <a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer">esta.cbp.dhs.gov</a>（申請料$40.27）です。</p>
+    <p class="article__lede">このページはESTAの<strong>対象者と要件</strong>をまとめた参照ページです。制度の概要と申請手順は <a href="/list-esta-application/esta-flow/">ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説</a> をご覧ください。公式の申請先は <a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer">esta.cbp.dhs.gov</a>（申請料$40.62）です。</p>
     <div style="margin-top:28px;background:var(--paper);border:1px solid var(--line);padding:24px 26px">
       <p style="margin:0 0 16px;font-family:var(--sans);color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:700">目的別に読む</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px">
@@ -97,7 +97,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
 <section class="cta-strip cta-strip--solid" id="apply">
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2 style="font-size:30px;line-height:1.4">日本語サポート付きで<br>申請代行を依頼する（当サイト）</h2>
-  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.27を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。</p>
+  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.62を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。</p>
   <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">日本語サポート付きで申請を依頼する</span><span class="cta-arrow">→</span></span></a>
 </section>
 <!-- ===== Related articles (reused) ===== -->

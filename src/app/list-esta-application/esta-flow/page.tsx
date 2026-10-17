@@ -3,7 +3,7 @@ import { JsonLd, pageJsonLd, seoMetadata, faqPageSchema, articleJsonLd } from '@
 
 const PAGE_PATH = '/list-esta-application/esta-flow/';
 const PAGE_TITLE = 'ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説【2026年10月最新】 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTA（エスタ）はビザなしで90日以内の観光・商用・乗り継ぎでアメリカへ渡航する際に必要な電子渡航認証です。制度・対象者・申請料$40.27・有効期限2年を解説し、公式サイト（esta.cbp.dhs.gov）の申請手順を実際の画面と全項目の記入例つきで案内。2026年10月時点。';
+const PAGE_DESCRIPTION = 'ESTA（エスタ）はビザなしで90日以内の観光・商用・乗り継ぎでアメリカへ渡航する際に必要な電子渡航認証です。制度・対象者・申請料$40.62・有効期限2年を解説し、公式サイト（esta.cbp.dhs.gov）の申請手順を実際の画面と全項目の記入例つきで案内。2026年10月時点。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -38,7 +38,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
     <article class="article-body">
       <section id="sec-01" class="fade-up"><h2>2026年10月時点の最新情報</h2>
         <div class="update-log">
-          <p>・申請料は <strong>$40.27</strong>（米国国土安全保障省申請料）。公式サイトの「The Travel Promotion Act of 2009」の画面に、One Big Beautiful Bill Act (PL 119-21) により $40.27 に改定された旨と内訳（VWP申請者1人あたり$17.00＋処理手数料$10.27＋Treasury General Fund Fee $13.00、却下時は$10.27のみ）が記載されています（2026年10月5日 公式サイトで確認）。</p>
+          <p>・申請料は <strong>$40.62</strong>（米国国土安全保障省申請料）。公式サイトの「The Travel Promotion Act of 2009」の画面に、One Big Beautiful Bill Act (PL 119-21) により $40.62 に改定された旨と内訳（VWP申請者1人あたり$17.00＋処理手数料$10.62＋Treasury General Fund Fee $13.00、却下時は$10.62のみ）が記載されています（2026年10月5日 公式サイトで確認）。</p>
           <p>・公式アプリ（ESTA Mobile App）での申請に対応しています（<a href="/list-esta-application/application/">アプリでの申請方法</a>）。</p>
           <p>・本ページの公式サイト画面は 2026年10月5日 に撮影したものです（ダミー情報で入力。支払いは行っていません）。</p>
         </div>
@@ -51,7 +51,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
 <tr><th>対象</th><td>日本を含むビザ免除プログラム（VWP）参加国の市民</td></tr>
 <tr><th>渡航目的</th><td>短期間の観光・商用・乗り継ぎ（留学・就労・永住は対象外）</td></tr>
 <tr><th>滞在日数</th><td>最大90日間</td></tr>
-<tr><th>申請料</th><td>$40.27（米国国土安全保障省申請料）</td></tr>
+<tr><th>申請料</th><td>$40.62（米国国土安全保障省申請料）</td></tr>
 <tr><th>有効期限</th><td>2年間（パスポートの有効期限が先に来る場合はその日まで）</td></tr>
 <tr><th>審査時間</th><td>通常は数時間以内、最大72時間</td></tr>
 <tr><th>申請先</th><td><a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener noreferrer">esta.cbp.dhs.gov</a>（CBP公式サイト）</td></tr>
@@ -64,7 +64,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
       <section id="sec-04" class="fade-up"><h2>ESTAとビザの違い</h2>
         <table class="kv"><thead><tr><th>　</th><th>ESTA</th><th>ビザ</th></tr></thead><tbody>
         <tr><th>取得先</th><td>CBP公式サイト（オンライン）</td><td>在日米国大使館・総領事館</td></tr>
-        <tr><th>費用</th><td>$40.27</td><td>ビザの種類により異なる</td></tr>
+        <tr><th>費用</th><td>$40.62</td><td>ビザの種類により異なる</td></tr>
         <tr><th>滞在</th><td>最大90日</td><td>ビザの種類による（90日超も可）</td></tr>
         <tr><th>目的</th><td>観光・商用・乗り継ぎ</td><td>留学・就労・永住など</td></tr>
         <tr><th>審査</th><td>通常数時間〜最大72時間</td><td>面接が必要。申請から発給まで1か月以上かかる場合あり</td></tr>
@@ -79,7 +79,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
         <p>なお、ESTAの有効期限が残っている場合でも、パスポートを更新・再発行した場合はESTAを再申請する必要があります。パスポート番号が変更されると、ESTAは自動的に失効するため注意が必要です。また、未成年者のESTA申請を保護者が行う場合でも、申請には本人(未成年者)のパスポート情報を入力してください。</p>
 
         <h3>クレジットカード(またはデビッドカード)</h3>
-        <p>ESTA申請には手数料の支払いが必要です。申請料金は40.27ドルで、クレジットカードまたはデビットカードによる決済が可能です。対応しているカードブランドは、Visa、Master Card、JCB、American Express、Diners Clubとなります。</p>
+        <p>ESTA申請には手数料の支払いが必要です。申請料金は40.62ドルで、クレジットカードまたはデビットカードによる決済が可能です。対応しているカードブランドは、Visa、Master Card、JCB、American Express、Diners Clubとなります。</p>
         <p>料金の支払いは、申請プロセスの最終段階で行われます。カード名義は申請者本人である必要はなく、家族や友人名義のカードも使用可能です。ただし、決済が完了しない限り申請は正式に受理されないため、カードの有効期限や利用限度額を事前に確認しておくことをおすすめします。</p>
 
         <h3>有効なメールアドレス</h3>
@@ -89,7 +89,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
       <section id="sec-06" class="fade-up"><h2>公式サイト（esta.cbp.dhs.gov）での申請手順【全画面】</h2>
         <p>ESTAは、申請フォームの案内に従って入力を進める必要があります。申請時は入力間違いがないよう、正確に情報を入力することが重要です。以下では、ESTA申請の手順について詳しく解説します。</p>
 
-        <h3>1.　公式サイトへアクセス（日本語表示→新規申請→個人）</h3><figure class="shot"><img src="/img/esta-flow/002_ja_top.jpg" alt="ESTA公式サイト トップページ（日本語表示）" loading="lazy"><figcaption>公式サイトのトップページ。右上の「言語の変換」で日本語を選び、「新規に申請を作成する」から進みます。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/003_ja_new_application_menu.jpg" alt="ESTA公式サイト 新規に申請を作成する→個人による申請" loading="lazy"><figcaption>「新規に申請を作成する」を押すと「個人による申請」「グループによる申請」が表示されます。1人で申請する場合は「個人による申請」を選びます。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/004_security_notice.jpg" alt="ESTA公式サイト セキュリティに関する通告" loading="lazy"><figcaption>最初に「セキュリティに関する通告」が表示されるので「確認して続行」を押します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/005_disclaimer.jpg" alt="ESTA公式サイト 免責事項" loading="lazy"><figcaption>免責事項を読み、「はい、私は上記の説明を読み、内容を理解し、これらの条件に合意します。」を選択します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/006_travel_promotion_act.jpg" alt="ESTA公式サイト The Travel Promotion Act of 2009（申請料の説明）" loading="lazy"><figcaption>続けて「The Travel Promotion Act of 2009」を開き、同じく「はい」を選んで「次へ」。この画面に申請料$40.27の内訳が記載されています。</figcaption></figure>
+        <h3>1.　公式サイトへアクセス（日本語表示→新規申請→個人）</h3><figure class="shot"><img src="/img/esta-flow/002_ja_top.jpg" alt="ESTA公式サイト トップページ（日本語表示）" loading="lazy"><figcaption>公式サイトのトップページ。右上の「言語の変換」で日本語を選び、「新規に申請を作成する」から進みます。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/003_ja_new_application_menu.jpg" alt="ESTA公式サイト 新規に申請を作成する→個人による申請" loading="lazy"><figcaption>「新規に申請を作成する」を押すと「個人による申請」「グループによる申請」が表示されます。1人で申請する場合は「個人による申請」を選びます。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/004_security_notice.jpg" alt="ESTA公式サイト セキュリティに関する通告" loading="lazy"><figcaption>最初に「セキュリティに関する通告」が表示されるので「確認して続行」を押します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/005_disclaimer.jpg" alt="ESTA公式サイト 免責事項" loading="lazy"><figcaption>免責事項を読み、「はい、私は上記の説明を読み、内容を理解し、これらの条件に合意します。」を選択します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/006_travel_promotion_act.jpg" alt="ESTA公式サイト The Travel Promotion Act of 2009（申請料の説明）" loading="lazy"><figcaption>続けて「The Travel Promotion Act of 2009」を開き、同じく「はい」を選んで「次へ」。この画面に申請料$40.62の内訳が記載されています。</figcaption></figure>
         <p>米国国土安全保障省(DHS)が運営する公式ウェブサイトにアクセスし、画面右上の言語選択欄から「日本語」を選択してください。ただし、パスポート情報や渡航情報などの入力は英語(ローマ字)で行う必要があるため、パスポートを手元に用意してから進めましょう。</p>
         <p>TOPページの「新規に申請を作成する」をクリックし、「個人による申請」を選択します。その後、免責事項を確認し内容に問題がなければ同意して、次のステップへ進んでください。</p>
 
@@ -116,8 +116,8 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
         <p>ESTA申請における適格性に関する質問は、特に重要な項目です。質問内容は、過去の犯罪歴、ビザの却下や入国拒否の経験、感染症の有無など、全部で9項目あります。いずれか1つでも「はい」に該当する場合、ESTAによる渡航認証が許可されない可能性があるため注意が必要です。また、虚偽の申告を行った場合には、ESTAが無効になるだけでなく、今後のアメリカ入国に支障をきたす可能性もあるため正確に回答しましょう。</p>
         <p>すべての回答に不備がなければ、権利放棄に関する2つの確認項目にチェックを入れ、次に進んでください。なお、2つ目の項目については、自身の申請のみ行う場合はチェック不要です。</p>
 
-        <h3>6.　申請料$40.27の支払い</h3><figure class="shot"><img src="/img/esta-flow/023_review_application.jpg" alt="ESTA公式サイト 申請内容の確認" loading="lazy"><figcaption>申請者情報・個人情報・渡航情報・適格性の各セクションを開いて確認し、「確認して続行」を押します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/024_payment.jpg" alt="ESTA公式サイト 今すぐ支払い手続きを行い、申請を完了する" loading="lazy"><figcaption>申請番号が表示され、支払い内容の概要に申請費用$40.27が出ます。免責事項にチェックを入れて「今すぐ支払う」へ。支払い期限（申請日を含め1週間）もここに表示されます。</figcaption></figure>
-        <p>すべての情報を入力し、申請内容を確認した後は決済画面へ進みます。申請費用は40.27ドルです。支払い方法は、クレジットカード、デビッドカード、またはオンライン決済サービス"Paypal(ペイパル)"から選択できます。なお、申請者本人のカードである必要はなく、家族や友人のカードを使用しても問題ありません。決済に必要な情報を入力後、「続行」をクリックし、「支払い手続きが実行されました」と表示されたら決済は完了です。</p>
+        <h3>6.　申請料$40.62の支払い</h3><figure class="shot"><img src="/img/esta-flow/023_review_application.jpg" alt="ESTA公式サイト 申請内容の確認" loading="lazy"><figcaption>申請者情報・個人情報・渡航情報・適格性の各セクションを開いて確認し、「確認して続行」を押します。</figcaption></figure><figure class="shot"><img src="/img/esta-flow/024_payment.jpg" alt="ESTA公式サイト 今すぐ支払い手続きを行い、申請を完了する" loading="lazy"><figcaption>申請番号が表示され、支払い内容の概要に申請費用$40.62が出ます。免責事項にチェックを入れて「今すぐ支払う」へ。支払い期限（申請日を含め1週間）もここに表示されます。</figcaption></figure>
+        <p>すべての情報を入力し、申請内容を確認した後は決済画面へ進みます。申請費用は40.62ドルです。支払い方法は、クレジットカード、デビッドカード、またはオンライン決済サービス"Paypal(ペイパル)"から選択できます。なお、申請者本人のカードである必要はなく、家族や友人のカードを使用しても問題ありません。決済に必要な情報を入力後、「続行」をクリックし、「支払い手続きが実行されました」と表示されたら決済は完了です。</p>
         <p>申請費用の支払いには、申請日を含めて1週間以内の猶予期間があります。支払いを後回しにする場合は、再度公式ウェブサイトにアクセスして決済画面に進み、期日までに支払いを完了させてください。期日を過ぎると申請内容は破棄されるため、できるだけ早めの決済をおすすめします。</p>
         <p>決済が完了すると、申請番号が表示されます。この番号は、後に申請状況を確認する際などに必要となるため、メモを取るかスクリーンショットで保存しておきましょう。</p>
 
@@ -139,12 +139,12 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
       </section>
       <section id="sec-08" class="fade-up"><h2>料金と支払い</h2>
         
-        <p>すべての情報を入力し、申請内容を確認した後は決済画面へ進みます。申請費用は40.27ドルです。支払い方法は、クレジットカード、デビッドカード、またはオンライン決済サービス"Paypal(ペイパル)"から選択できます。なお、申請者本人のカードである必要はなく、家族や友人のカードを使用しても問題ありません。決済に必要な情報を入力後、「続行」をクリックし、「支払い手続きが実行されました」と表示されたら決済は完了です。</p>
+        <p>すべての情報を入力し、申請内容を確認した後は決済画面へ進みます。申請費用は40.62ドルです。支払い方法は、クレジットカード、デビッドカード、またはオンライン決済サービス"Paypal(ペイパル)"から選択できます。なお、申請者本人のカードである必要はなく、家族や友人のカードを使用しても問題ありません。決済に必要な情報を入力後、「続行」をクリックし、「支払い手続きが実行されました」と表示されたら決済は完了です。</p>
         <p>申請費用の支払いには、申請日を含めて1週間以内の猶予期間があります。支払いを後回しにする場合は、再度公式ウェブサイトにアクセスして決済画面に進み、期日までに支払いを完了させてください。期日を過ぎると申請内容は破棄されるため、できるだけ早めの決済をおすすめします。</p>
         <p>決済が完了すると、申請番号が表示されます。この番号は、後に申請状況を確認する際などに必要となるため、メモを取るかスクリーンショットで保存しておきましょう。</p>
 
         
-        <p>申請料は2025年9月30日に$21から$40.27へ改定されました（公式サイト「The Travel Promotion Act of 2009」の記載を2026年10月5日に確認）。料金の詳細は <a href="/list-esta-application/fee/">ESTAの申請料金</a>、公式サイトと代行サイトの費用の違いは <a href="/list-esta-guide/cost/">ESTA申請の料金はいくら？</a> をご覧ください。</p>
+        <p>申請料は2025年9月30日に$21から$40.62へ改定されました（公式サイト「The Travel Promotion Act of 2009」の記載を2026年10月5日に確認）。料金の詳細は <a href="/list-esta-application/fee/">ESTAの申請料金</a>、公式サイトと代行サイトの費用の違いは <a href="/list-esta-guide/cost/">ESTA申請の料金はいくら？</a> をご覧ください。</p>
       </section>
       <section id="sec-09" class="fade-up"><h2>有効期限と申請タイミング</h2>
         <p>ESTAの審査には最大3日間かかる場合があります。そのため、DHS(アメリカ国土安全保障省)では、出発日の72時間前までにESTAを申請し、「渡航認証許可」を取得することが推奨されています。申請後は、CBP(アメリカ合衆国税関・国境警備局)による審査が行われ、審査結果が確認され次第、当サイトより「渡航認証可否メール」が送信されます。審査結果は、「渡航認証許可」または「渡航認証拒否」のいずれかとなります。通知内容によって対応が異なりますので、必ず「渡航認証可否メール」をご確認ください。渡航認証が承認された場合は「渡航認証許可」の通知が届きますが、申請内容に不備があった場合などには「渡航認証拒否」と通知されます。「渡航認証拒否」の通知を受けた場合、ESTAを利用した渡航は認められませんのでご注意ください。</p>
@@ -194,7 +194,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
 <p>上記は当サイトの各解説ページに掲載している記入例をまとめたものです。実際の入力は、必ずパスポート・各書類の表記に合わせてください。</p>
       </section>
       <section id="sec-12" class="fade-up"><h2>申請時の注意点（公式と代行の違い・偽サイト）</h2>
-        <p>公式サイト（esta.cbp.dhs.gov）で申請する場合の費用は$40.27で、入力はすべて英語（ローマ字）です。当サイトの申請代行は、申請手数料24,200円（税込・米国政府への申請料$40.27を含む）で、日本語のフォームから申請できます。公式サイトに似せた偽サイトも存在するため、公式サイトのURLと見分け方は <a href="/list-esta-guide/official-vs-fake/">公式サイトと偽サイトの見分け方</a> をご確認ください。</p>
+        <p>公式サイト（esta.cbp.dhs.gov）で申請する場合の費用は$40.62で、入力はすべて英語（ローマ字）です。当サイトの申請代行は、申請手数料24,200円（税込・米国政府への申請料$40.62を含む）で、日本語のフォームから申請できます。公式サイトに似せた偽サイトも存在するため、公式サイトのURLと見分け方は <a href="/list-esta-guide/official-vs-fake/">公式サイトと偽サイトの見分け方</a> をご確認ください。</p>
         <p>ESTA(エスタ)は、短期間の観光などを目的にアメリカへ渡航する際に必要な申請です。ただし、日本を含むビザ免除プログラム(VWP)参加国の市民であっても、以下のいずれかに該当する場合は、ESTAを利用することができません。</p>
         <ul>
           <li>VWP参加国の国籍者で、2021年1月12日以降にキューバへの滞在または渡航歴がある方</li>
@@ -253,7 +253,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
 <section class="cta-strip cta-strip--solid" id="apply">
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2 style="font-size:30px;line-height:1.4">日本語サポート付きで<br>申請代行を依頼する（当サイト）</h2>
-  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.27を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。</p>
+  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.62を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。</p>
   <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">日本語サポート付きで申請を依頼する</span><span class="cta-arrow">→</span></span></a>
 </section>
 <!-- ===== Related articles (reused) ===== -->
