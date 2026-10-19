@@ -38,7 +38,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
     <article class="article-body">
       <section id="sec-01" class="fade-up"><h2>2026年10月時点の最新情報</h2>
         <div class="update-log">
-          <p>・申請料は <strong>$40.62</strong>（米国国土安全保障省申請料）。公式サイトの「The Travel Promotion Act of 2009」の画面に、One Big Beautiful Bill Act (PL 119-21) により $40.62 に改定された旨と内訳（VWP申請者1人あたり$17.00＋処理手数料$10.62＋Treasury General Fund Fee $13.00、却下時は$10.62のみ）が記載されています（2026年10月5日 公式サイトで確認）。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
+          <p>・申請料は <strong>$40.62</strong>（米国国土安全保障省申請料）。公式サイトの「The Travel Promotion Act of 2009」の画面に、One Big Beautiful Bill Act (PL 119-21) により $40.62 に改定された旨と内訳（VWP申請者1人あたり$17.00＋処理手数料$10.62＋Treasury General Fund Fee $13.00、却下時は$10.62のみ）が記載されています（2026年10月15日 公式サイトで確認）。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
           <p>・公式アプリ（ESTA Mobile App）での申請に対応しています（<a href="/list-esta-application/application/">アプリでの申請方法</a>）。</p>
           <p>・本ページの公式サイト画面は 2026年10月5日 に撮影したものです（ダミー情報で入力。支払いは行っていません）。</p>
         </div>
@@ -144,7 +144,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
         <p>決済が完了すると、申請番号が表示されます。この番号は、後に申請状況を確認する際などに必要となるため、メモを取るかスクリーンショットで保存しておきましょう。</p>
 
         
-        <p>申請料は2025年9月30日に$21から$40.62へ改定されました（公式サイト「The Travel Promotion Act of 2009」の記載を2026年10月5日に確認）。料金の詳細は <a href="/list-esta-application/fee/">ESTAの申請料金</a>、公式サイトと代行サイトの費用の違いは <a href="/list-esta-guide/cost/">ESTA申請の料金はいくら？</a> をご覧ください。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
+        <p>申請料は2026年10月15日に$40.27から$40.62へ改定されました（公式サイト「The Travel Promotion Act of 2009」の記載を2026年10月5日に確認）。料金の詳細は <a href="/list-esta-application/fee/">ESTAの申請料金</a>、公式サイトと代行サイトの費用の違いは <a href="/list-esta-guide/cost/">ESTA申請の料金はいくら？</a> をご覧ください。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
       </section>
       <section id="sec-09" class="fade-up"><h2>有効期限と申請タイミング</h2>
         <p>ESTAの審査には最大3日間かかる場合があります。そのため、DHS(アメリカ国土安全保障省)では、出発日の72時間前までにESTAを申請し、「渡航認証許可」を取得することが推奨されています。申請後は、CBP(アメリカ合衆国税関・国境警備局)による審査が行われ、審査結果が確認され次第、当サイトより「渡航認証可否メール」が送信されます。審査結果は、「渡航認証許可」または「渡航認証拒否」のいずれかとなります。通知内容によって対応が異なりますので、必ず「渡航認証可否メール」をご確認ください。渡航認証が承認された場合は「渡航認証許可」の通知が届きますが、申請内容に不備があった場合などには「渡航認証拒否」と通知されます。「渡航認証拒否」の通知を受けた場合、ESTAを利用した渡航は認められませんのでご注意ください。</p>
