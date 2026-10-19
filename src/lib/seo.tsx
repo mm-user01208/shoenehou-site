@@ -44,7 +44,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-application/fee/': {
     label: 'ESTA(エスタ)の申請料金',
-    lastmod: '2026-06-04',
+    lastmod: '2026-10-15',
     image: '/img/related/fee.jpg',
   },
   '/list-esta-application/expiration-date/': {
@@ -59,7 +59,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-application/official-cbp/': {
     label: 'ESTA公式ウェブサイトについて解説',
-    lastmod: '2026-06-04',
+    lastmod: '2026-10-15',
     image: '/img/related/official-cbp.jpg',
   },
   '/list-esta-application/status-check/': {
@@ -69,17 +69,17 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-application/esta-flow/': {
     label: 'ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説',
-    lastmod: '2026-10-05',
+    lastmod: '2026-10-15',
     image: '/img/related/04-apply-method.jpg',
   },
   '/list-esta-application/esta/': {
     label: 'ESTA（エスタ）の対象者・申請要件｜VWP参加国一覧と対象外になるケース',
-    lastmod: '2026-10-05',
+    lastmod: '2026-10-15',
     image: '/img/related/01-esta-toha.jpg',
   },
   '/list-esta-application/application/': {
     label: 'アプリを使ったESTA申請方法を解説',
-    lastmod: '2026-06-04',
+    lastmod: '2026-10-15',
     image: '/img/related/application.jpg',
   },
   '/list-esta-guide/': {
@@ -89,7 +89,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-guide/cost/': {
     label: 'ESTA申請の料金はいくら？公式サイトの費用と代行サイトの違い',
-    lastmod: '2026-06-09',
+    lastmod: '2026-10-15',
     image: '/img/related/cost.jpg',
   },
   '/list-esta-guide/address-guide/': {
@@ -99,7 +99,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-guide/group-family/': {
     label: 'ESTAのグループ申請・家族申請の方法',
-    lastmod: '2026-06-09',
+    lastmod: '2026-10-15',
     image: '/img/related/group-family.jpg',
   },
   '/list-esta-guide/children/': {
@@ -109,7 +109,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-guide/renewal/': {
     label: 'ESTAの更新・延長方法を解説',
-    lastmod: '2026-06-09',
+    lastmod: '2026-10-15',
     image: '/img/related/renewal.jpg',
   },
   '/list-esta-guide/denied/': {
@@ -124,12 +124,12 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-guide/passport/': {
     label: 'ESTAとパスポートの関係',
-    lastmod: '2026-06-09',
+    lastmod: '2026-10-15',
     image: '/img/related/passport.jpg',
   },
   '/list-esta-guide/official-vs-fake/': {
     label: 'ESTA公式サイトと偽サイトの見分け方',
-    lastmod: '2026-06-09',
+    lastmod: '2026-10-15',
     image: '/img/related/official-vs-fake.jpg',
   },
   '/list-esta-guide/hawaii/': {
@@ -164,7 +164,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-site-information/agreement/': {
     label: '利用規約',
-    lastmod: '2026-06-04',
+    lastmod: '2026-10-15',
     image: '/img/related/agreement.jpg',
   },
   '/list-site-information/browser/': {
