@@ -84,7 +84,7 @@ const BODY_HTML = `<section class="article-hero">
 
         <h3>18.　申請料の支払い</h3>
         <p>申請料のお支払い方法はクレジットカードのみとなります。各種クレジットカード(Visa、Master Card、JCB、American Express、Diners Club)が利用可能です。なお、カードは申請者本人の名義でなくても審査には影響ありません。そのため、ご家族やグループでの申請において代表者がまとめて支払う場合も、申請者以外のカードでのお支払いが可能です。</p>
-        <p>申請手数料の内訳は、アメリカ国土安全保障省申請料($40.62)に加え、申請代行サービス料として24,200円(税込)を頂戴いたします。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
+        <p>申請手数料の内訳は、アメリカ国土安全保障省申請料($40.62)に加え、申請代行サービス料として24,200円(税込)を頂戴いたします。<br><span class="fee-revision-note">※2026年10月17日より、$40.27 から $40.62 に改定されました。</span></p>
 
         <h3>19.　申請手続きの完了</h3>
         <p>お支払いが完了し、「申請完了」と表示された時点でESTA申請の手続きはすべて終了となります。</p>
@@ -99,7 +99,7 @@ const BODY_HTML = `<section class="article-hero">
 <section class="cta-strip cta-strip--solid" id="apply">
   <p class="cta-strip__eyebrow">Start your application</p>
   <h2 style="font-size:30px;line-height:1.4">日本語サポート付きで<br>申請代行を依頼する（当サイト）</h2>
-  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.62を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。<br><span class="fee-revision-note">※2026年10月15日より、$40.27 から $40.62 に改定されました。</span></p>
+  <p style="max-width:640px">当サイトの申請サポートは日本語フォームでの入力・内容確認・結果通知まで対応します<br class="pc-br">（申請手数料24,200円・税込、米国政府への申請料$40.62を含む）。<br>審査には最大3日ほどかかるため、余裕をもってお手続きください。<br><span class="fee-revision-note">※2026年10月17日より、$40.27 から $40.62 に改定されました。</span></p>
   <a href="/form/step1" class="cta-btn"><span class="cta-sub">アメリカ入国前に必須の事前手続き</span><span class="cta-main"><span class="cta-txt">日本語サポート付きで申請を依頼する</span><span class="cta-arrow">→</span></span></a>
 </section>
 <!-- ===== Related articles (reused) ===== -->
