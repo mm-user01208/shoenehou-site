@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>ESTAのグループ申請・家族申請の方法【2026年最新】代理申請も解説</em>
     </nav>
     <p class="article__eyebrow">Group &amp; Family Application</p>

@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>ハワイ旅行にESTAは必要？申請方法と入国審査の流れ【2026年】</em>
     </nav>
     <p class="article__eyebrow">Hawaii Travel ESTA</p>

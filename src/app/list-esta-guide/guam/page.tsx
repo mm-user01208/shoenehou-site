@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>グアム入国にESTA(エスタ)は必要？入国審査についても紹介</em>
     </nav>
     <p class="article__eyebrow">Guam Entry</p>

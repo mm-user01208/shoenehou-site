@@ -14,7 +14,7 @@ const PAGE_JSON_LD = pageJsonLd({ path: PAGE_PATH, title: PAGE_TITLE, descriptio
 
 const BODY_HTML = `<section class="article-hero">
   <div class="article-hero__inner">
-    <nav class="crumb" aria-label="パンくず"><a href="/">HOME</a><span>›</span><a href="/list-site-information">サイト情報一覧</a><span>›</span><em>当サイト申請フォームの使い方（入力手順ガイド）</em></nav>
+    <nav class="crumb" aria-label="パンくず"><a href="/">HOME</a><span>›</span><a href="/list-site-information/">サイト情報一覧</a><span>›</span><em>当サイト申請フォームの使い方（入力手順ガイド）</em></nav>
     <p class="article__eyebrow">Form Guide</p>
     <h1 class="article__title">当サイト申請フォームの使い方（入力手順ガイド）</h1>
     <p class="article__lede">このページは、当サイトの申請フォームで入力に迷った方向けのサポート用ガイドです。公式サイト（esta.cbp.dhs.gov）で直接申請する手順は <a href="/list-esta-application/esta-flow/">ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説</a> をご覧ください。</p>

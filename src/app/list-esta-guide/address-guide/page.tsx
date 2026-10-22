@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>ESTA申請の住所・出生地・勤務先の英語表記ガイド【記入例付き】</em>
     </nav>
     <p class="article__eyebrow">Address &amp; Place of Birth Guide</p>
@@ -59,12 +59,8 @@ const BODY_HTML = `
 
       <section id="sec-02" class="fade-up">
         <h2>出生地の書き方（日本国内→都道府県を英語で/海外生まれの場合）</h2>
-        <p>ESTA申請フォームでは、「City of Birth(出生した市区町村)」と「Country of Birth(出生国)」の入力が求められます。出生地とは、生まれた場所のことであり、パスポートの「本籍地」とは異なります。出生地は、出生届に記載された場所、つまり実際に生まれた病院や自宅がある市区町村を指します。出生地が分からない場合は、戸籍謄本で確認することができます。</p>
-        <p>日本国内で生まれた場合、City of Birthには出生した市区町村名をローマ字で入力し、Country of Birthには「Japan」を選択します。例えば、東京都新宿区で生まれた場合は、City of Birthに「Shinjuku-ku, Tokyo」と入力します。北海道札幌市で生まれた場合は「Sapporo, Hokkaido」と入力します。市名と都道府県名をカンマで区切って記載するのが一般的ですが、市名のみの記載でも問題ありません。</p>
-        <p>海外で生まれた場合は、City of Birthに出生した都市名を英語で入力し、Country of Birthに出生した国を選択します。例えば、アメリカのロサンゼルスで生まれた場合は、City of Birthに「Los Angeles」、Country of Birthに「United States」を選択します。海外で生まれた日本国籍者がESTA申請を行う場合でも、パスポートが日本のものであれば申請に問題はありません。</p>
-        <p>出生地の入力でよくある間違いとして、「本籍地」を出生地として入力してしまうケースがあります。本籍地は戸籍上の住所であり、出生地とは異なる場合があります。例えば、本籍地が東京都であっても、実際に生まれたのが神奈川県横浜市であれば、出生地は「Yokohama, Kanagawa」と入力します。出生地が不明な場合は、パスポートや戸籍謄本を確認するか、両親に確認するとよいでしょう。</p>
-        <p>なお、ESTA申請フォームでは出生地の入力は必須項目となっています。出生地が不明のまま申請を行うことはできませんので、事前に確認しておくことをおすすめします。また、出生地の表記に多少の揺れがあっても(例：「Shinjuku」と「Shinjuku-ku」)、申請が却下されることは通常ありませんが、パスポートに記載されている情報と矛盾しないよう注意してください。</p>
-        <p>出生地の書き方の詳細は<a href="/list-esta-application/place-of-birth/">出生地ガイド</a>をご覧ください。</p>
+        <p>ESTA申請フォームでは「City of Birth(出生した市区町村)」と「Country of Birth(出生国)」の入力が求められ、日本国内で生まれた場合は出生した市区町村名をローマ字で入力し、出生国に「Japan」を選択します。出生地はパスポートの「本籍地」とは異なるため、実際に生まれた場所を入力してください。</p>
+        <p>出生地（City of Birth）の書き方は、<a href="/list-esta-application/place-of-birth/">出生地の記入例</a>で詳しく解説しています。</p>
       </section>
 
       <section id="sec-03" class="fade-up">

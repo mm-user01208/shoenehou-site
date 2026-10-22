@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-site-information">サイト情報一覧</a><span>›</span>
+      <a href="/list-site-information/">サイト情報一覧</a><span>›</span>
       <em>特定商取引法に基づく表記</em>
     </nav>
     <p class="article__eyebrow">Business Information</p>

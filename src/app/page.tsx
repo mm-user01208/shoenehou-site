@@ -249,7 +249,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     <p class="section__eyebrow">№07 — Related Articles</p>
     <h2 class="section__title">ESTA申請関連情報</h2>
     <div class="ornament"><span></span><em></em><span></span></div>
-    <p style="text-align:center;margin:30px 0 56px;font-size:13px;letter-spacing:.16em;color:var(--gold);font-weight:700;text-transform:uppercase"><a href="/list-esta-application" style="color:inherit;text-decoration:none">一覧を見る →</a></p>
+    <p style="text-align:center;margin:30px 0 56px;font-size:13px;letter-spacing:.16em;color:var(--gold);font-weight:700;text-transform:uppercase"><a href="/list-esta-application/" style="color:inherit;text-decoration:none">一覧を見る →</a></p>
   </div>
   <div class="related fade-up">
     <a href="/list-esta-application/esta/"><span class="related__media"><img src="/img/related/01-esta-toha.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">01.</span><span class="related__title">ESTAの対象者・申請要件（VWP参加国一覧）</span><span class="related__more">Read more</span></span></a>

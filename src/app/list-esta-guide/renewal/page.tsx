@@ -101,7 +101,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>ESTAの更新・延長方法を解説｜期限切れ前の再申請手順【2026年】</em>
     </nav>
     <p class="article__eyebrow">Renewal &amp; Extension</p>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-guide/immigration/';
-const PAGE_TITLE = 'アメリカ入国審査の流れと質問例｜ESTAでの入国手続きガイド【2026年】 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'アメリカ入国審査の流れを到着から順に解説。よく聞かれる質問と英語フレーズ、必要な持ち物、二次審査になるケース、家族での並び方まで。ESTA渡航者向けの実践ガイドです。';
+const PAGE_TITLE = 'アメリカ入国審査の流れと質問例｜ESTAの印刷は必要？【2026年】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'アメリカ入国審査の流れと、審査官によく聞かれる質問の例を解説します。ESTAの承認画面を印刷して持っていく必要があるのか、二次審査になるのはどんな場合かもあわせて整理します。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -36,7 +36,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-guide">ESTA申請ガイド一覧</a><span>›</span>
+      <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
       <em>アメリカ入国審査の流れと質問例｜ESTAでの入国手続きガイド</em>
     </nav>
     <p class="article__eyebrow">US Immigration</p>
@@ -53,6 +53,7 @@ const BODY_HTML = `
         <li><a href="#sec-01">入国審査の全体の流れ</a></li>
         <li><a href="#sec-02">審査でよく聞かれる質問と英語フレーズ</a></li>
         <li><a href="#sec-03">入国審査に必要な持ち物</a></li>
+        <li><a href="#sec-print">ESTAの承認画面は印刷が必要？</a></li>
         <li><a href="#sec-04">二次審査になりうるケース</a></li>
         <li><a href="#sec-05">子供連れ・家族での審査の受け方</a></li>
         <li><a href="#sec-faq">よくある質問</a></li>
@@ -110,6 +111,10 @@ const BODY_HTML = `
         </div>
       </section>
 
+      <section id="sec-print" class="fade-up">
+        <h2>ESTAの承認画面は印刷が必要？</h2>
+        <p>ESTAはパスポートに電子的に紐づいて管理されるため、印刷や提示は基本的に不要です。心配な場合は、承認画面のスクリーンショットを保存しておけば十分です。</p>
+      </section>
       <section id="sec-04" class="fade-up">
         <h2>二次審査になりうるケース</h2>
         <p>入国審査官が追加の確認が必要と判断した場合、別室での二次審査(Secondary Inspection)に案内されることがあります。二次審査は「入国拒否」を意味するものではなく、追加の確認を行うための手続きで、そのまま入国できるケースも多くあります。一般的には、次のような場合にきっかけとなることがあります。</p>

@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-site-information">サイト情報一覧</a><span>›</span>
+      <a href="/list-site-information/">サイト情報一覧</a><span>›</span>
       <em>利用規約</em>
     </nav>
     <p class="article__eyebrow">Terms of Service</p>
@@ -65,7 +65,7 @@ const BODY_HTML = `
       </section>
       <section id="sec-03" class="fade-up">
         <h2>第3条（個人情報の取扱い）</h2>
-        <p>当サイトにおける個人情報の取扱いについては、別途定める「<a href="/list-site-information/privacy-policy">個人情報保護に関する基本方針</a>」に従って管理されます。利用者は、本規約とあわせて当該方針の内容についても同意したものとみなします。</p>
+        <p>当サイトにおける個人情報の取扱いについては、別途定める「<a href="/list-site-information/privacy-policy/">個人情報保護に関する基本方針</a>」に従って管理されます。利用者は、本規約とあわせて当該方針の内容についても同意したものとみなします。</p>
       </section>
       <section id="sec-04" class="fade-up">
         <h2>第4条（サービス内容）</h2>

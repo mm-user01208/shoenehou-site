@@ -37,7 +37,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
+      <a href="/list-esta-application/">ESTA申請関連情報一覧</a><span>›</span>
       <em>ESTAの申請タイミング（いつまでに・いつから）</em>
     </nav>
     <p class="article__eyebrow">When to apply</p>

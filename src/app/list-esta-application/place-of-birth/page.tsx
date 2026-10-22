@@ -22,7 +22,7 @@ const BODY_HTML = `
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
+      <a href="/list-esta-application/">ESTA申請関連情報一覧</a><span>›</span>
       <em>ESTA(エスタ)申請時の出生地や住所の書き方を解説</em>
     </nav>
     <p class="article__eyebrow">Place of Birth</p>

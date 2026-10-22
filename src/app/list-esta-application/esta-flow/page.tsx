@@ -24,7 +24,7 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
   <div class="article-hero__inner">
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
-      <a href="/list-esta-application">ESTA申請関連情報一覧</a><span>›</span>
+      <a href="/list-esta-application/">ESTA申請関連情報一覧</a><span>›</span>
       <em>ESTA（エスタ）とは？申請方法を公式サイトの全画面・記入例付きで解説</em>
     </nav>
     <p class="article__eyebrow">ESTA Complete Guide</p>
