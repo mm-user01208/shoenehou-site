@@ -97,10 +97,16 @@ const BODY_HTML = `<style>.article__title{white-space:normal!important;line-heig
         <p>申請の手順（公式サイトの全画面・記入例付き）は <a href="/list-esta-application/esta-flow/">こちら</a> をご覧ください。有効期限と申請タイミングについても同ページで解説しています（<a href="/list-esta-application/expiration-date/">有効期限の詳細</a>）。</p>
       </section>
       <section id="sec-06" class="fade-up"><h2>よくある質問</h2>
-        <h3>日本以外のVWP参加国の家族も同じ手続きですか？</h3>
-        <p>はい。日本を含むVWP参加国の市民であれば、同じ手続きでESTAを申請します。年齢を問わず全員分の申請が必要で、家族やグループで渡米する場合は、忘れずに全員分の申請を行ってください（<a href="/list-esta-guide/group-family/">家族・グループでの申請</a>）。</p>
-        <h3>ビザとESTAのどちらを選べばよいですか？</h3>
-        <p>90日以内の観光・商用・乗り継ぎであればESTA、留学・就労・永住や90日を超える滞在であればビザが必要です。両者の違いは <a href="/list-esta-application/esta-flow/#sec-04">ESTAとビザの違い</a> で比較しています。</p>
+        <div class="faq" style="margin-top:32px">
+          <details open>
+            <summary>日本以外のVWP参加国の家族も同じ手続きですか？</summary>
+            <div class="answer"><p>はい。日本を含むVWP参加国の市民であれば、同じ手続きでESTAを申請します。年齢を問わず全員分の申請が必要で、家族やグループで渡米する場合は、忘れずに全員分の申請を行ってください（<a href="/list-esta-guide/group-family/">家族・グループでの申請</a>）。</p></div>
+          </details>
+          <details>
+            <summary>ビザとESTAのどちらを選べばよいですか？</summary>
+            <div class="answer"><p>90日以内の観光・商用・乗り継ぎであればESTA、留学・就労・永住や90日を超える滞在であればビザが必要です。両者の違いは <a href="/list-esta-application/esta-flow/#sec-04">ESTAとビザの違い</a> で比較しています。</p></div>
+          </details>
+        </div>
       </section>
     </article>
   </div>
