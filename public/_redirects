@@ -6,3 +6,5 @@
 /list-site-information/contact/* /contact/:splat 301
 /list-esta-application/cbp-flow/* /list-esta-application/esta-flow/ 301
 /list-esta-application/cbp-flow /list-esta-application/esta-flow/ 301
+/list-estaguide/cbp-flow/* /list-esta-application/esta-flow/ 301
+/list-estaguide/cbp-flow /list-esta-application/esta-flow/ 301
