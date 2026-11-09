@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-guide/address-guide/';
-const PAGE_TITLE = 'ESTA申請の住所・出生地・勤務先の英語表記ガイド【記入例付き】 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTA申請時の住所・出生地・勤務先の英語表記の書き方を記入例付きで解説。都道府県のローマ字表記一覧、番地の書き方、ホテル住所の入力方法、よくある入力ミスと対処法を紹介します。';
+const PAGE_TITLE = 'ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTA申請の勤務先情報（会社名・勤務先住所・電話番号）の英語表記を記入例付きで解説。学生・主婦・退職された方の書き方、都道府県のローマ字表記一覧、アメリカ滞在先ホテル住所の入力方法も紹介します。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -23,11 +23,11 @@ const BODY_HTML = `
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
       <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
-      <em>ESTA申請の住所・出生地・勤務先の英語表記ガイド【記入例付き】</em>
+      <em>ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】</em>
     </nav>
-    <p class="article__eyebrow">Address &amp; Place of Birth Guide</p>
-    <h1 class="article__title">ESTA申請の住所・出生地・勤務先の英語表記ガイド【記入例付き】</h1>
-    <p class="article__lede">ESTA(エスタ)の申請フォームでは、現住所、出生地、勤務先情報、アメリカ滞在先住所などを英語(ローマ字)で入力する必要があります。日本語の住所を英語に変換する際は、日本語とは逆の順序(番地→市区町村→都道府県→国名)で記載するのが基本ルールです。本記事では、ESTA申請時に必要となる各項目の英語表記の書き方を、具体的な記入例を交えながら分かりやすく解説します。都道府県のローマ字表記一覧も掲載していますので、申請時にぜひお役立てください。正確な情報を入力することが、スムーズなESTA承認につながります。</p>
+    <p class="article__eyebrow">Employer &amp; Address Guide</p>
+    <h1 class="article__title">ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】</h1>
+    <p class="article__lede">ESTA(エスタ)の申請フォームでは、勤務先情報、現住所、アメリカ滞在先住所などを英語(ローマ字)で入力する必要があります。日本語の住所を英語に変換する際は、日本語とは逆の順序(番地→市区町村→都道府県→国名)で記載するのが基本ルールです。本記事では、ESTA申請時に必要となる各項目の英語表記の書き方を、具体的な記入例を交えながら分かりやすく解説します。都道府県のローマ字表記一覧も掲載していますので、申請時にぜひお役立てください。正確な情報を入力することが、スムーズなESTA承認につながります。</p>
   </div>
 </section>
 
@@ -36,8 +36,7 @@ const BODY_HTML = `
     <aside class="toc">
       <p class="toc__head">目次</p>
       <ol>
-        <li><a href="#sec-01">現住所の英語表記の書き方</a></li>
-        <li><a href="#sec-02">出生地の書き方</a></li>
+        <li><a href="#sec-01">都道府県・市区町村・番地の英語表記の順番</a></li>
         <li><a href="#sec-03">勤務先情報の書き方</a></li>
         <li><a href="#sec-04">アメリカ滞在先住所の書き方</a></li>
         <li><a href="#sec-05">都道府県のローマ字表記一覧表</a></li>
@@ -49,7 +48,7 @@ const BODY_HTML = `
     <article class="article-body">
 
       <section id="sec-01" class="fade-up">
-        <h2>現住所の英語表記の書き方（都道府県/市区町村/番地の順番）</h2>
+        <h2>都道府県・市区町村・番地の英語表記の順番</h2>
         <p>ESTA申請フォームでは、自宅の住所を英語(ローマ字)で入力する必要があります。日本語の住所は「都道府県→市区町村→番地→建物名」の順で記載しますが、英語では逆の順序で「番地→市区町村→都道府県→国名」の順で記載します。ESTA申請フォームでは、住所の入力欄が「Address Line 1(住所1行目)」「Address Line 2(住所2行目)」「City(市区町村)」「State/Province/Region(都道府県)」「Country(国名)」などに分かれているため、それぞれの欄に正しい情報を入力してください。</p>
         <p>例えば、日本語の住所が「東京都千代田区霞が関1-2-3 ABCマンション405号室」の場合、英語表記は以下のようになります。Address Line 1には「1-2-3 Kasumigaseki」と入力します。Address Line 2には「ABC Mansion #405」と入力します。Cityには「Chiyoda-ku」と入力します。State/Province/Regionには「Tokyo」と入力します。Zip/Postal Codeには「100-0013」と入力します。Countryには「Japan」を選択します。</p>
         <p>番地の書き方について補足します。日本の住所で「1丁目2番地3号」は英語では「1-2-3」とハイフンでつなげて表記するのが一般的です。また、マンション名やアパート名はローマ字でそのまま記載し、部屋番号は「#」をつけて記載します。例えば「グリーンハイツ301号室」は「Green Heights #301」と表記します。なお、建物名がなく番地のみの場合は、Address Line 2は空欄のままでも問題ありません。</p>
@@ -58,9 +57,7 @@ const BODY_HTML = `
       </section>
 
       <section id="sec-02" class="fade-up">
-        <h2>出生地の書き方（日本国内→都道府県を英語で/海外生まれの場合）</h2>
-        <p>ESTA申請フォームでは「City of Birth(出生した市区町村)」と「Country of Birth(出生国)」の入力が求められ、日本国内で生まれた場合は出生した市区町村名をローマ字で入力し、出生国に「Japan」を選択します。出生地はパスポートの「本籍地」とは異なるため、実際に生まれた場所を入力してください。</p>
-        <p>出生地（City of Birth）の書き方は、<a href="/list-esta-application/place-of-birth/">出生地の記入例</a>で詳しく解説しています。</p>
+        <p>出生地（出生都市・出生国）の書き方は、記入例をまとめた「<a href="/list-esta-application/place-of-birth/">ESTA(エスタ)申請時の出生地や住所の書き方</a>」で解説しています。</p>
       </section>
 
       <section id="sec-03" class="fade-up">

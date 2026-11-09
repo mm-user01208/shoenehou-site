@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-application/us-contact-details/';
-const PAGE_TITLE = '米国内の連絡先情報の記入方法 | US ESTA Apply Website';
+const PAGE_TITLE = 'ESTA申請の米国内の連絡先情報の記入方法｜滞在先・緊急連絡先【記入例付き】 | US ESTA Apply Website';
 const PAGE_DESCRIPTION = 'ESTA申請時に必要な米国内の滞在先情報や緊急連絡先の入力方法、変更方法、都市別記入例を詳しく解説します。';
 
 export const metadata: Metadata = seoMetadata({

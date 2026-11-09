@@ -33,8 +33,8 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     image: '/img/related/01-esta-toha.jpg',
   },
   '/list-esta-application/us-contact-details/': {
-    label: '米国内の連絡先情報の記入方法',
-    lastmod: '2026-06-04',
+    label: 'ESTA申請の米国内の連絡先情報の記入方法',
+    lastmod: '2026-11-09',
     image: '/img/related/06-us-contact.jpg',
   },
   '/list-esta-application/place-of-birth/': {
@@ -48,8 +48,8 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     image: '/img/related/fee.jpg',
   },
   '/list-esta-application/expiration-date/': {
-    label: 'ESTAの有効期限と再申請・確認の方法',
-    lastmod: '2026-06-04',
+    label: 'ESTAの有効期限は何年？残り期限の確認方法',
+    lastmod: '2026-11-09',
     image: '/img/related/expiration-date.jpg',
   },
   '/list-esta-application/when-to-apply/': {
@@ -93,8 +93,8 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     image: '/img/related/cost.jpg',
   },
   '/list-esta-guide/address-guide/': {
-    label: 'ESTA申請の住所・出生地・勤務先の英語表記ガイド',
-    lastmod: '2026-06-09',
+    label: 'ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記',
+    lastmod: '2026-11-09',
     image: '/img/related/address-guide.jpg',
   },
   '/list-esta-guide/group-family/': {
@@ -114,7 +114,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-guide/denied/': {
     label: 'ESTA申請が却下・拒否された場合の対処法',
-    lastmod: '2026-06-09',
+    lastmod: '2026-11-09',
     image: '/img/related/denied.jpg',
   },
   '/list-esta-guide/transit/': {
