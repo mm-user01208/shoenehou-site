@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { JsonLd, pageJsonLd, seoMetadata } from '@/lib/seo';
 
 const PAGE_PATH = '/list-esta-guide/address-guide/';
-const PAGE_TITLE = 'ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】 | US ESTA Apply Website';
-const PAGE_DESCRIPTION = 'ESTA申請の勤務先情報（会社名・勤務先住所・電話番号）の英語表記を記入例付きで解説。学生・主婦・退職された方の書き方、都道府県のローマ字表記一覧、アメリカ滞在先ホテル住所の入力方法も紹介します。';
+const PAGE_TITLE = 'ESTA申請の勤務先情報の書き方｜会社名・勤務先住所・役職名の英語表記【記入例付き】 | US ESTA Apply Website';
+const PAGE_DESCRIPTION = 'ESTA申請の勤務先情報（会社名・勤務先住所・役職名）の英語表記を記入例付きで解説。学生・主婦・退職された方の書き方、都道府県のローマ字表記一覧、アメリカ滞在先ホテル住所の入力方法も紹介します。';
 
 export const metadata: Metadata = seoMetadata({
   path: PAGE_PATH,
@@ -23,10 +23,10 @@ const BODY_HTML = `
     <nav class="crumb" aria-label="パンくず">
       <a href="/">HOME</a><span>›</span>
       <a href="/list-esta-guide/">ESTA申請ガイド一覧</a><span>›</span>
-      <em>ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】</em>
+      <em>ESTA申請の勤務先情報の書き方｜会社名・勤務先住所・役職名の英語表記【記入例付き】</em>
     </nav>
     <p class="article__eyebrow">Employer &amp; Address Guide</p>
-    <h1 class="article__title">ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記【記入例付き】</h1>
+    <h1 class="article__title">ESTA申請の勤務先情報の書き方｜会社名・勤務先住所・役職名の英語表記【記入例付き】</h1>
     <p class="article__lede">ESTA(エスタ)の申請フォームでは、勤務先情報、現住所、アメリカ滞在先住所などを英語(ローマ字)で入力する必要があります。日本語の住所を英語に変換する際は、日本語とは逆の順序(番地→市区町村→都道府県→国名)で記載するのが基本ルールです。本記事では、ESTA申請時に必要となる各項目の英語表記の書き方を、具体的な記入例を交えながら分かりやすく解説します。都道府県のローマ字表記一覧も掲載していますので、申請時にぜひお役立てください。正確な情報を入力することが、スムーズなESTA承認につながります。</p>
   </div>
 </section>
@@ -61,12 +61,12 @@ const BODY_HTML = `
       </section>
 
       <section id="sec-03" class="fade-up">
-        <h2>勤務先情報の書き方（会社名/住所/電話番号）</h2>
+        <h2>勤務先情報の書き方（会社名/勤務先住所/役職名）</h2>
         <p>ESTA申請フォームでは、現在の勤務先(雇用主)に関する情報の入力が求められます。入力項目には「Employer(勤務先名)」「Job Title(役職/職種)」「Address(勤務先住所)」「Phone Number(電話番号)」などがあります。勤務先情報は必須項目ではなく、未入力のまま申請することも可能ですが、入力することでESTA審査がスムーズに進む場合があります。</p>
         <p>勤務先名(Employer)は、会社の正式名称を英語で入力します。日本の会社の場合は、会社名をローマ字で表記します。例えば「株式会社山田製作所」の場合は「Yamada Seisakusho Co., Ltd.」と表記します。「株式会社」は「Co., Ltd.」や「Inc.」と表記するのが一般的です。会社の英語名が公式に決まっている場合は、その名称を使用してください。会社のウェブサイトや名刺に英語表記が記載されている場合は、それに従うのが確実です。</p>
         <p>役職(Job Title)は、現在の役職や職種を英語で入力します。例えば「営業部長」は「Sales Manager」、「事務職」は「Office Clerk」、「エンジニア」は「Engineer」、「会社員」は「Office Worker」や「Company Employee」と表記します。アルバイトやパートタイムの場合は「Part-time Worker」、自営業の場合は「Self-employed」と入力します。学生の場合は勤務先欄に学校名を入力し、Job Titleには「Student」と入力してください。</p>
         <p>勤務先住所(Address)は、現住所と同様に英語の順序(番地→市区町村→都道府県→国名)で入力します。例えば、「東京都港区六本木1-1-1」の場合は「1-1-1 Roppongi, Minato-ku, Tokyo, Japan」と入力します。勤務先住所の入力欄も、Address Line 1、City、State/Province/Regionなどに分かれている場合がありますので、それぞれの欄に適切な情報を入力してください。</p>
-        <p>電話番号(Phone Number)は、日本の国番号「+81」に続けて、市外局番の先頭の「0」を除いた番号を入力します。例えば、会社の電話番号が「03-1234-5678」の場合は「+81-3-1234-5678」と入力します。携帯電話番号「090-1234-5678」の場合は「+81-90-1234-5678」と入力します。なお、ESTA申請フォームの電話番号入力欄では、ハイフンなしで数字のみ入力する形式の場合もありますので、画面の指示に従って入力してください。</p>
+        <p>電話番号(Phone Number)は、日本の国番号「+81」に続けて、市外局番の先頭の「0」を除いた番号を入力します。例えば、会社の電話番号が「03-1234-5678」の場合は「+81-3-1234-5678」と入力します。携帯電話番号「090-1234-5678」の場合は「+81-90-1234-5678」と入力します。なお、ESTA申請フォームの電話番号入力欄では、ハイフンなしで数字のみ入力する形式の場合もありますので、画面の指示に従って入力してください。電話番号の形式（国番号・市外局番の先頭の0・ハイフン）は<a href="/list-esta-application/us-contact-details/">米国内の連絡先情報の記入方法</a>でまとめて解説しています。</p>
         <p>退職中や無職の場合は、勤務先情報の欄に「N/A」(Not Applicable)と入力するか、該当する選択肢(「Not Employed」など)を選択します。主婦・主夫の場合は「Homemaker」と入力することができます。退職者の場合は「Retired」と入力してください。いずれの場合も、勤務先情報が未入力であることを理由にESTA申請が却下されることは通常ありません。</p>
       </section>
 
@@ -203,10 +203,6 @@ const BODY_HTML = `
             <div class="answer"><p>いいえ、ESTA申請フォームへの入力はすべて英語(ローマ字)で行う必要があります。日本語(漢字やひらがな)で入力するとエラーが表示されるか、申請が正しく処理されない場合があります。住所は英語の順序(番地→市区町村→都道府県→国名)でローマ字に変換して入力してください。本記事の記入例や都道府県のローマ字表記一覧を参考にしてください。</p></div>
           </details>
           <details>
-            <summary>出生地が分からない場合はどうすればよいですか？</summary>
-            <div class="answer"><p>出生地が分からない場合は、戸籍謄本を取得して確認することができます。戸籍謄本には出生地(出生した場所)が記載されています。また、両親に確認する方法もあります。出生地はパスポートの「本籍地」とは異なる場合がありますのでご注意ください。出生地は実際に生まれた場所(病院がある市区町村)を指します。</p></div>
-          </details>
-          <details>
             <summary>勤務先が決まっていない場合は何と入力しますか？</summary>
             <div class="answer"><p>現在無職の場合や勤務先が決まっていない場合は、勤務先名の欄に「N/A」(Not Applicable)と入力するか、該当する選択肢(「Not Employed」など)を選択してください。主婦・主夫の場合は「Homemaker」、退職者の場合は「Retired」、学生の場合は学校名を入力しJob Titleに「Student」と入力します。勤務先情報が未入力であることを理由にESTA申請が却下されることは通常ありません。</p></div>
           </details>
@@ -261,5 +257,5 @@ const BODY_HTML = `
 `;
 
 export default function Page() {
-  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "住所を日本語で入力しても申請できますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、ESTA申請フォームへの入力はすべて英語(ローマ字)で行う必要があります。日本語(漢字やひらがな)で入力するとエラーが表示されるか、申請が正しく処理されない場合があります。住所は英語の順序(番地→市区町村→都道府県→国名)でローマ字に変換して入力してください。本記事の記入例や都道府県のローマ字表記一覧を参考にしてください。"}}, {"@type": "Question", "name": "出生地が分からない場合はどうすればよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "出生地が分からない場合は、戸籍謄本を取得して確認することができます。戸籍謄本には出生地(出生した場所)が記載されています。また、両親に確認する方法もあります。出生地はパスポートの「本籍地」とは異なる場合がありますのでご注意ください。出生地は実際に生まれた場所(病院がある市区町村)を指します。"}}, {"@type": "Question", "name": "勤務先が決まっていない場合は何と入力しますか？", "acceptedAnswer": {"@type": "Answer", "text": "現在無職の場合や勤務先が決まっていない場合は、勤務先名の欄に「N/A」(Not Applicable)と入力するか、該当する選択肢(「Not Employed」など)を選択してください。主婦・主夫の場合は「Homemaker」、退職者の場合は「Retired」、学生の場合は学校名を入力しJob Titleに「Student」と入力します。勤務先情報が未入力であることを理由にESTA申請が却下されることは通常ありません。"}}, {"@type": "Question", "name": "アメリカの滞在先が決まっていない場合はどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "アメリカでの滞在先が未定の場合は、滞在先情報の欄に「UNKNOWN」と入力することができます。ただし、滞在先情報をすべて「UNKNOWN」とした場合、入国審査で滞在先について質問される可能性があります。できるだけ滞在先を事前に決めてから申請することをおすすめします。なお、アメリカ滞在先の住所はESTA承認後もCBP公式サイトから変更が可能ですので、後から情報を更新することもできます。"}}, {"@type": "Question", "name": "住所の入力を間違えたらESTAは不承認になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "住所の軽微な表記の揺れや入力ミスのみを理由にESTAが不承認となることは通常ありません。ESTAの審査では、犯罪歴の有無やテロリストリストとの照合など、セキュリティに関する項目が重点的に審査されます。ただし、住所の入力ミスが原因で入国審査時に質問される可能性はあるため、できるだけ正確に入力することをおすすめします。申請後にミスに気づいた場合は、変更可能な項目であればCBP公式サイトから修正できます。変更できない項目に重大な誤りがある場合は、ESTAの再申請を検討してください。"}}]}) }} /></>);
+  return (<><JsonLd data={PAGE_JSON_LD} /><div className="redesign-detail" dangerouslySetInnerHTML={{ __html: BODY_HTML }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "住所を日本語で入力しても申請できますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、ESTA申請フォームへの入力はすべて英語(ローマ字)で行う必要があります。日本語(漢字やひらがな)で入力するとエラーが表示されるか、申請が正しく処理されない場合があります。住所は英語の順序(番地→市区町村→都道府県→国名)でローマ字に変換して入力してください。本記事の記入例や都道府県のローマ字表記一覧を参考にしてください。"}}, {"@type": "Question", "name": "勤務先が決まっていない場合は何と入力しますか？", "acceptedAnswer": {"@type": "Answer", "text": "現在無職の場合や勤務先が決まっていない場合は、勤務先名の欄に「N/A」(Not Applicable)と入力するか、該当する選択肢(「Not Employed」など)を選択してください。主婦・主夫の場合は「Homemaker」、退職者の場合は「Retired」、学生の場合は学校名を入力しJob Titleに「Student」と入力します。勤務先情報が未入力であることを理由にESTA申請が却下されることは通常ありません。"}}, {"@type": "Question", "name": "アメリカの滞在先が決まっていない場合はどうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "アメリカでの滞在先が未定の場合は、滞在先情報の欄に「UNKNOWN」と入力することができます。ただし、滞在先情報をすべて「UNKNOWN」とした場合、入国審査で滞在先について質問される可能性があります。できるだけ滞在先を事前に決めてから申請することをおすすめします。なお、アメリカ滞在先の住所はESTA承認後もCBP公式サイトから変更が可能ですので、後から情報を更新することもできます。"}}, {"@type": "Question", "name": "住所の入力を間違えたらESTAは不承認になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "住所の軽微な表記の揺れや入力ミスのみを理由にESTAが不承認となることは通常ありません。ESTAの審査では、犯罪歴の有無やテロリストリストとの照合など、セキュリティに関する項目が重点的に審査されます。ただし、住所の入力ミスが原因で入国審査時に質問される可能性はあるため、できるだけ正確に入力することをおすすめします。申請後にミスに気づいた場合は、変更可能な項目であればCBP公式サイトから修正できます。変更できない項目に重大な誤りがある場合は、ESTAの再申請を検討してください。"}}]}) }} /></>);
 }

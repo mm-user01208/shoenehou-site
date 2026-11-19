@@ -259,7 +259,7 @@ const BODY_HTML = `<!-- ===== HERO ===== -->
     <a href="/list-esta-application/us-contact-details/"><span class="related__media"><img src="/img/related/06-us-contact.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">05.</span><span class="related__title">米国内の連絡先情報</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/expiration-date/"><span class="related__media"><img src="/img/related/expiration-date.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">06.</span><span class="related__title">ESTAの有効期限と再申請</span><span class="related__more">Read more</span></span></a>
     <a href="/list-esta-application/application/"><span class="related__media"><img src="/img/related/application.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">07.</span><span class="related__title">アプリのESTA申請方法</span><span class="related__more">Read more</span></span></a>
-    <a href="/list-esta-application/guam/"><span class="related__media"><img src="/img/related/guam.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">08.</span><span class="related__title">グアム入国にESTAは必要？</span><span class="related__more">Read more</span></span></a>
+    <a href="/list-esta-guide/guam/"><span class="related__media"><img src="/img/related/guam.jpg" alt="" loading="lazy"></span><span class="related__body"><span class="related__num">08.</span><span class="related__title">グアム入国にESTAは必要？</span><span class="related__more">Read more</span></span></a>
   </div>
 </section>
 

@@ -39,7 +39,7 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
   },
   '/list-esta-application/place-of-birth/': {
     label: 'ESTA申請時の出生地や住所の書き方を解説',
-    lastmod: '2026-06-04',
+    lastmod: '2026-11-19',
     image: '/img/related/03-address-writing.jpg',
   },
   '/list-esta-application/fee/': {
@@ -93,8 +93,8 @@ export const SEO_ROUTES: Record<string, RouteInfo> = {
     image: '/img/related/cost.jpg',
   },
   '/list-esta-guide/address-guide/': {
-    label: 'ESTA申請の勤務先情報の書き方｜会社名・住所・電話番号の英語表記',
-    lastmod: '2026-11-09',
+    label: 'ESTA申請の勤務先情報の書き方｜会社名・勤務先住所・役職名の英語表記',
+    lastmod: '2026-11-19',
     image: '/img/related/address-guide.jpg',
   },
   '/list-esta-guide/group-family/': {
